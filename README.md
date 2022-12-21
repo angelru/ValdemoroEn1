@@ -58,14 +58,10 @@ The application has a clean and tidy architecture, applying the best practices a
   * Multi-Language Localization
   * Shell
 
-# Screenshots
+# Demo
 #### Android
 
 <img src ="/images/menu.png?raw=true" width="200" /> <img src ="/images/list.png?raw=true" width="200" />
-
-<img src ="/images/transport.png?raw=true" width="200" /> <img src ="/images/realtimetransport.png?raw=true" width="200" />
-
-<img src ="/images/urban.png?raw=true" width="200" /> <img src ="/images/interurban.png?raw=true" width="200" />
 
 # Download
 <a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
