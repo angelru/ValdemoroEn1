@@ -5,6 +5,7 @@ namespace ValdemoroEn1.Utils;
 public class Helper
 {
     //The ideal is to create a database and save the stops.
+
     public static IEnumerable<StopName> Stops()
     {
         string json = Preferences.Get("stopNames", "default");
