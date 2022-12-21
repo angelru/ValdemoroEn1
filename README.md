@@ -44,7 +44,7 @@ I hope you can learn with the project 👋🏽
 ## Google cloud setup
 1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
 2. Use API keys [Get api key](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
-3. Put api key in (AppSetings)https://github.com/angelru/ValdemoroEn1/blob/6aa476d162472de061400c0643dbec2ca70154b6/src/ValdemoroEn1/Utils/AppSettings.cs#L19
+3. Put api key in ```AppSettings ApiKey```
 
 # Tools used
 * [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
