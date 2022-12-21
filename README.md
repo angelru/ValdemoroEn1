@@ -44,7 +44,7 @@ Google API to get results and authenticate with Firebase.
 4. Set ```[GoogleService-Info.plist|google-services.json]``` **build action** behaviour to ```[Bundle Resource|GoogleServicesJson]``` by Right clicking/Build Action.
 
 ## Google cloud setup
-1. *[Create project and enable APIS] (https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
+1. *[Create project and enable APIS](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
 
 # Tools used
 * [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
