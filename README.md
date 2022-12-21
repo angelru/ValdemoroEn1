@@ -75,4 +75,4 @@ The application has a clean and tidy architecture, applying the best practices a
 # Copyright and license
 Copyright 2022 by Ángel Rubén
 
-Code released under the [MIT license](https://opensource.org/licenses/MIT)
+Code released under the [MIT license](https://en.wikipedia.org/wiki/MIT_License)
