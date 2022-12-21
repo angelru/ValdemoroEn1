@@ -43,7 +43,7 @@ I hope you can learn with the project 👋🏽
       * For the SHA-1 debug key you will need to modify the command below, open a CMD or Terminal and paste the bash.
       * ```keytool -list -v -keystore "PATH\debug.keystore" -alias androiddebugkey -storepass android -keypass android```
          
-4. Download and add ```Google-services.json``` your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
+4. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
 
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Next)
 
