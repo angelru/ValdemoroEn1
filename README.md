@@ -42,6 +42,21 @@ Google API to get results and authenticate with Firebase.
 * [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
 * [Google Api](https://github.com/vivet/GoogleApi)
 
+# Architecture
+The application has a clean and tidy architecture, applying the best practices and MVVM.
+
+# Features
+  * XAML
+  * Bindings
+  * Converters
+  * ViewModels
+  * DI
+  * Custom Controls
+  * Extensions
+  * Font Awesome
+  * Global Usings
+  * Shell
+
 # Screenshots
 #### Android
 
