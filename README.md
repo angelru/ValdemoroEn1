@@ -6,30 +6,25 @@
 Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
 * **Restauración.** Listado de bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
-* **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo. También podrás consultar los horarios en formato PDF.
-* **Salud.** Listado de centros médicos, gimnasios, dentistas, farmacias, fisioterapeutas y otros profesionales. Información actualizada con horarios y teléfonos de contacto.
-* **Cercanías.** Próximamente
-
+* **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
+* **Cercanías.** Consulta el horario en tiempo real de los trenes de Valdemoro.
 
 Your services in Valdemoro, all the information in one place.
 
 * **Restaurants.** Local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly.
-* **Buses.** Real-time schedule of urban and intercity buses, locate the bus stop number and check the time to your bus. You can also check the schedules in PDF format.
-* **Health.**  Medical centers, gyms, dentists, pharmacies, physiotherapists and other professionals. Updated information with contact hours and telephone numbers.
-* **Train.** Schedule real-time. Coming soon
+* **Buses.** Real-time schedule of urban and intercity buses, locate the bus stop number and check the time to your bus.
+* **Train.** Check the real-time schedule of Valdemoro trains.
 
 # History
-Decido publicar el código fuente de mi primera aplicación en **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
+Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
 
-**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en PhoneGap, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, en el presente tiene muchas partes que no están actualizadas.
-Mi planteamiento es poder ir actualizando y mejorando algunos aspectos que hay que reenfocar.
+**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en PhoneGap, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
 
 Espero que podáis aprender con el proyecto 👋🏽
 
-I decide to post the source code of my first application in **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** because I believe in community work, in which all of us contribute our bit to advance open source and thus increase our knowledge.
+I decide to post the source code of my first application in **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)** because I believe in community work, in which all of us contribute our bit to advance open source and thus increase our knowledge.
 
-**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at PhoneGap, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** it currently has many parts that are not up to date.
-My approach is to be able to update and improve some aspects that need to be refocused.
+**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at PhoneGap, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, and now in 2022 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
 
 I hope you can learn with the project 👋🏽
 
