@@ -33,7 +33,7 @@ I hope you can learn with the project 👋🏽
 
 # Google API and Firebase Auth
 Google API to get results and authenticate with Firebase.
-* [Places](https://developers.google.com/maps/documentation/places/web-service/overview)
+* [Places](https://developers.google.com/maps/documentation/places/web-service)
 * [Auth](https://firebase.google.com/docs/auth)
 
 # Tools used
