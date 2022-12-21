@@ -62,8 +62,9 @@ I hope you can learn with the project 👋🏽
 The application has a clean and tidy architecture, applying the best practices and MVVM.
 
 # Features
+  * Shell
   * XAML
-  * Bindings
+  * Bindings/Relative
   * Converters
   * MVVM
   * DI
@@ -72,7 +73,6 @@ The application has a clean and tidy architecture, applying the best practices a
   * Font Awesome
   * Global Usings
   * Multi-Language Localization
-  * Shell
 
 # Demo
 #### Android
