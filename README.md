@@ -36,12 +36,15 @@ Google API to get results and authenticate with Firebase.
 * [Places](https://developers.google.com/maps/documentation/places/web-service)
 * [Auth](https://firebase.google.com/docs/auth)
 
-## Basic setup
+## Firebase setup
 
 1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/), if you don't already have one. If you already have an existing Google project associated with your mobile app, click **Import Google Project**. Otherwise, click **Create New Project**.
 2. Click **Add Firebase to your *[iOS|Android]* app** and follow the setup steps. If you're importing an existing Google project, this may happen automatically and you can just download the config file.
 3. Add ```[GoogleService-Info.plist|google-services.json]``` file to your app project.
 4. Set ```[GoogleService-Info.plist|google-services.json]``` **build action** behaviour to ```[Bundle Resource|GoogleServicesJson]``` by Right clicking/Build Action.
+
+## Google cloud setup
+1. *[Create project and enable APIS] (https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
 
 # Tools used
 * [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
