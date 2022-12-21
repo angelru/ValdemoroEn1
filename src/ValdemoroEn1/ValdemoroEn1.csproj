@@ -36,10 +36,10 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" BaseSize="128,128" Color="White" />		
-		
+		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
+
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Resize="False" Color="White" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="512,760" Color="White" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\apple.svg" BaseSize="24,24" />
@@ -83,7 +83,7 @@
 			<DependentUpon>InfoMenuDetailView.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Pages\Menu\AboutPage.xaml.cs">
-		  <DependentUpon>AboutPage.xaml</DependentUpon>
+			<DependentUpon>AboutPage.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Pages\Menu\Transport\SchedulesRealTimePage.xaml.cs">
 			<DependentUpon>SchedulesRealTimePage.xaml</DependentUpon>
@@ -110,7 +110,7 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\Views\CardView.xaml">
-		  <Generator>MSBuild:Compile</Generator>
+			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\Views\FlyoutHeaderView.xaml">
 			<Generator>MSBuild:Compile</Generator>
@@ -137,7 +137,7 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\Menu\AboutPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
+			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Pages\Menu\InfoMenuDetailPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
