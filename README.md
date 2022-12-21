@@ -18,15 +18,18 @@ Your services in Valdemoro, all the information in one place.
 # History
 Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
 
-**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en PhoneGap, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
+**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
 
 Espero que podáis aprender con el proyecto 👋🏽
 
 I decide to post the source code of my first application in **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)** because I believe in community work, in which all of us contribute our bit to advance open source and thus increase our knowledge.
 
-**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at PhoneGap, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, and now in 2022 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
+**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at **[PhoneGap](https://en.wikipedia.org/wiki/PhoneGap)**, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, and now in 2022 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
 
 I hope you can learn with the project 👋🏽
+
+# CRTM API
+* .[CRTM](https://www.crtm.es)
 
 # Google API and Firebase Auth
 Google API to get results and authenticate with Firebase.
@@ -34,16 +37,10 @@ Google API to get results and authenticate with Firebase.
 * [Auth](https://firebase.google.com/docs/auth)
 
 # Tools used
-* [Prism](https://github.com/PrismLibrary/Prism)
-* [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
-* [Userdialogs](https://github.com/aritchie/userdialogs)
-* [Akavache](https://github.com/reactiveui/Akavache)
-* [CardView](https://github.com/AndreiMisiukevich/CardView)
-* [ExpandableView](https://github.com/AndreiMisiukevich/ExpandableView)
-* [FirebaseAuth](https://github.com/f-miyu/Plugin.FirebaseAuth)
+* [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet)
+* [CommunityToolkit.Maui](https://github.com/CommunityToolkit/Maui)
+* [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
 * [GoogleApi](https://github.com/vivet/GoogleApi)
-* [GoogleClientPlugin](https://github.com/CrossGeeks/GoogleClientPlugin)
-* [ValidationRulesPlugin](https://github.com/luismts/ValidationRulesPlugin)
 
 # Screenshots
 #### Android
