@@ -55,7 +55,7 @@ The application has a clean and tidy architecture, applying the best practices a
   * Extensions
   * Font Awesome
   * Global Usings
-  * Localization
+  * Multi-Language Localization
   * Shell
 
 # Screenshots
