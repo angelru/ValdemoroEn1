@@ -49,7 +49,7 @@ The application has a clean and tidy architecture, applying the best practices a
   * XAML
   * Bindings
   * Converters
-  * ViewModels
+  * MVVM
   * DI
   * Custom Controls
   * Extensions
