@@ -38,9 +38,14 @@ I hope you can learn with the project 👋🏽
 ## Firebase setup
 1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/), if you don't already have one. If you already have an existing Google project associated with your mobile app, click **Import Google Project**. Otherwise, click **Create New Project**.
 2. Go to the **Authentication** section and press select **Sign-in method**, in the Sign-in provides options, select and enable **Google** and **Email/Password**. 
-3. Click **Add Firebase to your *[iOS|Android]* app** and follow the setup steps. If you're importing an existing Google project, this may happen automatically and you can just download the config file.
-3. Add ```[GoogleService-Info.plist|google-services.json]``` file to your app project.
-4. Set ```[GoogleService-Info.plist|google-services.json]``` **build action** behaviour to ```[Bundle Resource|GoogleServicesJson]``` by Right clicking/Build Action.
+3. Click **Add Firebase to your *Android* app** and follow the setup steps.
+      * To enable Google Sign-In, we will need to provide Google with the package name, the name of the App and a SHA-1 certificate.
+      * For the SHA-1 debug key you will need to modify the command below, open a CMD or Terminal and paste the bash.
+      * ```keytool -list -v -keystore "PATH\debug.keystore" -alias androiddebugkey -storepass android -keypass android```
+         
+4. Download and add ```Google-services.json``` file to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
+
+5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Next)
 
 ## Google cloud setup
 1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
