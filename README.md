@@ -40,10 +40,10 @@ I hope you can learn with the project 👋🏽
 2. Go to the **Authentication** section and press select **Sign-in method**, in the Sign-in provides options, select and enable **Google** and **Email/Password**. 
 3. Click **Add Firebase to your *Android* app** and follow the setup steps.
       * To enable Google Sign-In, we will need to provide Google with the package name, the name of the App and a SHA-1 certificate.
-      * For the SHA-1 debug key you will need to modify the command below, open a CMD or Terminal and paste the bash.
+      * For the SHA-1 debug key you will need to modify the command below, open a CMD or Terminal.
       * ```keytool -list -v -keystore "PATH\debug.keystore" -alias androiddebugkey -storepass android -keypass android```
-         
-4. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
+4. Put the SHA-1 in Certificate SHA-1 input.         
+5. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
 
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
 
