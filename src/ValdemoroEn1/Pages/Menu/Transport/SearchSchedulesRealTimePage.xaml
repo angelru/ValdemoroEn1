@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ValdemoroEn1.Pages.SearchSchedulesRealTimePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewModels="clr-namespace:ValdemoroEn1.ViewModels"
+    Title="{localization:Translate Transport}"
+    x:DataType="viewModels:SearchSchedulesRealTimePageViewModel">
+    <controls:BaseStateLayout
+        Padding="16"
+        CurrentState="{Binding BaseState}"
+        ErrorCommand="{Binding StopsMunicipalityCommand}">
+        <controls:BaseStateLayout.SuccessContent>
+            <Border Stroke="{StaticResource BlueGeneral}" StrokeShape="RoundRectangle 10">
+                <SearchBar
+                    BackgroundColor="Transparent"
+                    CancelButtonColor="{StaticResource BlueGeneral}"
+                    FontSize="Small"
+                    Placeholder="{localization:Translate StopCode}"
+                    Text="{Binding TextStopCode}">
+                    <SearchBar.Behaviors>
+                        <toolkit:UserStoppedTypingBehavior
+                            Command="{Binding SearchStopCommand}"
+                            MinimumLengthThreshold="1"
+                            ShouldDismissKeyboardAutomatically="False"
+                            StoppedTypingTimeThreshold="200" />
+                    </SearchBar.Behaviors>
+                </SearchBar>
+            </Border>
+
+            <CollectionView
+                Margin="0,0,0,16"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding StopMunicipalities}"
+                MaximumHeightRequest="350"
+                SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:StopName">
+                        <Grid
+                            BackgroundColor="White"
+                            ColumnDefinitions="50,*"
+                            CompressedLayout.IsHeadless="True"
+                            RowDefinitions="35">
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                FontSize="13"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding ShortStopCode, Mode=OneTime}"
+                                TextColor="{StaticResource BlueGeneral}"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="13"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Name, Mode=OneTime}"
+                                TextColor="{StaticResource BlueGeneral}"
+                                VerticalTextAlignment="Center" />
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding StopCode, Mode=OneTime}" />
+                            </Grid.GestureRecognizers>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Text="{localization:Translate SearchBus}"
+                TextColor="{StaticResource BlueGeneral}" />
+            <BoxView
+                Margin="0,0,0,10"
+                HeightRequest="1"
+                Color="{StaticResource BlueGeneral}" />
+            <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+                <StackLayout
+                    BindableLayout.ItemsSource="{Binding StopNames, Mode=OneTime}"
+                    CompressedLayout.IsHeadless="True"
+                    Spacing="16">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="models:StopName">
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem
+                                            BackgroundColor="DarkRed"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SearchSchedulesRealTimePageViewModel}}, Path=DeleteStopNameCommand, Mode=OneTime}"
+                                            CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext, Mode=OneTime}"
+                                            IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
+                                                                        Glyph={Static fontawesome:FontAwesomeIcons.Trash},
+                                                                        Color=Black,
+                                                                        Size=24}" />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Grid
+                                    BackgroundColor="White"
+                                    ColumnDefinitions="50,*"
+                                    CompressedLayout.IsHeadless="True"
+                                    RowDefinitions="35">
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        FontSize="13"
+                                        LineBreakMode="TailTruncation"
+                                        Text="{Binding ShortStopCode, Mode=OneTime}"
+                                        TextColor="{StaticResource BlueGeneral}"
+                                        VerticalTextAlignment="Center" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        FontSize="13"
+                                        LineBreakMode="TailTruncation"
+                                        Text="{Binding Name, Mode=OneTime}"
+                                        TextColor="{StaticResource BlueGeneral}"
+                                        VerticalTextAlignment="Center" />
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding StopCode, Mode=OneTime}" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+                            </SwipeView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+        </controls:BaseStateLayout.SuccessContent>
+    </controls:BaseStateLayout>
+</ContentPage>

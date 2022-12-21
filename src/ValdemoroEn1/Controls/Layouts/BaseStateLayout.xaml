@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout
+    x:Class="ValdemoroEn1.Controls.BaseStateLayout"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    x:Name="this"
+    toolkit:StateContainer.CurrentState="{Binding Source={x:Reference this}, Path=CurrentState}"
+    toolkit:StateContainer.ShouldAnimateOnStateChange="False"
+    CompressedLayout.IsHeadless="true">
+    <toolkit:StateContainer.StateViews>
+        <VerticalStackLayout
+            toolkit:StateView.StateKey="Loading"
+            CompressedLayout.IsHeadless="true"
+            VerticalOptions="CenterAndExpand">
+            <ActivityIndicator IsRunning="True" Color="{StaticResource BlueGeneral}" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Padding="16"
+            toolkit:StateView.StateKey="ConexError"
+            CompressedLayout.IsHeadless="true"
+            Spacing="16"
+            VerticalOptions="CenterAndExpand">
+            <Image
+                HeightRequest="250"
+                Source="conexerror"
+                WidthRequest="250" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="{localization:Translate ConexError}"
+                TextColor="{StaticResource BlueGeneral}" />
+            <Button
+                Clicked="Button_Clicked"
+                Style="{StaticResource ButtonGeneral}"
+                Text="{localization:Translate TryAgain}" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Padding="16"
+            toolkit:StateView.StateKey="CrtmError"
+            CompressedLayout.IsHeadless="true"
+            Spacing="16"
+            VerticalOptions="CenterAndExpand">
+            <Image
+                HeightRequest="250"
+                Source="crtmerror"
+                WidthRequest="250" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="{localization:Translate CrtmError}"
+                TextColor="{StaticResource BlueGeneral}" />
+            <Button
+                Clicked="Button_Clicked"
+                Style="{StaticResource ButtonGeneral}"
+                Text="{localization:Translate TryAgain}" />
+        </VerticalStackLayout>
+        <VerticalStackLayout
+            Padding="16"
+            toolkit:StateView.StateKey="Error"
+            CompressedLayout.IsHeadless="true"
+            Spacing="16"
+            VerticalOptions="CenterAndExpand">
+            <Image Source="error" WidthRequest="250" />
+            <Label
+                HorizontalTextAlignment="Center"
+                Text="{localization:Translate Error}"
+                TextColor="{StaticResource BlueGeneral}" />
+            <Button
+                Clicked="Button_Clicked"
+                Style="{StaticResource ButtonGeneral}"
+                Text="{localization:Translate TryAgain}" />
+        </VerticalStackLayout>
+
+        <StackLayout
+            x:Name="StackSuccess"
+            toolkit:StateView.StateKey="Success"
+            CompressedLayout.IsHeadless="true"
+            VerticalOptions="FillAndExpand" />
+    </toolkit:StateContainer.StateViews>
+</StackLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="ValdemoroEn1.Controls.Popups.LanguagePopup"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Size="220,176"
+    Color="Transparent">
+    <Border BackgroundColor="White" StrokeShape="RoundRectangle 20">
+        <VerticalStackLayout Padding="16" Spacing="26">
+            <CollectionView
+                x:Name="LanguageCollectionView"
+                SelectionChanged="LanguageChanged"
+                SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="30" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:AppLanguage">
+                        <VerticalStackLayout Padding="6">
+                            <Label
+                                x:Name="langLabel"
+                                FontAttributes="Bold"
+                                Text="{Binding Language}"
+                                TextColor="{StaticResource RedGeneral}" />
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal" />
+                                    <VisualState Name="Selected">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="{StaticResource BlueGeneral}" />
+                                            <Setter TargetName="langLabel" Property="Label.TextColor" Value="White" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button
+                Clicked="Button_Clicked"
+                Style="{StaticResource ButtonGeneral}"
+                Text="{localization:Translate Accept}" />
+        </VerticalStackLayout>
+    </Border>
+</toolkit:Popup>

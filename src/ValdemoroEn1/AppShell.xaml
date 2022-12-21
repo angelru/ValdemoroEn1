@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ValdemoroEn1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:pages="clr-namespace:ValdemoroEn1.Pages"
+    xmlns:viewModel="clr-namespace:ValdemoroEn1.ViewModels"
+    x:DataType="viewModel:AppShellViewModel">
+
+    <Shell.FlyoutHeader>
+        <controls:FlyoutHeaderView />
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:MainPage}"
+        Route="Main"
+        Shell.FlyoutBehavior="Disabled"
+        Shell.FlyoutItemIsVisible="False"
+        Shell.NavBarIsVisible="False" />
+
+    <FlyoutItem
+        FlyoutDisplayOptions="AsMultipleItems"
+        Route="Menu"
+        Shell.TabBarIsVisible="False">
+
+        <ShellContent
+            Title="{localization:Translate FoodDelivery}"
+            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
+                             Color=Black,
+                             Size=24}" />
+        <ShellContent
+            Title="{localization:Translate Restaurants}"
+            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
+                             Color=Black,
+                             Size=24}" />
+
+        <ShellContent
+            Title="{localization:Translate Hostels}"
+            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.Hotel},
+                             Color=Black,
+                             Size=24}" />
+
+        <ShellContent
+            Title="{localization:Translate Transport}"
+            ContentTemplate="{DataTemplate pages:SearchSchedulesRealTimePage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.BusAlt},
+                             Color=Black,
+                             Size=24}" />
+    </FlyoutItem>
+
+    <MenuItem
+        Command="{Binding LanguagePopupCommand}"
+        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
+                                    Glyph={Static fontawesome:FontAwesomeIcons.Language},
+                                    Color=Black,
+                                    Size=24}"
+        Text="{localization:Translate Language}" />
+
+    <MenuItem
+        Command="{Binding AboutCommand}"
+        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
+                                    Glyph={Static fontawesome:FontAwesomeIcons.InfoCircle},
+                                    Color=Black,
+                                    Size=24}"
+        Text="{localization:Translate About}" />
+
+    <MenuItem
+        Command="{Binding LogoutCommand}"
+        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
+                                    Glyph={Static fontawesome:FontAwesomeIcons.PowerOff},
+                                    Color=Black,
+                                    Size=24}"
+        Text="{localization:Translate Logout}" />
+
+</Shell>

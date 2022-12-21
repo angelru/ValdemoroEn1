@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="AcceptTerms" xml:space="preserve">
+    <value>By registering or logging in, you agree to the </value>
+  </data>
+  <data name="AndThe" xml:space="preserve">
+    <value>and the </value>
+  </data>
+  <data name="BodyEmail" xml:space="preserve">
+    <value>Here your message</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>Buses</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ConexError" xml:space="preserve">
+    <value>There seems to be a problem with your internet connection, please try again later.</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>For any matter, contact by email.</value>
+  </data>
+  <data name="CrtmError" xml:space="preserve">
+    <value>It seems that there is an error in the Madrid regional transport consortium server, please try again later.</value>
+  </data>
+  <data name="CrtmInfo" xml:space="preserve">
+    <value>Access to public transport schedules. It is about showing the data in a simple way and contrasted with official sources of the CRTM but in a particular way, that is, there is no link with the consortium.</value>
+  </data>
+  <data name="CrtmWeb" xml:space="preserve">
+    <value>For more information on the official CRTM website.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailExists" xml:space="preserve">
+    <value>Mail in use, use another.</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="EnjoyValdemoro" xml:space="preserve">
+    <value>I hope you enjoy
+ValdemoroEn1!</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>An error has occurred, please try again later.</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>There seems to be an error in your email.</value>
+  </data>
+  <data name="FoodDelivery" xml:space="preserve">
+    <value>Food delivery</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Have you forgotten the password?</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="GoogleInfo" xml:space="preserve">
+    <value>The images shown here, titles, descriptive texts or telephone numbers, is public information offered by Google, ValdemoroEn1 is only limited to displaying the data.</value>
+  </data>
+  <data name="HaveAnAccount" xml:space="preserve">
+    <value>Do you already have an account?</value>
+  </data>
+  <data name="Hostels" xml:space="preserve">
+    <value>Hostels</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="InvalidEmailPassword" xml:space="preserve">
+    <value>Wrong username or password.</value>
+  </data>
+  <data name="JoinValdemoro" xml:space="preserve">
+    <value>¡Join
+ValdemoroEn1!</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="LogoutMsg" xml:space="preserve">
+    <value>Are you sure you want to log out?</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PressHere" xml:space="preserve">
+    <value>Press here</value>
+  </data>
+  <data name="PrivacyGoogle" xml:space="preserve">
+    <value>Google privacy policy</value>
+  </data>
+  <data name="Restaurants" xml:space="preserve">
+    <value>Restaurants</value>
+  </data>
+  <data name="SchedulesRealTime" xml:space="preserve">
+    <value>Schedules in real time</value>
+  </data>
+  <data name="SearchBus" xml:space="preserve">
+    <value>Search- favorites</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Select a language</value>
+  </data>
+  <data name="SendEmail" xml:space="preserve">
+    <value>We have sent an email to the indicated address, check your inbox or spam folder and follow the instructions.</value>
+  </data>
+  <data name="SigninWithApple" xml:space="preserve">
+    <value>Sign in with Apple</value>
+  </data>
+  <data name="SigninWithFacebook" xml:space="preserve">
+    <value>Sign in with Facebook</value>
+  </data>
+  <data name="SigninWithGoogle" xml:space="preserve">
+    <value>Sign in with Google</value>
+  </data>
+  <data name="Signup" xml:space="preserve">
+    <value>Sign up free</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="StopCode" xml:space="preserve">
+    <value>Stop code</value>
+  </data>
+  <data name="TermsConditions" xml:space="preserve">
+    <value>terms and conditions </value>
+  </data>
+  <data name="Transport" xml:space="preserve">
+    <value>Transport</value>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Try again</value>
+  </data>
+  <data name="ValdemoroEn1" xml:space="preserve">
+    <value>ValdemoroEn1 has been created with the aim of offering citizens more direct access to Valdemoro establishments.</value>
+  </data>
+  <data name="WeakPassword" xml:space="preserve">
+    <value>Very weak password.</value>
+  </data>
+  <data name="WithOutTlf" xml:space="preserve">
+    <value>Without phone</value>
+  </data>
+  <data name="WithOutWeb" xml:space="preserve">
+    <value>Without website</value>
+  </data>
+</root>

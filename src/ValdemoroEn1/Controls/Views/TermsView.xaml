@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="ValdemoroEn1.Controls.TermsView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    x:Name="this">
+    <Label Margin="0,16,0,0" LineBreakMode="WordWrap">
+        <Label.FormattedText>
+            <FormattedString>
+                <Span Text="{localization:Translate AcceptTerms}" />
+                <Span FontAttributes="Bold" Text="{localization:Translate TermsConditions}">
+                    <Span.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=OpenURLCommand}" CommandParameter="{Binding Source={x:Reference this}, Path=TermsGoogleURL}" />
+                    </Span.GestureRecognizers>
+                </Span>
+                <Span Text="{localization:Translate AndThe}" />
+                <Span FontAttributes="Bold" Text="{localization:Translate PrivacyGoogle}">
+                    <Span.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=OpenURLCommand}" CommandParameter="{Binding Source={x:Reference this}, Path=PrivacyGoogleURL}" />
+                    </Span.GestureRecognizers>
+                </Span>
+            </FormattedString>
+        </Label.FormattedText>
+    </Label>
+</ContentView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView
+    x:Class="ValdemoroEn1.Controls.CardView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="this">
+    <Border Stroke="{StaticResource BlueGeneral}" StrokeShape="RoundRectangle 10">
+        <VerticalStackLayout Spacing="0">
+            <Label
+                Margin="16,10"
+                FontAttributes="Bold"
+                Text="{Binding Source={x:Reference this}, Path=Title}" />
+            <BoxView HeightRequest="1" Color="{StaticResource BlueGeneral}" />
+            <VerticalStackLayout x:Name="StackContent" Padding="16" />
+        </VerticalStackLayout>
+    </Border>
+</ContentView>
