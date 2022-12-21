@@ -18,7 +18,7 @@ Your services in Valdemoro, all the information in one place.
 # History
 Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
 
-**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
+**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://learn.microsoft.com/es-es/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
 
 Espero que podáis aprender con el proyecto 👋🏽
 
@@ -32,9 +32,25 @@ I hope you can learn with the project 👋🏽
 * [CRTM](https://www.crtm.es/tu-transporte-publico.aspx)
 
 # Google API and Firebase Auth
-Google API to get results and authenticate with Firebase.
 * [Places](https://developers.google.com/maps/documentation/places/web-service)
 * [Auth](https://firebase.google.com/docs/auth)
+
+## Firebase setup
+1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/), if you don't already have one. If you already have an existing Google project associated with your mobile app, click **Import Google Project**. Otherwise, click **Create New Project**.
+2. Go to the **Authentication** section and press select **Sign-in method**, in the Sign-in provides options, select and enable **Google** and **Email/Password**. 
+3. Click **Add Firebase to your *Android* app** and follow the setup steps.
+      * To enable Google Sign-In, we will need to provide Google with the package name, the name of the App and a SHA-1 certificate.
+      * For the SHA-1 debug key you will need to modify the command below, open a CMD or Terminal.
+      * ```keytool -list -v -keystore "PATH\debug.keystore" -alias androiddebugkey -storepass android -keypass android```
+4. Put the SHA-1 in Certificate SHA-1 input.         
+5. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
+
+5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
+
+## Google cloud setup
+1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
+2. Use API keys [Get api key](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
+3. Put api key in ```AppSettings ApiKey```
 
 # Tools used
 * [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
