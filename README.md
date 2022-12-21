@@ -37,8 +37,8 @@ Google API to get results and authenticate with Firebase.
 * [Auth](https://firebase.google.com/docs/auth)
 
 # Tools used
-* [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet)
-* [CommunityToolkit.Maui](https://github.com/CommunityToolkit/Maui)
+* [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
+* [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
 * [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
 * [Google Api](https://github.com/vivet/GoogleApi)
 
