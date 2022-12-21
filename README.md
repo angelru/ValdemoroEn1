@@ -45,7 +45,7 @@ I hope you can learn with the project 👋🏽
          
 4. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
 
-5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Next)
+5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
 
 ## Google cloud setup
 1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
