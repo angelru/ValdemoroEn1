@@ -47,7 +47,6 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
                 {
                     var timeSpam = time.StopTime - DateTime.Now;
                     int minutes = (int)timeSpam.TotalMinutes;
-                    string name = string.Empty;
 
                     if (minutes >= 0 && minutes <= 59)
                     {
