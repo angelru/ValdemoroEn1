@@ -18,13 +18,13 @@ Your services in Valdemoro, all the information in one place.
 # History
 Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
 
-**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://learn.microsoft.com/es-es/xamarin/get-started/what-is-xamarin-forms)**, y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
+**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://learn.microsoft.com/es-es/xamarin/get-started/what-is-xamarin-forms)** y ahora en 2022 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
 
 Espero que podáis aprender con el proyecto 👋🏽
 
 I decide to post the source code of my application in **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)** because I believe in community work, in which all of us contribute our bit to advance open source and thus increase our knowledge.
 
-**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at **[PhoneGap](https://en.wikipedia.org/wiki/PhoneGap)**, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, and now in 2022 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
+**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at **[PhoneGap](https://en.wikipedia.org/wiki/PhoneGap)**, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** and now in 2022 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
 
 I hope you can learn with the project 👋🏽
 
@@ -48,7 +48,7 @@ I hope you can learn with the project 👋🏽
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
 
 ## Google cloud setup
-1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
+1. Enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
 2. Use API keys [Get api key](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
 3. Put api key in ```AppSettings ApiKey```
 
@@ -62,8 +62,9 @@ I hope you can learn with the project 👋🏽
 The application has a clean and tidy architecture, applying the best practices and MVVM.
 
 # Features
+  * Shell
   * XAML
-  * Bindings
+  * Bindings/Relative
   * Converters
   * MVVM
   * DI
@@ -72,7 +73,6 @@ The application has a clean and tidy architecture, applying the best practices a
   * Font Awesome
   * Global Usings
   * Multi-Language Localization
-  * Shell
 
 # Demo
 #### Android
