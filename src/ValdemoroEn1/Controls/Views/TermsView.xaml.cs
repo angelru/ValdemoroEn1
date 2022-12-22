@@ -1,6 +1,4 @@
-﻿using System.Windows.Input;
-
-namespace ValdemoroEn1.Controls
+﻿namespace ValdemoroEn1.Controls
 {
     public partial class TermsView : ContentView
     {
@@ -9,14 +7,14 @@ namespace ValdemoroEn1.Controls
             InitializeComponent();
         }
 
-        public string TermsGoogleURL { get; private set; } = AppSettings.TermsGoogleURL;
-        public string PrivacyGoogleURL { get; private set; } = AppSettings.PrivacyGoogleURL;
-
-        public ICommand OpenURLCommand => new Command<string>(OpenURL);
-
-        private void OpenURL(string url)
+        private async void Terms_Tapped(object sender, TappedEventArgs e)
         {
-            _ = Browser.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+            await Browser.OpenAsync(new Uri(AppSettings.TermsGoogleURL), BrowserLaunchMode.SystemPreferred);
+        }
+
+        private async void Privacy_Tapped(object sender, TappedEventArgs e)
+        {
+            await Browser.OpenAsync(new Uri(AppSettings.PrivacyGoogleURL), BrowserLaunchMode.SystemPreferred);
         }
     }
 }

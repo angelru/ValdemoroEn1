@@ -7,7 +7,7 @@ public partial class AboutPage : ContentPage
         InitializeComponent();
     }
 
-    private async void SendEmail(object sender, TappedEventArgs e)
+    private async void SendEmail_Tapped(object sender, TappedEventArgs e)
     {
         if (Email.Default.IsComposeSupported)
         {
@@ -27,7 +27,7 @@ public partial class AboutPage : ContentPage
         }
     }
 
-    private async void OpenWeb(object sender, TappedEventArgs e)
+    private async void OpenWeb_Tapped(object sender, TappedEventArgs e)
     {
         await Browser.OpenAsync(new Uri(AppSettings.WebCrtm), BrowserLaunchMode.SystemPreferred);
     }

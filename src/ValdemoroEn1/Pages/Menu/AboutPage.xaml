@@ -22,7 +22,7 @@
                         Text="{localization:Translate CrtmWeb}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OpenWeb" />
+                            <TapGestureRecognizer Tapped="OpenWeb_Tapped" />
                         </Label.GestureRecognizers>
                     </Label>
                 </controls:CardView.CardContent>
@@ -39,7 +39,7 @@
                         Text="{localization:Translate ContactInfo}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="SendEmail" />
+                            <TapGestureRecognizer Tapped="SendEmail_Tapped" />
                         </Label.GestureRecognizers>
                     </Label>
                 </controls:CardView.CardContent>

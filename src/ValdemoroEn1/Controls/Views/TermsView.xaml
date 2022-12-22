@@ -11,13 +11,13 @@
                 <Span Text="{localization:Translate AcceptTerms}" />
                 <Span FontAttributes="Bold" Text="{localization:Translate TermsConditions}">
                     <Span.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=OpenURLCommand}" CommandParameter="{Binding Source={x:Reference this}, Path=TermsGoogleURL}" />
+                        <TapGestureRecognizer Tapped="Terms_Tapped" />
                     </Span.GestureRecognizers>
                 </Span>
                 <Span Text="{localization:Translate AndThe}" />
                 <Span FontAttributes="Bold" Text="{localization:Translate PrivacyGoogle}">
                     <Span.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Source={x:Reference this}, Path=OpenURLCommand}" CommandParameter="{Binding Source={x:Reference this}, Path=PrivacyGoogleURL}" />
+                        <TapGestureRecognizer Tapped="Privacy_Tapped" />
                     </Span.GestureRecognizers>
                 </Span>
             </FormattedString>
