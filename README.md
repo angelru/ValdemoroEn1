@@ -48,7 +48,7 @@ I hope you can learn with the project 👋🏽
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
 
 ## Google cloud setup
-1. Create project and enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
+1. enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
 2. Use API keys [Get api key](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
 3. Put api key in ```AppSettings ApiKey```
 
