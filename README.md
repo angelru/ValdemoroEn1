@@ -59,7 +59,7 @@ I hope you can learn with the project 👋🏽
 * [Google Api](https://github.com/vivet/GoogleApi)
 
 # Architecture
-The application has a clean and tidy architecture, applying the best practices and MVVM.
+The application has a clean and tidy architecture, applying the best practices, MVVM and pattern feature-oriented.
 
 # Features
   * Shell
