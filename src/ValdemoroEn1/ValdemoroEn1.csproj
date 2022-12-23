@@ -82,13 +82,13 @@
 		<Compile Update="Controls\Views\InfoMenuDetailView.xaml.cs">
 			<DependentUpon>InfoMenuDetailView.xaml</DependentUpon>
 		</Compile>
-		<Compile Update="Pages\Menu\AboutPage.xaml.cs">
+		<Compile Update="Features\Menu\About\AboutPage.xaml.cs">
 			<DependentUpon>AboutPage.xaml</DependentUpon>
 		</Compile>
-		<Compile Update="Pages\Menu\Transport\SchedulesRealTimePage.xaml.cs">
+		<Compile Update="Features\Menu\Schedules\SchedulesRealTimePage.xaml.cs">
 			<DependentUpon>SchedulesRealTimePage.xaml</DependentUpon>
 		</Compile>
-		<Compile Update="Pages\Menu\Transport\SearchSchedulesRealTimePage.xaml.cs">
+		<Compile Update="Features\Menu\SearchSchedules\SearchSchedulesRealTimePage.xaml.cs">
 			<DependentUpon>SearchSchedulesRealTimePage.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Resources\Localization\AppResources.Designer.cs">
@@ -124,31 +124,31 @@
 		<MauiXaml Update="Controls\Views\TermsView.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Account\LoginPage.xaml">
+		<MauiXaml Update="Features\Login\LoginPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Account\RegisterPage.xaml">
+		<MauiXaml Update="Features\Register\RegisterPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\Layouts\BaseStateLayout.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Account\MainPage.xaml">
+		<MauiXaml Update="Features\Main\MainPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Menu\AboutPage.xaml">
+		<MauiXaml Update="Features\Menu\About\AboutPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Menu\InfoMenuDetailPage.xaml">
+		<MauiXaml Update="Features\Menu\InfoMenuDetail\InfoMenuDetailPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Menu\InfoMenuPage.xaml">
+		<MauiXaml Update="Features\Menu\InfoMenu\InfoMenuPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Menu\Transport\SchedulesRealTimePage.xaml">
+		<MauiXaml Update="Features\Menu\Schedules\SchedulesRealTimePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Pages\Menu\Transport\SearchSchedulesRealTimePage.xaml">
+		<MauiXaml Update="Features\Menu\SearchSchedules\SearchSchedulesRealTimePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>

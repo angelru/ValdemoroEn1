@@ -4,18 +4,17 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:features="clr-namespace:ValdemoroEn1.Features"
     xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
-    xmlns:pages="clr-namespace:ValdemoroEn1.Pages"
-    xmlns:viewModel="clr-namespace:ValdemoroEn1.ViewModels"
-    x:DataType="viewModel:AppShellViewModel">
+    x:DataType="features:AppShellViewModel">
 
     <Shell.FlyoutHeader>
         <controls:FlyoutHeaderView />
     </Shell.FlyoutHeader>
 
     <ShellContent
-        ContentTemplate="{DataTemplate pages:MainPage}"
+        ContentTemplate="{DataTemplate features:MainPage}"
         Route="Main"
         Shell.FlyoutBehavior="Disabled"
         Shell.FlyoutItemIsVisible="False"
@@ -28,14 +27,14 @@
 
         <ShellContent
             Title="{localization:Translate FoodDelivery}"
-            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            ContentTemplate="{DataTemplate features:InfoMenuPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
                              Color=Black,
                              Size=24}" />
         <ShellContent
             Title="{localization:Translate Restaurants}"
-            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            ContentTemplate="{DataTemplate features:InfoMenuPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
                              Color=Black,
@@ -43,7 +42,7 @@
 
         <ShellContent
             Title="{localization:Translate Hostels}"
-            ContentTemplate="{DataTemplate pages:InfoMenuPage}"
+            ContentTemplate="{DataTemplate features:InfoMenuPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Hotel},
                              Color=Black,
@@ -51,7 +50,7 @@
 
         <ShellContent
             Title="{localization:Translate Transport}"
-            ContentTemplate="{DataTemplate pages:SearchSchedulesRealTimePage}"
+            ContentTemplate="{DataTemplate features:SearchSchedulesRealTimePage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.BusAlt},
                              Color=Black,

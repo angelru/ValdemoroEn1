@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 
-namespace ValdemoroEn1.Services.Alerts;
+namespace ValdemoroEn1.Services;
 
 public class AlertService
 {

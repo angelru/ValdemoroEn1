@@ -1,7 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using ValdemoroEn1.Converters;
 
-namespace ValdemoroEn1.Services.API.DTO;
+namespace ValdemoroEn1.Services;
 
 public class StopTimesResponse
 {

@@ -1,7 +1,7 @@
 using CommunityToolkit.Maui.Views;
 using System.Globalization;
 
-namespace ValdemoroEn1.Controls.Popups;
+namespace ValdemoroEn1.Controls;
 
 public partial class LanguagePopup : Popup
 {

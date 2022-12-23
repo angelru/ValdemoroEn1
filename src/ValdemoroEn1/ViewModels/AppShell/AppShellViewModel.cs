@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui.Views;
-using ValdemoroEn1.Controls.Popups;
+using ValdemoroEn1.Controls;
 
-namespace ValdemoroEn1.ViewModels;
+namespace ValdemoroEn1.Features;
 
 public partial class AppShellViewModel : BaseViewModel
 {

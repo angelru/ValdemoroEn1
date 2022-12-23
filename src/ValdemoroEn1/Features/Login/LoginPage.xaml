@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ValdemoroEn1.Features.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:features="clr-namespace:ValdemoroEn1.Features"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    Title="{localization:Translate Login}"
+    x:DataType="features:LoginPageViewModel"
+    Shell.FlyoutBehavior="Disabled">
+    <VerticalStackLayout Padding="16" Spacing="16">
+        <Label FontSize="45" Text="{localization:Translate EnjoyValdemoro}" />
+        <Entry
+            Keyboard="Email"
+            Placeholder="{localization:Translate Email}"
+            Text="{Binding Email}" />
+        <Entry
+            IsPassword="True"
+            Placeholder="{localization:Translate Password}"
+            Text="{Binding Password}" />
+
+        <controls:TermsView />
+
+        <Button
+            Command="{Binding LoginCommand}"
+            Style="{StaticResource ButtonGeneral}"
+            Text="{localization:Translate Login}" />
+        <Label HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="{localization:Translate ForgotPassword}" />
+                    <Span FontAttributes="Bold" Text="{localization:Translate PressHere}" />
+                </FormattedString>
+            </Label.FormattedText>
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding RecoveryPasswordCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+    </VerticalStackLayout>
+
+</ContentPage>

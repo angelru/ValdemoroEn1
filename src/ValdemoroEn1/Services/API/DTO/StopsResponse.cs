@@ -1,4 +1,4 @@
-﻿namespace ValdemoroEn1.Services.API.DTO;
+﻿namespace ValdemoroEn1.Services;
 
 public class StopsResponse
 {

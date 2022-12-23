@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Maui;
-using ValdemoroEn1.Extensions;
 
 namespace ValdemoroEn1;
+
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
@@ -11,6 +11,7 @@ public static class MauiProgram
             .RegisterFonts()
             .RegisterServices()
             .RegisterFirebaseServices()
+            .RegisterPagesViewModels()
             .RegisterHandlers()
             .UseMauiCommunityToolkit();
         return builder.Build();

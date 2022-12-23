@@ -1,12 +1,10 @@
 ﻿global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;
 global using Plugin.Firebase.Auth;
+global using ValdemoroEn1.Common;
+global using ValdemoroEn1.Features;
+global using ValdemoroEn1.FontAwesome;
+global using ValdemoroEn1.Models;
 global using ValdemoroEn1.Resources.Localization;
 global using ValdemoroEn1.Services;
-global using ValdemoroEn1.Pages;
-global using ValdemoroEn1.ViewModels;
-global using ValdemoroEn1.Utils;
-global using ValdemoroEn1.Models;
-global using ValdemoroEn1.FontAwesome;
-global using ValdemoroEn1.Services.Alerts;
-global using ServiceProvider = ValdemoroEn1.Services.ServiceProvider;
+//global using ServiceProvider = ValdemoroEn1.Services.ServiceProvider;

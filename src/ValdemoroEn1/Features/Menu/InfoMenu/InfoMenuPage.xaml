@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ValdemoroEn1.Features.InfoMenuPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:features="clr-namespace:ValdemoroEn1.Features"
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    Title="{Binding Title}"
+    x:DataType="features:InfoMenuPageViewModel">
+
+    <Shell.TitleView>
+        <controls:LogoTitleView />
+    </Shell.TitleView>
+
+    <controls:BaseStateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding InitInfoMenusCommand}">
+        <controls:BaseStateLayout.SuccessContent>
+            <RefreshView
+                Command="{Binding RefreshInfoMenusCommand}"
+                IsRefreshing="{Binding IsRefreshing}"
+                RefreshColor="{StaticResource BlueGeneral}">
+                <CollectionView
+                    ItemSizingStrategy="MeasureFirstItem"
+                    ItemsSource="{Binding InfoMenus, Mode=OneTime}"
+                    RemainingItemsThreshold="{Binding ItemTreshold}"
+                    RemainingItemsThresholdReachedCommand="{Binding LoadMoreInfoItemsCommand}"
+                    SelectedItem="{Binding SelectedInfoMenu}"
+                    SelectionChangedCommand="{Binding SelectionInfoMenuCommand}"
+                    SelectionMode="Single"
+                    VerticalOptions="FillAndExpand">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="models:InfoMenu">
+                            <Grid
+                                BackgroundColor="White"
+                                ColumnDefinitions="68,*"
+                                CompressedLayout.IsHeadless="true"
+                                RowDefinitions="*"
+                                Style="{StaticResource GridGeneral}">
+                                <Border
+                                    Grid.RowSpan="1"
+                                    Grid.Column="0"
+                                    HeightRequest="68"
+                                    Stroke="{StaticResource RedGeneral}"
+                                    StrokeShape="RoundRectangle 100"
+                                    StrokeThickness="3"
+                                    WidthRequest="68">
+                                    <Image Aspect="AspectFill" Source="{Binding Photo, Mode=OneTime}" />
+                                </Border>
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="{Binding Name, Mode=OneTime}"
+                                    VerticalTextAlignment="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                    <CollectionView.Footer>
+                        <Grid IsVisible="{Binding LoadMore}">
+                            <Grid.Triggers>
+                                <Trigger TargetType="Grid" Property="IsVisible" Value="False">
+                                    <Setter Property="HeightRequest" Value="0" />
+                                </Trigger>
+                            </Grid.Triggers>
+                            <ActivityIndicator
+                                HorizontalOptions="Center"
+                                IsRunning="True"
+                                VerticalOptions="Center"
+                                Color="{StaticResource BlueGeneral}" />
+                        </Grid>
+                    </CollectionView.Footer>
+                </CollectionView>
+            </RefreshView>
+        </controls:BaseStateLayout.SuccessContent>
+    </controls:BaseStateLayout>
+
+</ContentPage>
