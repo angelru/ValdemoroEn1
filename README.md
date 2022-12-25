@@ -63,6 +63,8 @@ The application has a clean and tidy architecture, applying the best practices, 
 
 # Features
   * Shell
+  * CollectionView
+  * SwipeView
   * XAML
   * Bindings/Relative
   * Converters
