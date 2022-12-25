@@ -17,11 +17,12 @@ public partial class LoginPageViewModel : BaseViewModel
     [RelayCommand]
     private async Task RecoveryPasswordAsync()
     {
-        var result = await AlertService.PromptAsync(AppResources.Email, null, AppResources.Accept, AppResources.Cancel);
-       
-        if (!string.IsNullOrWhiteSpace(result) && !string.IsNullOrEmpty(result))
+        string email = await AlertService.PromptAsync(AppResources.Email, null, AppResources.Accept, AppResources.Cancel);
+        bool validate = Helper.ValidateEmail(email);
+
+        if (validate)
         {
-            await CrossFirebaseAuth.Current.SendPasswordResetEmailAsync(result);
+            await CrossFirebaseAuth.Current.SendPasswordResetEmailAsync(email);
             await AlertService.SnackBarAsync(AppResources.SendEmail, SnackType.Success);
         }
     }
