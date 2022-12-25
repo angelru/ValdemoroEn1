@@ -63,15 +63,16 @@ The application has a clean and tidy architecture, applying the best practices, 
 
 # Features
   * Shell
+  * XAML
   * CollectionView
   * SwipeView
-  * XAML
-  * Bindings/Relative
-  * Converters
-  * Triggers
+  * RefreshView
   * MVVM
   * DI
   * Custom Controls
+  * Bindings/Relative
+  * Converters
+  * Triggers
   * Extensions
   * Font Awesome
   * Global Usings
