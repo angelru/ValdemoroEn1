@@ -68,6 +68,7 @@ The application has a clean and tidy architecture, applying the best practices, 
   * XAML
   * Bindings/Relative
   * Converters
+  * Triggers
   * MVVM
   * DI
   * Custom Controls
