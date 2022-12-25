@@ -76,6 +76,10 @@ The application has a clean and tidy architecture, applying the best practices, 
   * Font Awesome
   * Global Usings
   * Multi-Language Localization
+  
+# Platforms
+  * Android
+  * iOS (coming soon)
 
 # Demo
 #### Android
