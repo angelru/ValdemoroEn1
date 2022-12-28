@@ -9,7 +9,7 @@ using Plugin.Firebase.iOS;
 using Plugin.Firebase.Android;
 #endif
 
-namespace ValdemoroEn1.Common;
+namespace ValdemoroEn1.Extensions;
 
 public static partial class LifecycleEventsExtensions
 {

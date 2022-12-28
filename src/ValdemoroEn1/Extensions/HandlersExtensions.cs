@@ -1,4 +1,4 @@
-﻿namespace ValdemoroEn1.Common;
+﻿namespace ValdemoroEn1.Extensions;
 
 public static partial class HandlersExtensions
 {
