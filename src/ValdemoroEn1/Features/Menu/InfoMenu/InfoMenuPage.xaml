@@ -13,7 +13,7 @@
         <controls:LogoTitleView />
     </Shell.TitleView>
 
-    <controls:BaseStateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding InitInfoMenusCommand}">
+    <controls:BaseStateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding InfoMenuCommand}">
         <controls:BaseStateLayout.SuccessContent>
             <RefreshView
                 Command="{Binding RefreshInfoMenusCommand}"

@@ -18,9 +18,9 @@ public partial class LoginPageViewModel : BaseViewModel
     private async Task RecoveryPasswordAsync()
     {
         string email = await AlertService.PromptAsync(AppResources.Email, null, AppResources.Accept, AppResources.Cancel);
-        bool validate = Helper.ValidateEmail(email);
+        bool isValid = Helper.ValidateEmail(email);
 
-        if (validate)
+        if (isValid)
         {
             await CrossFirebaseAuth.Current.SendPasswordResetEmailAsync(email);
             await AlertService.SnackBarAsync(AppResources.SendEmail, SnackType.Success);

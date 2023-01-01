@@ -26,7 +26,7 @@ public partial class InfoMenuPageViewModel : BaseViewModel
     public InfoMenuPageViewModel()
     {
         Title = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Title;
-        InitInfoMenus();
+        InfoMenu();
     }
 
     public ObservableRangeCollection<InfoMenu> InfoMenus { get; set; } = new();
@@ -41,7 +41,7 @@ public partial class InfoMenuPageViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private void InitInfoMenus()
+    private void InfoMenu()
     {
         ItemTreshold = 5;
         LoadMore = false;
