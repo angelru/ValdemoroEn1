@@ -51,10 +51,9 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
                     {
                         return $"{timeSpam.TotalMinutes:0}min";
                     }
-                    else
-                    {
-                        return time.StopTime.ToShortTimeString();
-                    }
+
+                    return time.StopTime.ToShortTimeString();
+
                 }).ToList()
             }).ToList();
 
