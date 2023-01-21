@@ -34,7 +34,7 @@ public partial class InfoMenuPageViewModel : BaseViewModel
     [RelayCommand]
     private async Task SelectionInfoMenuAsync()
     {
-        NavigationService.AddParameter("infoMenu", _selectedInfoMenu);
+        NavigationService.AddParameter("infoMenu", SelectedInfoMenu);
         await NavigationService.NavigationAsync("infomenudetails");
         await Task.Delay(300);
         SelectedInfoMenu = null;
