@@ -7,7 +7,6 @@ public class AlertService
 {
     public static async Task SnackBarAsync(string message, SnackType snackType)
     {
-        CancellationToken cancellationToken = new();
         var duration = TimeSpan.FromSeconds(5);
 
         var snackbarOptions = new SnackbarOptions
@@ -19,7 +18,7 @@ public class AlertService
             ActionButtonTextColor = Colors.White,
         };
 
-        await Shell.Current.DisplaySnackbar(message, duration: duration, visualOptions: snackbarOptions, token: cancellationToken);
+        await Shell.Current.DisplaySnackbar(message, duration: duration, visualOptions: snackbarOptions);
     }
 
     public static async Task<string> PromptAsync(string title, string message, string accept = "OK", string cancel = "Cancel", string placeholder = null, int maxLength = -1, Keyboard keyboard = null, string initialValue = "")
