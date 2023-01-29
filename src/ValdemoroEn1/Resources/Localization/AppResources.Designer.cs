@@ -287,6 +287,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Índice de la calidad del aire.
+        /// </summary>
+        public static string ICA {
+            get {
+                return ResourceManager.GetString("ICA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Información.
         /// </summary>
         public static string Information {

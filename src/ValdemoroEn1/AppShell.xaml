@@ -49,6 +49,14 @@
                              Size=24}" />
 
         <ShellContent
+            Title="{localization:Translate ICA}"
+            ContentTemplate="{DataTemplate features:ICAPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.Water},
+                             Color=Black,
+                             Size=24}" />
+
+        <ShellContent
             Title="{localization:Translate Transport}"
             ContentTemplate="{DataTemplate features:SearchSchedulesRealTimePage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,

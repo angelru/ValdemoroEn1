@@ -2,6 +2,9 @@
 
 public class AppSettings
 {
+    //AqiCn
+    public const string ApiAqiCn = "https://api.waqi.info/feed/";
+
     //Crtm
     public const string WebCrtm = "https://www.crtm.es";
     public const string ApiCrtm = "https://www.crtm.es/widgets/api/";

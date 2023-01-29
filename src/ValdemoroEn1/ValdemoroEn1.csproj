@@ -59,7 +59,6 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="4.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
@@ -73,6 +72,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
 		<GoogleServicesJson Include="Platforms\Android\google-services.json" />
 		<ProguardConfiguration Include="Platforms\Android\proguard.cfg" />
+		<AndroidEnvironment Include="Platforms\Android\GarbageCollector.config" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -123,6 +123,9 @@
 		</MauiXaml>
 		<MauiXaml Update="Controls\Views\TermsView.xaml">
 			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
+		<MauiXaml Update="Features\Menu\ICA\ICAPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Login\LoginPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
