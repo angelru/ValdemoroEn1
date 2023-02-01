@@ -15,6 +15,7 @@ public static class MauiProgram
             .RegisterPagesViewModels()
             .RegisterHandlers()
             .UseMauiCommunityToolkit();
+
         return builder.Build();
     }
 }
