@@ -6,6 +6,7 @@ public static partial class ServicesExtensions
     {
         builder.Services
         //Transient
+            .AddTransient<ICAPage>().AddTransient<ICAPageViewModel>()
             .AddTransient<SchedulesRealTimePage>().AddTransient<SchedulesRealTimePageViewModel>()
             .AddTransient<InfoMenuDetailPage>().AddTransient<InfoMenuDetailPageViewModel>()
             .AddTransient<InfoMenuPage>().AddTransient<InfoMenuPageViewModel>()

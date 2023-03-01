@@ -16,19 +16,19 @@ public class ApiService
         crtmHttpClient.Timeout = TimeSpan.FromSeconds(40);
     }
 
-    public async Task<object> ICAAsync()
+    public Task<object> ICAAsync()
     {
-        return await aqiCnhttpClient.GetFromJsonAsync<object>("valdemoro/?token=TOKEN");
+        return aqiCnhttpClient.GetFromJsonAsync<object>("valdemoro/?token=TOKEN");
     }
 
-    public async Task<StopTimesResponse> SchedulesAsync(string stopCode)
+    public Task<StopTimesResponse> SchedulesAsync(string stopCode)
     {
-        return await crtmHttpClient.GetFromJsonAsync<StopTimesResponse>($"GetStopsTimes.php?codStop={stopCode}&type=1&orderBy=2&stopTimesByIti=3");
+        return crtmHttpClient.GetFromJsonAsync<StopTimesResponse>($"GetStopsTimes.php?codStop={stopCode}&type=1&orderBy=2&stopTimesByIti=3");
     }
 
-    public async Task<StopsResponse> StopsAsync()
+    public Task<StopsResponse> StopsAsync()
     {
-        return await crtmHttpClient.GetFromJsonAsync<StopsResponse>("GetStops.php?codMunicipality=4426");
+        return crtmHttpClient.GetFromJsonAsync<StopsResponse>("GetStops.php?codMunicipality=4426");
     }
 }
 

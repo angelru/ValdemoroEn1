@@ -59,10 +59,13 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
 
             var stopTimesGroup = new StopTimesGroup(line.Description.Split("-", 2).Last(), line.CodMode, line.ShortDescription, stopTimeNames);
             return stopTimesGroup;
-        }).ToList();
+        });
 
+        string shortCodStop = StopTimesResponse.StopTimes.Stop.ShortCodStop;
+        string name = StopTimesResponse.StopTimes.Stop.Name;
 
         StopTimesGroups.ReplaceRange(stopTimeGroups);
-        WeakReferenceMessenger.Default.Send(new StopName(stopCode, StopTimesResponse.StopTimes.Stop.ShortCodStop, StopTimesResponse.StopTimes.Stop.Name));
+
+        WeakReferenceMessenger.Default.Send(new StopName(stopCode, shortCodStop, name));
     }
 }
