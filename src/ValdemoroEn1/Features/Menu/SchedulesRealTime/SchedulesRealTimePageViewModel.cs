@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.Messaging;
-
-namespace ValdemoroEn1.Features;
+﻿namespace ValdemoroEn1.Features;
 
 public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttributable
 {
@@ -65,7 +63,5 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
         string name = StopTimesResponse.StopTimes.Stop.Name;
 
         StopTimesGroups.ReplaceRange(stopTimeGroups);
-
-        WeakReferenceMessenger.Default.Send(new StopName(stopCode, shortCodStop, name));
     }
 }

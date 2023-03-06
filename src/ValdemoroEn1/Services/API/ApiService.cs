@@ -4,13 +4,13 @@ namespace ValdemoroEn1.Services;
 
 public class ApiService
 {
-    private readonly HttpClient aqiCnhttpClient = new();
+    private readonly HttpClient openWheaterhttpClient = new();
     private readonly HttpClient crtmHttpClient = new();
 
     public ApiService()
     {
-        aqiCnhttpClient.BaseAddress = new Uri(AppSettings.ApiAqiCn);
-        aqiCnhttpClient.Timeout = TimeSpan.FromSeconds(40);
+        openWheaterhttpClient.BaseAddress = new Uri(AppSettings.ApiOpenWheater);
+        openWheaterhttpClient.Timeout = TimeSpan.FromSeconds(40);
 
         crtmHttpClient.BaseAddress = new Uri(AppSettings.ApiCrtm);
         crtmHttpClient.Timeout = TimeSpan.FromSeconds(40);
@@ -18,7 +18,7 @@ public class ApiService
 
     public Task<object> ICAAsync()
     {
-        return aqiCnhttpClient.GetFromJsonAsync<object>("valdemoro/?token=TOKEN");
+        return openWheaterhttpClient.GetFromJsonAsync<object>("valdemoro/?token=TOKEN");
     }
 
     public Task<StopTimesResponse> SchedulesAsync(string stopCode)

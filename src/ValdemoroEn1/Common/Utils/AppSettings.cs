@@ -2,8 +2,9 @@
 
 public class AppSettings
 {
-    //AqiCn
-    public const string ApiAqiCn = "https://api.waqi.info/feed/";
+    //OpenWheater
+    public const string ApiOpenWheater = "https://api.openweathermap.org/";
+    public const string ApiOpenWheaterKey = "API KEY";
 
     //Crtm
     public const string WebCrtm = "https://www.crtm.es";

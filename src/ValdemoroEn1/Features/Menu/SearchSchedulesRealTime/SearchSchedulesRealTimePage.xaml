@@ -63,7 +63,7 @@
                                 TextColor="{StaticResource BlueGeneral}"
                                 VerticalTextAlignment="Center" />
                             <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding StopCode, Mode=OneTime}" />
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding ., Mode=OneTime}" />
                             </Grid.GestureRecognizers>
                         </Grid>
                     </DataTemplate>
@@ -120,7 +120,7 @@
                                         TextColor="{StaticResource BlueGeneral}"
                                         VerticalTextAlignment="Center" />
                                     <Grid.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding StopCode, Mode=OneTime}" />
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding ., Mode=OneTime}" />
                                     </Grid.GestureRecognizers>
                                 </Grid>
                             </SwipeView>

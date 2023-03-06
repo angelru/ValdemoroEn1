@@ -1,8 +1,6 @@
-﻿using CommunityToolkit.Mvvm.Messaging;
+﻿namespace ValdemoroEn1.Features;
 
-namespace ValdemoroEn1.Features;
-
-public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel, IRecipient<StopName>
+public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
 {
     private List<StopMunicipality> stopMunicipalities = new();
 
@@ -19,7 +17,6 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel, IReci
 
     public SearchSchedulesRealTimePageViewModel()
     {
-        WeakReferenceMessenger.Default.Register(this);
         StopsMunicipality();
     }
 
@@ -54,23 +51,20 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel, IReci
     }
 
     [RelayCommand]
-    private async Task SchedulesAsync(string stopCode)
+    private async Task SchedulesAsync(StopName stopName)
     {
-        NavigationService.AddParameter("stopCode", stopCode);
+        AddStopName(stopName);
+        NavigationService.AddParameter("stopCode", stopName.StopCode);
         await NavigationService.NavigationAsync("schedulesrealtime");
     }
 
-    public void Receive(StopName stopName)
+    public void AddStopName(StopName stopName)
     {
         var stop = StopNames.FirstOrDefault(f => f.StopCode == stopName.StopCode);
 
         if (stop is null)
         {
-            MainThread.BeginInvokeOnMainThread(() =>
-            {
-                StopNames.Add(stopName);
-            });
-
+            StopNames.Add(stopName);
             Helper.SaveStops(StopNames);
         }
     }
