@@ -193,9 +193,6 @@ ValdemoroEn1!</value>
   <data name="Hostels" xml:space="preserve">
     <value>Alojamientos</value>
   </data>
-  <data name="ICA" xml:space="preserve">
-    <value>Índice de la calidad del aire</value>
-  </data>
   <data name="Information" xml:space="preserve">
     <value>Información</value>
   </data>
@@ -274,6 +271,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="WeakPassword" xml:space="preserve">
     <value>Contraseña muy débil.</value>
+  </data>
+  <data name="WeatherICA" xml:space="preserve">
+    <value>Tiempo y calidad del aire</value>
   </data>
   <data name="WithOutTlf" xml:space="preserve">
     <value>Sin teléfono</value>

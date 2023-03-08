@@ -3,8 +3,8 @@
 public class AppSettings
 {
     //OpenWheater
-    public const string ApiOpenWheater = "https://api.openweathermap.org/";
-    public const string ApiOpenWheaterKey = "API KEY";
+    public const string ApiOpenWeather = "https://api.openweathermap.org/data/2.5/";
+    public const string ApiOpenWeatherKey = "API KEY";
 
     //Crtm
     public const string WebCrtm = "https://www.crtm.es";

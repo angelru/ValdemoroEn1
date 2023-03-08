@@ -22,6 +22,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
 
 	</PropertyGroup>
+	
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
 		<AndroidPackageFormat>apk</AndroidPackageFormat>
 		<!--
@@ -31,9 +32,11 @@
 		<EnableLLVM>false</EnableLLVM>
 		-->
 	</PropertyGroup>
+	
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-android|AnyCPU'">
 		<AndroidKeyStore>False</AndroidKeyStore>
 	</PropertyGroup>
+	
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
@@ -42,6 +45,26 @@
 		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="512,760" Color="White" />
 
 		<!-- Images -->
+		<MauiImage Include="Resources\Images\d01d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d02d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d03d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d04d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d09d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d10d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d11d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d13d.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\d50d.png" BaseSize="100,100" />
+		
+		<MauiImage Include="Resources\Images\n01n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n02n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n03n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n04n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n09n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n10n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n11n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n13n.png" BaseSize="100,100" />
+		<MauiImage Include="Resources\Images\n50n.png" BaseSize="100,100" />
+		
 		<MauiImage Include="Resources\Images\apple.svg" BaseSize="24,24" />
 		<MauiImage Include="Resources\Images\conexerror.png" BaseSize="448,448" />
 		<MauiImage Include="Resources\Images\error.png" BaseSize="384,240" />
@@ -59,6 +82,7 @@
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
+	
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
@@ -89,6 +113,9 @@
 		</Compile>
 		<Compile Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml.cs">
 			<DependentUpon>SearchSchedulesRealTimePage.xaml</DependentUpon>
+		</Compile>
+		<Compile Update="Features\Menu\Weather\WeatherPage.xaml.cs">
+		  <DependentUpon>WeatherPage.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Resources\Localization\AppResources.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -123,7 +150,7 @@
 		<MauiXaml Update="Controls\Views\TermsView.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Features\Menu\ICA\ICAPage.xaml">
+		<MauiXaml Update="Features\Menu\Weather\WeatherPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Login\LoginPage.xaml">

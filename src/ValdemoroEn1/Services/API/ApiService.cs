@@ -1,24 +1,30 @@
 ﻿using System.Net.Http.Json;
+using ValdemoroEn1.Services.API.DTO;
 
 namespace ValdemoroEn1.Services;
 
 public class ApiService
 {
-    private readonly HttpClient openWheaterhttpClient = new();
+    private readonly HttpClient openWeatherhttpClient = new();
     private readonly HttpClient crtmHttpClient = new();
 
     public ApiService()
     {
-        openWheaterhttpClient.BaseAddress = new Uri(AppSettings.ApiOpenWheater);
-        openWheaterhttpClient.Timeout = TimeSpan.FromSeconds(40);
+        openWeatherhttpClient.BaseAddress = new Uri(AppSettings.ApiOpenWeather);
+        openWeatherhttpClient.Timeout = TimeSpan.FromSeconds(40);
 
         crtmHttpClient.BaseAddress = new Uri(AppSettings.ApiCrtm);
         crtmHttpClient.Timeout = TimeSpan.FromSeconds(40);
     }
 
-    public Task<object> ICAAsync()
+    public Task<object> ICAAsync(long latitute, long longitude)
     {
-        return openWheaterhttpClient.GetFromJsonAsync<object>("valdemoro/?token=TOKEN");
+        return openWeatherhttpClient.GetFromJsonAsync<object>($"air_pollution?lat={latitute}&lon={longitude}&appid={AppSettings.ApiOpenWeatherKey}&lang=es");
+    }
+
+    public Task<WeatherResponse> WeatherAsync()
+    {
+        return openWeatherhttpClient.GetFromJsonAsync<WeatherResponse>($"weather?id=3106868&appid={AppSettings.ApiOpenWeatherKey}&lang=es&units=metric");
     }
 
     public Task<StopTimesResponse> SchedulesAsync(string stopCode)

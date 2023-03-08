@@ -14,7 +14,6 @@ public partial class LanguagePopup : Popup
         LanguageCollectionView.ItemsSource = AppLanguages;
     }
 
-
     public List<AppLanguage> AppLanguages = new()
     {
         new AppLanguage("es-Es", AppResources.Spanish),

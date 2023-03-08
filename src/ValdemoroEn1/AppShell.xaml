@@ -49,8 +49,8 @@
                              Size=24}" />
 
         <ShellContent
-            Title="{localization:Translate ICA}"
-            ContentTemplate="{DataTemplate features:ICAPage}"
+            Title="{localization:Translate WeatherICA}"
+            ContentTemplate="{DataTemplate features:WeatherPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Water},
                              Color=Black,
@@ -60,7 +60,7 @@
             Title="{localization:Translate Transport}"
             ContentTemplate="{DataTemplate features:SearchSchedulesRealTimePage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.BusAlt},
+                             Glyph={Static fontawesome:FontAwesomeIcons.Bus},
                              Color=Black,
                              Size=24}" />
     </FlyoutItem>
@@ -76,7 +76,7 @@
     <MenuItem
         Command="{Binding AboutCommand}"
         IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                    Glyph={Static fontawesome:FontAwesomeIcons.InfoCircle},
+                                    Glyph={Static fontawesome:FontAwesomeIcons.CircleInfo},
                                     Color=Black,
                                     Size=24}"
         Text="{localization:Translate About}" />

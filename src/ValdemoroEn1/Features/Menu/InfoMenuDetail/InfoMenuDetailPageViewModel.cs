@@ -48,7 +48,7 @@ public partial class InfoMenuDetailPageViewModel : BaseViewModel, IQueryAttribut
 
         InfoMenuDetails.Add(new InfoMenuDetail
         {
-            Icon = FontAwesomeIcons.MapMarkedAlt,
+            Icon = FontAwesomeIcons.Marker,
             Text = placesDetailsResponse.Result.Vicinity,
             InfoMenuDetailType = Controls.InfoMenuDetailType.Maps
         });

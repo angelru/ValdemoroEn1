@@ -287,15 +287,6 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Índice de la calidad del aire.
-        /// </summary>
-        public static string ICA {
-            get {
-                return ResourceManager.GetString("ICA", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Información.
         /// </summary>
         public static string Information {
@@ -527,6 +518,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string WeakPassword {
             get {
                 return ResourceManager.GetString("WeakPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tiempo y calidad del aire.
+        /// </summary>
+        public static string WeatherICA {
+            get {
+                return ResourceManager.GetString("WeatherICA", resourceCulture);
             }
         }
         

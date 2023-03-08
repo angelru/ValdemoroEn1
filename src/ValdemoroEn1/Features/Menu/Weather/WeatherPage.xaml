@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ValdemoroEn1.Features.WeatherPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:converters="clr-namespace:ValdemoroEn1.Converters"
+    xmlns:features="clr-namespace:ValdemoroEn1.Features"
+    xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="{localization:Translate WeatherICA}"
+    x:DataType="features:WeatherPageViewModel">
+
+    <ContentPage.Resources>
+        <converters:AddLastCharacterConverter x:Key="AddLastCharacterConverter" />
+    </ContentPage.Resources>
+
+    <controls:BaseStateLayout
+        Padding="16"
+        CurrentState="{Binding BaseState}"
+        ErrorCommand="{Binding WeatherCommand}">
+        <controls:BaseStateLayout.SuccessContent>
+            <Label
+                FontFamily="FontAwesomeSolid"
+                FontSize="24"
+                Text="{Static fontawesome:FontAwesomeIcons.DropletDegree}" />
+            <Grid ColumnDefinitions="*,*" RowDefinitions="*">
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Padding="16"
+                    Stroke="{StaticResource BlueGeneral}"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*">
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="{Binding Weather.Name}" />
+                        <VerticalStackLayout Grid.Row="1">
+                            <Label Text="{Binding Weather.Main.Humidity}" />
+
+                        </VerticalStackLayout>
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Padding="16"
+                    BackgroundColor="LightBlue"
+                    Stroke="{StaticResource RedGeneral}"
+                    StrokeShape="RoundRectangle 20">
+                    <VerticalStackLayout>
+                        <Label
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Weather.Main.Temp}"
+                            TextColor="{StaticResource Black}" />
+                        <Image HeightRequest="80" Source="{Binding Weather.CurrentWeather.Icon, Converter={StaticResource AddLastCharacterConverter}}" />
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+        </controls:BaseStateLayout.SuccessContent>
+    </controls:BaseStateLayout>
+
+</ContentPage>

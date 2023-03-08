@@ -193,9 +193,6 @@ ValdemoroEn1!</value>
   <data name="Hostels" xml:space="preserve">
     <value>Hostels</value>
   </data>
-  <data name="ICA" xml:space="preserve">
-    <value>Air quality index</value>
-  </data>
   <data name="Information" xml:space="preserve">
     <value>Information</value>
   </data>
@@ -274,6 +271,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="WeakPassword" xml:space="preserve">
     <value>Very weak password.</value>
+  </data>
+  <data name="WeatherICA" xml:space="preserve">
+    <value>Weather and air quality</value>
   </data>
   <data name="WithOutTlf" xml:space="preserve">
     <value>Without phone</value>
