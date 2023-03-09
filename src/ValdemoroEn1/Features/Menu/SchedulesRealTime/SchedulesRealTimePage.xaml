@@ -104,16 +104,18 @@
                                                     FontAttributes="Bold"
                                                     FontSize="14"
                                                     Text="{Binding Name, Mode=OneTime}" />
-                                                <CollectionView ItemsSource="{Binding Times, Mode=OneTime}" SelectionMode="None">
-                                                    <CollectionView.ItemsLayout>
-                                                        <LinearItemsLayout ItemSpacing="16" Orientation="Horizontal" />
-                                                    </CollectionView.ItemsLayout>
-                                                    <CollectionView.ItemTemplate>
-                                                        <DataTemplate x:DataType="x:String">
-                                                            <Label FontSize="13" Text="{Binding ., Mode=OneTime}" />
-                                                        </DataTemplate>
-                                                    </CollectionView.ItemTemplate>
-                                                </CollectionView>
+                                                <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                                                    <HorizontalStackLayout
+                                                        BindableLayout.ItemsSource="{Binding Times, Mode=OneTime}"
+                                                        CompressedLayout.IsHeadless="True"
+                                                        Spacing="16">
+                                                        <BindableLayout.ItemTemplate>
+                                                            <DataTemplate x:DataType="x:String">
+                                                                <Label FontSize="13" Text="{Binding ., Mode=OneTime}" />
+                                                            </DataTemplate>
+                                                        </BindableLayout.ItemTemplate>
+                                                    </HorizontalStackLayout>
+                                                </ScrollView>
                                             </VerticalStackLayout>
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>

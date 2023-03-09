@@ -1,10 +1,9 @@
-﻿namespace ValdemoroEn1.Services;
+﻿namespace ValdemoroEn1.Services.API.DTO;
 
 public class StopsResponse
 {
     public Stops Stops { get; set; }
 }
-
 
 public class CodLines
 {

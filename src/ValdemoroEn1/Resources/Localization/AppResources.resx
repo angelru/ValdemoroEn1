@@ -126,6 +126,18 @@
   <data name="AcceptTerms" xml:space="preserve">
     <value>Al registrarte o iniciar sesión, aceptas los </value>
   </data>
+  <data name="AirGood" xml:space="preserve">
+    <value>Bueno</value>
+  </data>
+  <data name="AirMod" xml:space="preserve">
+    <value>Moderado</value>
+  </data>
+  <data name="AirUnhealthy" xml:space="preserve">
+    <value>Perjudicial</value>
+  </data>
+  <data name="AirUnhealthyG" xml:space="preserve">
+    <value>Perjudicial para grupos sensibles</value>
+  </data>
   <data name="AndThe" xml:space="preserve">
     <value>y la </value>
   </data>
@@ -183,6 +195,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="FullName" xml:space="preserve">
     <value>Nombre completo</value>
+  </data>
+  <data name="GasStations" xml:space="preserve">
+    <value>Gasolineras</value>
   </data>
   <data name="GoogleInfo" xml:space="preserve">
     <value>Las imágenes aquí mostradas, títulos, textos descriptivos o números de teléfono, es información pública ofrecida por Google, ValdemoroEn1 solo se límita a mostrar los datos.</value>

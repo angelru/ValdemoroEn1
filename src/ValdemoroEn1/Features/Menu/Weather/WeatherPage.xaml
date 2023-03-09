@@ -14,8 +14,9 @@
     x:DataType="features:WeatherPageViewModel">
 
     <ContentPage.Resources>
-        <converters:AddLastCharacterConverter x:Key="AddLastCharacterConverter" />
+        <converters:ICAToTextConverter x:Key="ICAToTextConverter" />
         <converters:MtsToKmConverter x:Key="MtsToKmConverter" />
+        <converters:AddLastCharacterConverter x:Key="AddLastCharacterConverter" />
     </ContentPage.Resources>
 
     <controls:BaseStateLayout
@@ -23,74 +24,169 @@
         CurrentState="{Binding BaseState}"
         ErrorCommand="{Binding WeatherCommand}">
         <controls:BaseStateLayout.SuccessContent>
+            <Grid
+                Margin="0,0,0,16"
+                ColumnDefinitions="*,*"
+                RowDefinitions="70,70">
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="#9cd84e"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*"
+                        VerticalOptions="Center">
+                        <Label
+                            Grid.Column="0"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{localization:Translate AirGood}" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalTextAlignment="End"
+                            Text="0-50" />
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="#facf39"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*"
+                        VerticalOptions="Center">
+                        <Label
+                            Grid.Column="0"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{localization:Translate AirMod}" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalTextAlignment="End"
+                            Text="51-100" />
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="#f99049"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*"
+                        VerticalOptions="Center">
+                        <Label
+                            Grid.Column="0"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{localization:Translate AirUnhealthyG}" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalTextAlignment="End"
+                            Text="101-150"
+                            VerticalTextAlignment="Center" />
+                    </Grid>
+                </Border>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    BackgroundColor="#f65e5f"
+                    StrokeShape="RoundRectangle 20">
+                    <Grid
+                        Padding="10"
+                        ColumnDefinitions="*,*"
+                        RowDefinitions="*"
+                        VerticalOptions="Center">
+                        <Label
+                            Grid.Column="0"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            Text="{localization:Translate AirUnhealthy}" />
+                        <Label
+                            Grid.Column="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalTextAlignment="End"
+                            Text="151-200" />
+                    </Grid>
+                </Border>
+            </Grid>
+
             <Border
                 Padding="16"
                 Stroke="{StaticResource BlueGeneral}"
                 StrokeShape="RoundRectangle 20">
                 <Grid
-                    ColumnDefinitions="*,*,*,*"
+                    ColumnDefinitions="*,*,*"
                     ColumnSpacing="30"
-                    RowDefinitions="*,64,*,36"
+                    RowDefinitions="*,*"
                     RowSpacing="6">
-                    <Label
-                        Grid.Row="0"
-                        Grid.ColumnSpan="3"
-                        Text="{Binding Weather.Name}" />
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="3"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Weather.Main.Temp}"
-                        TextColor="{StaticResource Black}" />
                     <Image
-                        Grid.Row="1"
-                        Grid.Column="3"
-                        Source="{Binding Weather.CurrentWeather.Icon, Converter={StaticResource AddLastCharacterConverter}}" />
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HeightRequest="46"
+                        Source="{Binding Weather.Data.Current.Pollution.Aqius, Converter={StaticResource ICAToTextConverter}, ConverterParameter=0}" />
+
+                    <VerticalStackLayout Grid.Row="0" Grid.Column="1">
+                        <Label HorizontalTextAlignment="Center" Text="{Binding Weather.Data.Current.Pollution.Aqius}" />
+                        <Label
+                            FontSize="12"
+                            HorizontalTextAlignment="Center"
+                            Text="AQI" />
+                    </VerticalStackLayout>
 
                     <Label
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Weather.Main.Humidity, StringFormat='{0}%'}" />
-                    <Image
-                        Grid.Row="3"
-                        Grid.Column="0"
-                        HeightRequest="36"
-                        Source="humidity" />
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Weather.Wind.Speed, Converter={StaticResource MtsToKmConverter}}" />
-                    <Image
-                        Grid.Row="3"
-                        Grid.Column="1"
-                        HeightRequest="36"
-                        Source="windspeed" />
-                    <Label
-                        Grid.Row="2"
+                        Grid.Row="0"
                         Grid.Column="2"
+                        FontSize="12"
                         HorizontalTextAlignment="Center"
-                        Text="{Binding Weather.Main.Temp_Min}" />
-                    <Label
-                        Grid.Row="3"
+                        Text="{Binding Weather.Data.Current.Pollution.Aqius, Converter={StaticResource ICAToTextConverter}, ConverterParameter=1}"
+                        VerticalTextAlignment="Center" />
+
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Spacing="6">
+                        <Image HeightRequest="46" Source="{Binding Weather.Data.Current.Weather.Ic, Converter={StaticResource AddLastCharacterConverter}}" />
+                        <Label
+                            HorizontalTextAlignment="Start"
+                            Text="{Binding Weather.Data.Current.Weather.Tp, StringFormat='{0:0}ºc'}"
+                            TextColor="{StaticResource Black}"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Spacing="6">
+                        <Image HeightRequest="26" Source="windspeed" />
+                        <Label
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Weather.Data.Current.Weather.Ws, Converter={StaticResource MtsToKmConverter}}"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Grid.Row="1"
                         Grid.Column="2"
-                        FontFamily="FontAwesomeSolid"
-                        FontSize="32"
-                        HorizontalTextAlignment="Center"
-                        Text="{Static fontawesome:FontAwesomeIcons.TemperatureLow}" />
-                    <Label
-                        Grid.Row="2"
-                        Grid.Column="3"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Weather.Main.Temp_Max}" />
-                    <Label
-                        Grid.Row="3"
-                        Grid.Column="3"
-                        FontFamily="FontAwesomeSolid"
-                        FontSize="32"
-                        HorizontalTextAlignment="Center"
-                        Text="{Static fontawesome:FontAwesomeIcons.TemperatureHigh}" />
+                        Spacing="6">
+                        <Image HeightRequest="25" Source="humidity" />
+                        <Label
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Weather.Data.Current.Weather.Hu, StringFormat='{0:0}%'}"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
                 </Grid>
             </Border>
 

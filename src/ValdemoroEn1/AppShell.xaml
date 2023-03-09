@@ -25,7 +25,7 @@
         Route="Menu"
         Shell.TabBarIsVisible="False">
 
-        <ShellContent
+        <!--<ShellContent
             Title="{localization:Translate FoodDelivery}"
             ContentTemplate="{DataTemplate features:InfoMenuPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
@@ -46,13 +46,21 @@
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Hotel},
                              Color=Black,
+                             Size=24}" />-->
+
+        <ShellContent
+            Title="{localization:Translate GasStations}"
+            ContentTemplate="{DataTemplate features:GasStationsPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.GasPump},
+                             Color=Black,
                              Size=24}" />
 
         <ShellContent
             Title="{localization:Translate WeatherICA}"
             ContentTemplate="{DataTemplate features:WeatherPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Water},
+                             Glyph={Static fontawesome:FontAwesomeIcons.CloudSun},
                              Color=Black,
                              Size=24}" />
 

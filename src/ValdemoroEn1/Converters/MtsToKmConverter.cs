@@ -11,7 +11,7 @@ public class MtsToKmConverter : IValueConverter
 
         double mts = (double)value;
         int km = System.Convert.ToInt32(mts * 3.6);
-        string final = string.Concat(km.ToString(), "km/h");
+        string final = string.Concat(km.ToString(), " km/h");
         return final;
     }
 

@@ -6,7 +6,6 @@ public static partial class ServicesExtensions
     {
         builder.Services
         //Transient
-            .AddTransient<WeatherPage>().AddTransient<WeatherPageViewModel>()
             .AddTransient<SchedulesRealTimePage>().AddTransient<SchedulesRealTimePageViewModel>()
             .AddTransient<InfoMenuDetailPage>().AddTransient<InfoMenuDetailPageViewModel>()
             .AddTransient<InfoMenuPage>().AddTransient<InfoMenuPageViewModel>()
@@ -14,6 +13,8 @@ public static partial class ServicesExtensions
             .AddTransient<LoginPage>().AddTransient<LoginPageViewModel>()
 
         //Singleton
+            .AddSingleton<GasStationsPage>().AddSingleton<GasStationsPageViewModel>()
+            .AddSingleton<WeatherPage>().AddSingleton<WeatherPageViewModel>()
             .AddSingleton<SearchSchedulesRealTimePage>().AddSingleton<SearchSchedulesRealTimePageViewModel>()
             .AddSingleton<MainPage>().AddSingleton<MainPageViewModel>();
 

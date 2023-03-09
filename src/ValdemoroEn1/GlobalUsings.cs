@@ -7,4 +7,5 @@ global using ValdemoroEn1.FontAwesome;
 global using ValdemoroEn1.Models;
 global using ValdemoroEn1.Resources.Localization;
 global using ValdemoroEn1.Services;
+global using ValdemoroEn1.Services.API.DTO;
 //global using ServiceProvider = ValdemoroEn1.Services.ServiceProvider;

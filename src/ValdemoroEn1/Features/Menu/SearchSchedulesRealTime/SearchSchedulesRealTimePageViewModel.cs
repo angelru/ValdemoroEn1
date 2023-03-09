@@ -58,7 +58,7 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
         await NavigationService.NavigationAsync("schedulesrealtime");
     }
 
-    public void AddStopName(StopName stopName)
+    private void AddStopName(StopName stopName)
     {
         var stop = StopNames.FirstOrDefault(f => f.StopCode == stopName.StopCode);
 

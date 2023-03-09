@@ -88,6 +88,42 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Bueno.
+        /// </summary>
+        public static string AirGood {
+            get {
+                return ResourceManager.GetString("AirGood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Moderado.
+        /// </summary>
+        public static string AirMod {
+            get {
+                return ResourceManager.GetString("AirMod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Perjudicial.
+        /// </summary>
+        public static string AirUnhealthy {
+            get {
+                return ResourceManager.GetString("AirUnhealthy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Perjudicial para grupos sensibles.
+        /// </summary>
+        public static string AirUnhealthyG {
+            get {
+                return ResourceManager.GetString("AirUnhealthyG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a y la .
         /// </summary>
         public static string AndThe {
@@ -256,6 +292,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string FullName {
             get {
                 return ResourceManager.GetString("FullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gasolineras.
+        /// </summary>
+        public static string GasStations {
+            get {
+                return ResourceManager.GetString("GasStations", resourceCulture);
             }
         }
         

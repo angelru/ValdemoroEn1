@@ -2,13 +2,21 @@
 
 public class AppSettings
 {
-    //OpenWheater
-    public const string ApiOpenWeather = "https://api.openweathermap.org/data/2.5/";
-    public const string ApiOpenWeatherKey = "API KEY";
+    //Geoportal gasolineras
+    public const string FuelApiUrl = "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/";
+    public const string FuelMunicipaly = "4432";
+
+    //IQAir
+    public const string IQAirApiUrl = "https://api.airvisual.com/v2/";
+    public const string IQAirApiKey = "API KEY";
+    public const string IQAirApiCity = "Valdemoro";
+    public const string IQAirApiState = "Madrid";
+    public const string IQAirApiCountry = "SPAIN";
 
     //Crtm
-    public const string WebCrtm = "https://www.crtm.es";
-    public const string ApiCrtm = "https://www.crtm.es/widgets/api/";
+    public const string CrtmApiUrl = "https://www.crtm.es/widgets/api/";
+    public const string CrtmCodMunicipaly = "4426";
+    public const string CrtmWeb = "https://www.crtm.es";
 
     //Google
     public const string TermsGoogleURL = "https://policies.google.com/terms?hl=es";
