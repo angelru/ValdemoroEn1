@@ -28,6 +28,14 @@ I decide to post the source code of my application in **[.NET MAUI](https://lear
 
 I hope you can learn with the project 👋🏽
 
+# Geoportal Gasolineras API
+* [Geoportal Gasolineras](https://geoportalgasolineras.es/geoportal-instalaciones/Inicio)
+* [API Rest](https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/help)
+
+# IQAir API
+* [IQAir](https://www.iqair.com/es/)
+* [API](https://api-docs.iqair.com/)
+
 # CRTM API
 * [CRTM](https://www.crtm.es/tu-transporte-publico.aspx)
 
