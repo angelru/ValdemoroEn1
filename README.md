@@ -64,6 +64,7 @@ I hope you can learn with the project 👋🏽
 * [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
 * [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
 * [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
+* [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
 * [Google Api](https://github.com/vivet/GoogleApi)
 
 # Architecture
