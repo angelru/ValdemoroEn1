@@ -1,6 +1,4 @@
 ﻿using System.Net.Http.Json;
-using System.Text.Encodings.Web;
-using System.Text.Json;
 
 namespace ValdemoroEn1.Services;
 
