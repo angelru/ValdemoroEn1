@@ -2,6 +2,9 @@
 
 public class AppSettings
 {
+    //Cines
+    public const string CinemaUrl = "https://www.centrocomercialelreston.com/";
+
     //Geoportal gasolineras
     public const string FuelApiUrl = "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/";
     public const string FuelMunicipaly = "4432";

@@ -160,6 +160,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cartelera de cine.
+        /// </summary>
+        public static string CinemaListings {
+            get {
+                return ResourceManager.GetString("CinemaListings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Parece que hay problemas con tu conexión a internet, inténtelo de nuevo más tarde..
         /// </summary>
         public static string ConexError {
@@ -450,11 +459,29 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona una fecha.
+        /// </summary>
+        public static string SelectDate {
+            get {
+                return ResourceManager.GetString("SelectDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Selecciona un idioma.
         /// </summary>
         public static string SelectLanguage {
             get {
                 return ResourceManager.GetString("SelectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona un producto.
+        /// </summary>
+        public static string SelectProduct {
+            get {
+                return ResourceManager.GetString("SelectProduct", resourceCulture);
             }
         }
         
@@ -527,6 +554,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string TermsConditions {
             get {
                 return ResourceManager.GetString("TermsConditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ver trailer.
+        /// </summary>
+        public static string Trailer {
+            get {
+                return ResourceManager.GetString("Trailer", resourceCulture);
             }
         }
         

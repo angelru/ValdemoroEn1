@@ -162,6 +162,9 @@
 		<MauiXaml Update="Features\Menu\GasStations\GasStationsPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Features\Menu\Movies\MoviesPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Features\Menu\Weather\WeatherPage.xaml">
 		  <Generator>MSBuild:Compile</Generator>
 		</MauiXaml>

@@ -150,6 +150,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="CinemaListings" xml:space="preserve">
+    <value>Cartelera de cine</value>
+  </data>
   <data name="ConexError" xml:space="preserve">
     <value>Parece que hay problemas con tu conexión a internet, inténtelo de nuevo más tarde.</value>
   </data>
@@ -248,8 +251,14 @@ ValdemoroEn1!</value>
   <data name="SearchBus" xml:space="preserve">
     <value>Búsqueda - favoritos</value>
   </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>Selecciona una fecha</value>
+  </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>Selecciona un idioma</value>
+  </data>
+  <data name="SelectProduct" xml:space="preserve">
+    <value>Selecciona un producto</value>
   </data>
   <data name="SendEmail" xml:space="preserve">
     <value>Hemos enviado un correo a la dirección indicada, revise su bandeja de entrada o la carpeta de spam y siga las indicaciones.</value>
@@ -274,6 +283,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="TermsConditions" xml:space="preserve">
     <value>términos y condiciones </value>
+  </data>
+  <data name="Trailer" xml:space="preserve">
+    <value>Ver trailer</value>
   </data>
   <data name="Transport" xml:space="preserve">
     <value>Transporte</value>

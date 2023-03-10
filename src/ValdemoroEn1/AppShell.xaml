@@ -47,6 +47,13 @@
                              Glyph={Static fontawesome:FontAwesomeIcons.Hotel},
                              Color=Black,
                              Size=24}" />-->
+        <ShellContent
+            Title="{localization:Translate CinemaListings}"
+            ContentTemplate="{DataTemplate features:MoviesPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.Film},
+                             Color=Black,
+                             Size=24}" />
 
         <ShellContent
             Title="{localization:Translate GasStations}"

@@ -2,9 +2,9 @@ namespace ValdemoroEn1.Features;
 
 public partial class SchedulesRealTimePage : ContentPage
 {
-	public SchedulesRealTimePage(SchedulesRealTimePageViewModel vm)
+	public SchedulesRealTimePage(SchedulesRealTimePageViewModel schedulesRealTimePageViewModel)
 	{
 		InitializeComponent();
-        BindingContext = vm;
+        BindingContext = schedulesRealTimePageViewModel;
     }
 }

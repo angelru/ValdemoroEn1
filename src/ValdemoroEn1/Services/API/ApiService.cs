@@ -1,15 +1,20 @@
 ﻿using System.Net.Http.Json;
+using System.Xml.Serialization;
 
 namespace ValdemoroEn1.Services;
 
 public class ApiService
 {
+    private readonly HttpClient cinemahttpClient = new();
     private readonly HttpClient fuelhttpClient = new();
     private readonly HttpClient iqairhttpClient = new();
     private readonly HttpClient crtmHttpClient = new();
 
     public ApiService()
     {
+        cinemahttpClient.BaseAddress = new Uri(AppSettings.CinemaUrl);
+        cinemahttpClient.Timeout = TimeSpan.FromSeconds(40);
+
         fuelhttpClient.BaseAddress = new Uri(AppSettings.FuelApiUrl);
         fuelhttpClient.Timeout = TimeSpan.FromSeconds(40);
 
@@ -18,6 +23,14 @@ public class ApiService
 
         crtmHttpClient.BaseAddress = new Uri(AppSettings.CrtmApiUrl);
         crtmHttpClient.Timeout = TimeSpan.FromSeconds(40);
+    }
+
+    public async Task<MovieResponse> MovieTimesAsync()
+    {
+        string movies = await cinemahttpClient.GetStringAsync("cartelera.asp");
+        var serializer = new XmlSerializer(typeof(MovieResponse));
+        var movieResponse = (MovieResponse)serializer.Deserialize(new StringReader(movies));
+        return movieResponse;
     }
 
     public Task<GasStationResponse> GasStationsAsync()

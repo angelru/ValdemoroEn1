@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ValdemoroEn1.Features.MoviesPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:features="clr-namespace:ValdemoroEn1.Features"
+    xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
+    xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    Title="{localization:Translate CinemaListings}"
+    x:DataType="features:MoviesPageViewModel">
+    <controls:BaseStateLayout
+        Padding="16"
+        CurrentState="{Binding BaseState}"
+        ErrorCommand="{Binding ShowMoviesCommand}">
+        <controls:BaseStateLayout.SuccessContent>
+            <Label HorizontalTextAlignment="Center" Text="{Binding Name}" />
+            <Picker
+                Title="{localization:Translate SelectDate}"
+                Margin="0,0,0,16"
+                ItemsSource="{Binding Dates}"
+                SelectedItem="{Binding SelectedDate}" />
+            <CollectionView
+                ItemsSource="{Binding Movies}"
+                SelectionMode="None"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Movie">
+                        <Grid
+                            Padding="0"
+                            BackgroundColor="{StaticResource White}"
+                            ColumnDefinitions="120,*"
+                            CompressedLayout.IsHeadless="true"
+                            RowDefinitions="*,auto"
+                            Style="{StaticResource GridGeneral}">
+                            <Image
+                                Grid.RowSpan="1"
+                                Grid.Column="0"
+                                Aspect="AspectFill"
+                                Source="{Binding Cover}" />
+                            <VerticalStackLayout
+                                Grid.RowSpan="1"
+                                Grid.Column="1"
+                                CompressedLayout.IsHeadless="true"
+                                Spacing="10">
+                                <Label Text="{Binding Title}" />
+                                <Label Text="{Binding Duration, StringFormat='{0} min'}" />
+                                <Label Text="Selecciona la hora y compra tu entrada" />
+                                <HorizontalStackLayout
+                                    BindableLayout.ItemsSource="{Binding Sessions}"
+                                    CompressedLayout.IsHeadless="true"
+                                    Spacing="6">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate x:DataType="models:Session">
+                                            <Button
+                                                BackgroundColor="{StaticResource BlueGeneral}"
+                                                Clicked="Button_Clicked"
+                                                CommandParameter="{Binding Ticket}"
+                                                Text="{Binding Hour}"
+                                                TextColor="{StaticResource White}" />
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </HorizontalStackLayout>
+                                <Button
+                                    BackgroundColor="{StaticResource BlueGeneral}"
+                                    Clicked="Button_Clicked"
+                                    CommandParameter="{Binding Trailer}"
+                                    HorizontalOptions="Start"
+                                    Text="{localization:Translate Trailer}"
+                                    TextColor="{StaticResource White}">
+                                    <Button.ImageSource>
+                                        <FontImageSource
+                                            FontFamily="FontAwesomeSolid"
+                                            Glyph="{Static fontawesome:FontAwesomeIcons.Film}"
+                                            Size="24"
+                                            Color="{StaticResource White}" />
+                                    </Button.ImageSource>
+                                </Button>
+                            </VerticalStackLayout>
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                Margin="0,16,0,5"
+                                Text="{Binding Synopsis}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </controls:BaseStateLayout.SuccessContent>
+    </controls:BaseStateLayout>
+</ContentPage>

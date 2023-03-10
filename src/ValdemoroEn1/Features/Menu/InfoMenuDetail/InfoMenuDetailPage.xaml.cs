@@ -2,9 +2,9 @@ namespace ValdemoroEn1.Features;
 
 public partial class InfoMenuDetailPage : ContentPage
 {
-	public InfoMenuDetailPage(InfoMenuDetailPageViewModel vm)
+	public InfoMenuDetailPage(InfoMenuDetailPageViewModel infoMenuDetailPageViewModel)
 	{
 		InitializeComponent();
-		BindingContext = vm;
+		BindingContext = infoMenuDetailPageViewModel;
 	}
 }

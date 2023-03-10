@@ -3,14 +3,20 @@
     x:Class="ValdemoroEn1.Features.GasStationsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
     xmlns:features="clr-namespace:ValdemoroEn1.Features"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     Title="{localization:Translate GasStations}"
     x:DataType="features:GasStationsPageViewModel">
-    <VerticalStackLayout Padding="16">
-        <Picker
-            Title="Producto"
-            ItemDisplayBinding="{Binding NombreProducto}"
-            ItemsSource="{Binding Fuels}" />
-    </VerticalStackLayout>
+    <controls:BaseStateLayout
+        Padding="16"
+        CurrentState="{Binding BaseState}"
+        ErrorCommand="{Binding GasStationsCommand}">
+        <controls:BaseStateLayout.SuccessContent>
+            <Picker
+                Title="{localization:Translate SelectProduct}"
+                ItemDisplayBinding="{Binding NombreProducto}"
+                ItemsSource="{Binding Fuels}" />
+        </controls:BaseStateLayout.SuccessContent>
+    </controls:BaseStateLayout>
 </ContentPage>

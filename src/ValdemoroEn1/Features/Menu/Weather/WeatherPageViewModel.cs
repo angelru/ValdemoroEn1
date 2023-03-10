@@ -4,12 +4,17 @@ public partial class WeatherPageViewModel : BaseViewModel
 {
     public WeatherPageViewModel()
     {
-        _ = RunSafeAsync(WeatherAsync);
+        ShowWeather();
     }
 
     public WeatherResponse Weather { get; set; }
 
     [RelayCommand]
+    private void ShowWeather()
+    {
+        _ = RunSafeAsync(WeatherAsync);
+    }
+
     private async Task WeatherAsync()
     {
         Weather = await ApiService.WeatherAsync();

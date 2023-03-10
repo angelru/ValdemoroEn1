@@ -2,9 +2,9 @@ namespace ValdemoroEn1.Features;
 
 public partial class RegisterPage : ContentPage
 {
-	public RegisterPage(RegisterPageViewModel vm)
+	public RegisterPage(RegisterPageViewModel registerPageViewModel)
 	{
 		InitializeComponent();
-		BindingContext= vm;
+		BindingContext= registerPageViewModel;
 	}
 }
