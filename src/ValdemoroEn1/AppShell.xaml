@@ -56,7 +56,7 @@
                              Size=24}" />
 
         <ShellContent
-            Title="{localization:Translate GasStations}"
+            Title="{localization:Translate GasPrice}"
             ContentTemplate="{DataTemplate features:GasStationsPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.GasPump},

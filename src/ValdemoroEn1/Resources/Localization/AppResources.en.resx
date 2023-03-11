@@ -199,8 +199,8 @@ ValdemoroEn1!</value>
   <data name="FullName" xml:space="preserve">
     <value>Full name</value>
   </data>
-  <data name="GasStations" xml:space="preserve">
-    <value>Gas stations</value>
+  <data name="GasPrice" xml:space="preserve">
+    <value>Gasoline price</value>
   </data>
   <data name="GoogleInfo" xml:space="preserve">
     <value>The images shown here, titles, descriptive texts or telephone numbers, is public information offered by Google, ValdemoroEn1 is only limited to displaying the data.</value>

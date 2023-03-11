@@ -305,11 +305,11 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Gasolineras.
+        ///   Busca una cadena traducida similar a Precio de la gasolina.
         /// </summary>
-        public static string GasStations {
+        public static string GasPrice {
             get {
-                return ResourceManager.GetString("GasStations", resourceCulture);
+                return ResourceManager.GetString("GasPrice", resourceCulture);
             }
         }
         

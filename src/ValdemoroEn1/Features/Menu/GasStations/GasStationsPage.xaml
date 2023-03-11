@@ -4,17 +4,73 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:dto="clr-namespace:ValdemoroEn1.Services.API.DTO"
     xmlns:features="clr-namespace:ValdemoroEn1.Features"
+    xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
-    Title="{localization:Translate GasStations}"
+    Title="{localization:Translate GasPrice}"
     x:DataType="features:GasStationsPageViewModel">
-    <controls:StateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding ShowFuelsCommand}">
+    <controls:StateLayout
+        Padding="16"
+        CurrentState="{Binding BaseState}"
+        ErrorCommand="{Binding ShowFuelsCommand}">
         <controls:StateLayout.SuccessContent>
             <Picker
                 Title="{localization:Translate SelectProduct}"
+                Margin="0,0,0,8"
                 ItemDisplayBinding="{Binding NombreProducto}"
                 ItemsSource="{Binding Fuels}"
                 SelectedItem="{Binding SelectedFuel}" />
+            <CollectionView
+                ItemsSource="{Binding GasStations}"
+                SelectedItem="{Binding SelectedStation}"
+                SelectionChangedCommand="{Binding SelectionStationCommand}"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="16" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="dto:ListaEESSPrecio">
+                        <Grid
+                            Padding="0"
+                            BackgroundColor="{StaticResource White}"
+                            ColumnDefinitions="60,170,*"
+                            CompressedLayout.IsHeadless="true"
+                            HeightRequest="60"
+                            RowDefinitions="*,auto"
+                            Style="{StaticResource GridGeneral}">
+                            <Border
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Padding="6"
+                                BackgroundColor="{StaticResource BlueGeneral}"
+                                HeightRequest="48"
+                                StrokeShape="RoundRectangle 100"
+                                WidthRequest="48">
+                                <Label
+                                    FontFamily="FontAwesomeSolid"
+                                    HorizontalTextAlignment="Center"
+                                    Text="{Static fontawesome:FontAwesomeIcons.GasPump}"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center" />
+                            </Border>
+                            <VerticalStackLayout
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                VerticalOptions="Center">
+                                <Label FontAttributes="Bold" Text="{Binding Rotulo}" />
+                                <Label Text="{Binding Direccion}" />
+                            </VerticalStackLayout>
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Text="{Binding PrecioProducto, StringFormat='{0} €'}"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </controls:StateLayout.SuccessContent>
     </controls:StateLayout>
 </ContentPage>

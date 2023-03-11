@@ -199,8 +199,8 @@ ValdemoroEn1!</value>
   <data name="FullName" xml:space="preserve">
     <value>Nombre completo</value>
   </data>
-  <data name="GasStations" xml:space="preserve">
-    <value>Gasolineras</value>
+  <data name="GasPrice" xml:space="preserve">
+    <value>Precio de la gasolina</value>
   </data>
   <data name="GoogleInfo" xml:space="preserve">
     <value>Las imágenes aquí mostradas, títulos, textos descriptivos o números de teléfono, es información pública ofrecida por Google, ValdemoroEn1 solo se límita a mostrar los datos.</value>
