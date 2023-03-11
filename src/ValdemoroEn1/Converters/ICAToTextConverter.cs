@@ -14,37 +14,23 @@ public class ICAToTextConverter : IValueConverter
 
         if (param is 0)
         {
-            if (ica <= 50)
+            return ica switch
             {
-                return "facegreen";
-            }
-            else if (ica <= 100)
-            {
-                return "faceyellow";
-            }
-            else if (ica <= 150)
-            {
-                return "faceorange";
-            }
-
-            return "facereed";
+                <= 50 => "facegreen",
+                <= 100 => "faceyellow",
+                <= 150 => "faceorange",
+                _ => "facereed",
+            };
         } 
         else
         {
-            if (ica <= 50)
+            return ica switch
             {
-                return AppResources.AirGood;
-            }
-            else if (ica <= 100)
-            {
-                return AppResources.AirMod;
-            }
-            else if (ica <= 150)
-            {
-                return AppResources.AirUnhealthyG;
-            }
-
-            return AppResources.AirUnhealthy;
+                <= 50 => AppResources.AirGood,
+                <= 100 => AppResources.AirMod,
+                <= 150 => AppResources.AirUnhealthyG,
+                _ => AppResources.AirUnhealthy,
+            };
         }
     }
 

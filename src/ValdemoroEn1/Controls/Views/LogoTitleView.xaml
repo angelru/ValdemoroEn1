@@ -13,7 +13,7 @@
             TextColor="White"
             VerticalTextAlignment="Center" />
         <Image
-            HorizontalOptions="EndAndExpand"
+            HorizontalOptions="End"
             Source="googledark.png"
             VerticalOptions="Center"
             WidthRequest="100" />
