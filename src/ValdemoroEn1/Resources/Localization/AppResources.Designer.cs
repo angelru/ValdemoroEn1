@@ -486,7 +486,7 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecciona un producto.
+        ///   Busca una cadena traducida similar a Selecciona un combustible.
         /// </summary>
         public static string SelectProduct {
             get {

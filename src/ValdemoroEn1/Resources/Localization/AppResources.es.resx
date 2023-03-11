@@ -261,7 +261,7 @@ ValdemoroEn1!</value>
     <value>Selecciona un idioma</value>
   </data>
   <data name="SelectProduct" xml:space="preserve">
-    <value>Selecciona un producto</value>
+    <value>Selecciona un combustible</value>
   </data>
   <data name="SendEmail" xml:space="preserve">
     <value>Hemos enviado un correo a la dirección indicada, revise su bandeja de entrada o la carpeta de spam y siga las indicaciones.</value>
