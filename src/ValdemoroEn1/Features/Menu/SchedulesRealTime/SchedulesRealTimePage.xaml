@@ -111,7 +111,7 @@
                                                         Spacing="16">
                                                         <BindableLayout.ItemTemplate>
                                                             <DataTemplate x:DataType="x:String">
-                                                                <Label FontSize="13" Text="{Binding ., Mode=OneTime}" />
+                                                                <Label FontSize="13" Text="{Binding ., StringFormat='{0} min', Mode=OneTime}" />
                                                             </DataTemplate>
                                                         </BindableLayout.ItemTemplate>
                                                     </HorizontalStackLayout>

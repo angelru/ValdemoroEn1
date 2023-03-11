@@ -32,6 +32,13 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
 
         if (times is null) return;
 
+        var stopTimeGroups = FlattenTimes(times);
+
+        StopTimesGroups.ReplaceRange(stopTimeGroups);
+    }
+
+    private List<StopTimesGroup> FlattenTimes(List<TimeStop> times)
+    {
         var stopTimeGroups = times.GroupBy(g => g.Line.ShortDescription).Select(grp =>
         {
             var timesGrp = grp.ToList().OrderBy(m => m.StopTime);
@@ -47,7 +54,7 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
 
                     if (minutes >= 0 && minutes <= 59)
                     {
-                        return $"{timeSpam.TotalMinutes:0}min";
+                        return timeSpam.TotalMinutes.ToString();
                     }
 
                     return time.StopTime.ToShortTimeString();
@@ -57,11 +64,8 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
 
             var stopTimesGroup = new StopTimesGroup(line.Description.Split("-", 2).Last(), line.CodMode, line.ShortDescription, stopTimeNames);
             return stopTimesGroup;
-        });
+        }).ToList();
 
-        string shortCodStop = StopTimesResponse.StopTimes.Stop.ShortCodStop;
-        string name = StopTimesResponse.StopTimes.Stop.Name;
-
-        StopTimesGroups.ReplaceRange(stopTimeGroups);
+        return stopTimeGroups;
     }
 }

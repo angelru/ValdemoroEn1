@@ -55,7 +55,7 @@
                                     Spacing="6">
                                     <Label Text="{Binding Title}" />
                                     <Label Text="{Binding Duration, StringFormat='{0} min'}" />
-                                    <Label Text="Selecciona la hora y compra tu entrada" />
+                                    <Label Text="{localization:Translate SelectHour}" />
                                 </VerticalStackLayout>
                                 <ScrollView
                                     Grid.Row="1"
@@ -65,7 +65,7 @@
                                         BindableLayout.ItemsSource="{Binding Sessions}"
                                         CompressedLayout.IsHeadless="true"
                                         Spacing="6"
-                                        VerticalOptions="StartAndExpand">
+                                        VerticalOptions="Start">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate x:DataType="models:Session">
                                                 <Button

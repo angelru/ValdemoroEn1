@@ -254,6 +254,9 @@ ValdemoroEn1!</value>
   <data name="SelectDate" xml:space="preserve">
     <value>Selecciona una fecha</value>
   </data>
+  <data name="SelectHour" xml:space="preserve">
+    <value>Selecciona la hora y compra tu entrada</value>
+  </data>
   <data name="SelectLanguage" xml:space="preserve">
     <value>Selecciona un idioma</value>
   </data>

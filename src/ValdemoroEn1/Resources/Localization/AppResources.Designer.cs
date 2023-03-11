@@ -468,6 +468,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Selecciona la hora y compra tu entrada.
+        /// </summary>
+        public static string SelectHour {
+            get {
+                return ResourceManager.GetString("SelectHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Selecciona un idioma.
         /// </summary>
         public static string SelectLanguage {
