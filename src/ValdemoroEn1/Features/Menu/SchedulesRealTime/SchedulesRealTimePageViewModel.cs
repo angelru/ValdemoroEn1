@@ -54,7 +54,7 @@ public partial class SchedulesRealTimePageViewModel : BaseViewModel, IQueryAttri
 
                     if (minutes >= 0 && minutes <= 59)
                     {
-                        return timeSpam.TotalMinutes.ToString();
+                        return $"{timeSpam.TotalMinutes:0} min";
                     }
 
                     return time.StopTime.ToShortTimeString();
