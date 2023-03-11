@@ -108,8 +108,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Controls\Layouts\BaseStateLayout.xaml.cs">
-			<DependentUpon>BaseStateLayout.xaml</DependentUpon>
+		<Compile Update="Controls\Layouts\StateLayout.xaml.cs">
+			<DependentUpon>StateLayout.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Controls\Views\InfoMenuDetailView.xaml.cs">
 			<DependentUpon>InfoMenuDetailView.xaml</DependentUpon>
@@ -174,7 +174,7 @@
 		<MauiXaml Update="Features\Register\RegisterPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Controls\Layouts\BaseStateLayout.xaml">
+		<MauiXaml Update="Controls\Layouts\StateLayout.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Main\MainPage.xaml">

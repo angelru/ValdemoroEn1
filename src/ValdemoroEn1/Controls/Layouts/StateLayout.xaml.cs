@@ -2,11 +2,11 @@ using System.Windows.Input;
 
 namespace ValdemoroEn1.Controls;
 
-public partial class BaseStateLayout : StackLayout
+public partial class StateLayout : StackLayout
 {
-    public static readonly BindableProperty ErrorCommandProperty = BindableProperty.Create(nameof(ErrorCommand), typeof(ICommand), typeof(BaseStateLayout), default(ICommand), BindingMode.TwoWay);
-    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(BaseStateLayout), default);
-    public static readonly BindableProperty CurrentStateProperty = BindableProperty.Create(nameof(CurrentState), typeof(string), typeof(BaseStateLayout), default(string));
+    public static readonly BindableProperty ErrorCommandProperty = BindableProperty.Create(nameof(ErrorCommand), typeof(ICommand), typeof(StateLayout), default(ICommand), BindingMode.TwoWay);
+    public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create(nameof(CommandParameter), typeof(object), typeof(StateLayout), default);
+    public static readonly BindableProperty CurrentStateProperty = BindableProperty.Create(nameof(CurrentState), typeof(string), typeof(StateLayout), default(string));
    
     public ICommand ErrorCommand
     {
@@ -28,7 +28,7 @@ public partial class BaseStateLayout : StackLayout
 
     public IList<IView> SuccessContent => StackSuccess.Children;
 
-    public BaseStateLayout()
+    public StateLayout()
     {
         InitializeComponent();
     }

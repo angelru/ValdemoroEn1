@@ -19,11 +19,11 @@
         <converters:AddLastCharacterConverter x:Key="AddLastCharacterConverter" />
     </ContentPage.Resources>
 
-    <controls:BaseStateLayout
+    <controls:StateLayout
         Padding="16"
         CurrentState="{Binding BaseState}"
         ErrorCommand="{Binding ShowWeatherCommand}">
-        <controls:BaseStateLayout.SuccessContent>
+        <controls:StateLayout.SuccessContent>
             <Grid
                 Margin="0,0,0,16"
                 ColumnDefinitions="*,*"
@@ -190,7 +190,7 @@
                 </Grid>
             </Border>
 
-        </controls:BaseStateLayout.SuccessContent>
-    </controls:BaseStateLayout>
+        </controls:StateLayout.SuccessContent>
+    </controls:StateLayout>
 
 </ContentPage>

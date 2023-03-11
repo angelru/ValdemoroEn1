@@ -9,8 +9,8 @@
     Title="{Binding Title}"
     x:DataType="features:InfoMenuDetailPageViewModel"
     Shell.FlyoutBehavior="Disabled">
-    <controls:BaseStateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding InfoMenuDetailCommand}">
-        <controls:BaseStateLayout.SuccessContent>
+    <controls:StateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding InfoMenuDetailCommand}">
+        <controls:StateLayout.SuccessContent>
             <CarouselView
                 IndicatorView="indicatorView"
                 ItemsSource="{Binding Photos, Mode=OneTime}"
@@ -52,6 +52,6 @@
                     </StackLayout>
                 </Border>
             </ScrollView>
-        </controls:BaseStateLayout.SuccessContent>
-    </controls:BaseStateLayout>
+        </controls:StateLayout.SuccessContent>
+    </controls:StateLayout>
 </ContentPage>

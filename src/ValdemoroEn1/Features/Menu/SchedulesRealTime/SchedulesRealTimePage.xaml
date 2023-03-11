@@ -10,11 +10,11 @@
     Title="{localization:Translate SchedulesRealTime}"
     x:DataType="features:SchedulesRealTimePageViewModel"
     Shell.FlyoutBehavior="Disabled">
-    <controls:BaseStateLayout
+    <controls:StateLayout
         Padding="16"
         CurrentState="{Binding BaseState}"
         ErrorCommand="{Binding SchedulesCommand}">
-        <controls:BaseStateLayout.SuccessContent>
+        <controls:StateLayout.SuccessContent>
             <Label
                 Margin="0,0,0,16"
                 FontAttributes="Bold"
@@ -125,6 +125,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </controls:BaseStateLayout.SuccessContent>
-    </controls:BaseStateLayout>
+        </controls:StateLayout.SuccessContent>
+    </controls:StateLayout>
 </ContentPage>

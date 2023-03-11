@@ -10,11 +10,11 @@
     xmlns:models="clr-namespace:ValdemoroEn1.Models"
     Title="{localization:Translate CinemaListings}"
     x:DataType="features:MoviesPageViewModel">
-    <controls:BaseStateLayout
+    <controls:StateLayout
         Padding="16"
         CurrentState="{Binding BaseState}"
         ErrorCommand="{Binding ShowMoviesCommand}">
-        <controls:BaseStateLayout.SuccessContent>
+        <controls:StateLayout.SuccessContent>
             <Label HorizontalTextAlignment="Center" Text="{Binding Name}" />
             <Picker
                 Title="{localization:Translate SelectDate}"
@@ -105,6 +105,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-        </controls:BaseStateLayout.SuccessContent>
-    </controls:BaseStateLayout>
+        </controls:StateLayout.SuccessContent>
+    </controls:StateLayout>
 </ContentPage>

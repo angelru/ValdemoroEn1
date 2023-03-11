@@ -8,15 +8,13 @@
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     Title="{localization:Translate GasStations}"
     x:DataType="features:GasStationsPageViewModel">
-    <controls:BaseStateLayout
-        Padding="16"
-        CurrentState="{Binding BaseState}"
-        ErrorCommand="{Binding GasStationsCommand}">
-        <controls:BaseStateLayout.SuccessContent>
+    <controls:StateLayout CurrentState="{Binding BaseState}" ErrorCommand="{Binding ShowFuelsCommand}">
+        <controls:StateLayout.SuccessContent>
             <Picker
                 Title="{localization:Translate SelectProduct}"
                 ItemDisplayBinding="{Binding NombreProducto}"
-                ItemsSource="{Binding Fuels}" />
-        </controls:BaseStateLayout.SuccessContent>
-    </controls:BaseStateLayout>
+                ItemsSource="{Binding Fuels}"
+                SelectedItem="{Binding SelectedFuel}" />
+        </controls:StateLayout.SuccessContent>
+    </controls:StateLayout>
 </ContentPage>

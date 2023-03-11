@@ -33,10 +33,10 @@ public class ApiService
         return movieResponse;
     }
 
-    public Task<GasStationResponse> GasStationsAsync()
+    public Task<GasStationResponse> GasStationsAsync(string idProducto)
     {
         string municipaly = AppSettings.FuelMunicipaly;
-        return fuelhttpClient.GetFromJsonAsync<GasStationResponse>($"EstacionesTerrestres/FiltroMunicipio/{municipaly}");
+        return fuelhttpClient.GetFromJsonAsync<GasStationResponse>($"EstacionesTerrestres/FiltroMunicipioProducto/{municipaly}/{idProducto}");
     }
 
     public Task<List<FuelResponse>> FuelsAsync()
