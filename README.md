@@ -61,7 +61,7 @@ I hope you can learn with the project 👋🏽
 3. Put api key in ```AppSettings ApiKey```
 
 # Tools used
-* [MVVM Community Toolkit](https://github.com/CommunityToolkit/dotnet)
+* [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
 * [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
 * [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
 * [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
