@@ -199,6 +199,9 @@ ValdemoroEn1!</value>
   <data name="FullName" xml:space="preserve">
     <value>Nombre completo</value>
   </data>
+  <data name="GasInfo" xml:space="preserve">
+    <value>Los precios de los combustibles y los datos de las estaciones de servicio son obtenidos en tiempo real a través del servicio de Geoportal del Ministerio para la Transición Ecológica y el Reto Demográfico.</value>
+  </data>
   <data name="GasPrice" xml:space="preserve">
     <value>Precio de la gasolina</value>
   </data>

@@ -29,6 +29,7 @@ public partial class AboutPage : ContentPage
 
     private async void OpenWeb_Tapped(object sender, TappedEventArgs e)
     {
-       await Helper.OpenUrlAsync(AppSettings.CrtmWeb);
+       string url = e.Parameter.ToString();
+       await Helper.OpenUrlAsync(url);
     }
 }

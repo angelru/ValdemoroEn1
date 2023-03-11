@@ -199,6 +199,9 @@ ValdemoroEn1!</value>
   <data name="FullName" xml:space="preserve">
     <value>Full name</value>
   </data>
+  <data name="GasInfo" xml:space="preserve">
+    <value>Fuel prices and data from service stations are obtained in real time through the Geoportal service of the Ministry for the Ecological Transition and the Demographic Challenge.</value>
+  </data>
   <data name="GasPrice" xml:space="preserve">
     <value>Gasoline price</value>
   </data>

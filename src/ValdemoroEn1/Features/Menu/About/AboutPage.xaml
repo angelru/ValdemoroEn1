@@ -3,6 +3,7 @@
     x:Class="ValdemoroEn1.Features.AboutPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:common="clr-namespace:ValdemoroEn1.Common"
     xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     Title="{localization:Translate About}"
@@ -14,6 +15,11 @@
                     <Label Text="{localization:Translate ValdemoroEn1}" />
                 </controls:CardView.CardContent>
             </controls:CardView>
+            <controls:CardView Title="{localization:Translate GasPrice}">
+                <controls:CardView.CardContent>
+                    <Label Text="{localization:Translate GasInfo}" />
+                </controls:CardView.CardContent>
+            </controls:CardView>
             <controls:CardView Title="{localization:Translate Transport}">
                 <controls:CardView.CardContent>
                     <Label Text="{localization:Translate CrtmInfo}" />
@@ -22,7 +28,7 @@
                         Text="{localization:Translate CrtmWeb}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OpenWeb_Tapped" />
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.CrtmWeb}" Tapped="OpenWeb_Tapped" />
                         </Label.GestureRecognizers>
                     </Label>
                 </controls:CardView.CardContent>

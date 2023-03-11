@@ -305,6 +305,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Los precios de los combustibles y los datos de las estaciones de servicio son obtenidos en tiempo real a través del servicio de Geoportal del Ministerio para la Transición Ecológica y el Reto Demográfico..
+        /// </summary>
+        public static string GasInfo {
+            get {
+                return ResourceManager.GetString("GasInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Precio de la gasolina.
         /// </summary>
         public static string GasPrice {
