@@ -69,7 +69,6 @@
                 Style="{StaticResource ButtonGeneral}"
                 Text="{localization:Translate TryAgain}" />
         </VerticalStackLayout>
-
         <StackLayout
             x:Name="StackSuccess"
             toolkit:StateView.StateKey="Success"

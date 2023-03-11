@@ -32,7 +32,6 @@
                     </SearchBar.Behaviors>
                 </SearchBar>
             </Border>
-
             <CollectionView
                 Margin="0,0,0,16"
                 ItemSizingStrategy="MeasureFirstItem"
@@ -79,10 +78,7 @@
                 HeightRequest="1"
                 Color="{StaticResource BlueGeneral}" />
             <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
-                <StackLayout
-                    BindableLayout.ItemsSource="{Binding StopNames, Mode=OneTime}"
-                    CompressedLayout.IsHeadless="True"
-                    Spacing="16">
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding StopNames, Mode=OneTime}" CompressedLayout.IsHeadless="True">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="models:StopName">
                             <SwipeView>
@@ -126,7 +122,7 @@
                             </SwipeView>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </StackLayout>
+                </VerticalStackLayout>
             </ScrollView>
         </controls:BaseStateLayout.SuccessContent>
     </controls:BaseStateLayout>

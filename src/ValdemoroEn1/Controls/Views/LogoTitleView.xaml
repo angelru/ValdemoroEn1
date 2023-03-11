@@ -3,7 +3,7 @@
     x:Class="ValdemoroEn1.Controls.LogoTitleView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout Padding="0,0,16,0" Orientation="Horizontal">
+    <HorizontalStackLayout Padding="0,0,16,0">
         <Label
             FontAttributes="Bold"
             FontSize="20"
@@ -17,5 +17,5 @@
             Source="googledark.png"
             VerticalOptions="Center"
             WidthRequest="100" />
-    </StackLayout>
+    </HorizontalStackLayout>
 </ContentView>
