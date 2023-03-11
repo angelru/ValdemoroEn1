@@ -29,7 +29,6 @@ public partial class MoviesPageViewModel : BaseViewModel
     {
         _ = RunSafeAsync(MoviesAsync);
     }
-
     private async Task MoviesAsync()
     {
         var movie = await ApiService.MovieTimesAsync();
@@ -39,7 +38,6 @@ public partial class MoviesPageViewModel : BaseViewModel
         var dates = FlattenDates(Events);
         Dates.ReplaceRange(dates);
     }
-
     private List<Movie> FlattenMovies(string date)
     {
         var movies = Events.Where(s => s.InfoFechas.Fechas.Any(s => s.LaFecha == date))
@@ -70,7 +68,6 @@ public partial class MoviesPageViewModel : BaseViewModel
 
         return movies;
     }
-
     private List<string> FlattenDates(List<Evento> events)
     {
         var dates = events.Select(s => s.InfoFechas.Fechas.GroupBy(g => g.LaFecha)

@@ -9,12 +9,12 @@
 
         private async void Terms_Tapped(object sender, TappedEventArgs e)
         {
-            await Browser.OpenAsync(new Uri(AppSettings.TermsGoogleURL), BrowserLaunchMode.SystemPreferred);
+            await Helper.OpenUrlAsync(AppSettings.TermsGoogleURL);
         }
 
         private async void Privacy_Tapped(object sender, TappedEventArgs e)
         {
-            await Browser.OpenAsync(new Uri(AppSettings.PrivacyGoogleURL), BrowserLaunchMode.SystemPreferred);
+            await Helper.OpenUrlAsync(AppSettings.PrivacyGoogleURL);
         }
     }
 }

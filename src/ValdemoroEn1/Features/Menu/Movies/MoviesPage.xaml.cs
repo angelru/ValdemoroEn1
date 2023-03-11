@@ -12,15 +12,6 @@ public partial class MoviesPage : ContentPage
     {
 		var button = (Button)sender;
 		string url = button.CommandParameter?.ToString();
-
-        try
-        {
-            var uri = new Uri(url);
-            await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-        }
-        catch (Exception ex)
-        {
-            _ = ex.Message;
-        }
+		await Helper.OpenUrlAsync(url);
     }
 }

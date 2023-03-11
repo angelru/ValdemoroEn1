@@ -24,21 +24,11 @@ public partial class GasStationsPageViewModel : BaseViewModel
     [RelayCommand]
     private async Task SelectionStationAsync()
     {
-        double lat =  Convert.ToDouble(SelectedStation.Latitud);
-        double longi = Convert.ToDouble(SelectedStation.LongitudWGS84);
+        if (SelectedStation is null) return;
 
-        var location = new Microsoft.Maui.Devices.Sensors.Location(lat, longi);
-        var options = new MapLaunchOptions { Name = SelectedStation.Rotulo };
-
-        try
-        {
-            await Map.Default.OpenAsync(location, options);
-        }
-        catch (Exception ex)
-        {
-            _ = ex.Message;
-        }
-
+        double latitude =  Convert.ToDouble(SelectedStation.Latitud);
+        double longitude = Convert.ToDouble(SelectedStation.LongitudWGS84);
+        await Helper.OpenMapAsync(SelectedStation.Rotulo, latitude, longitude);
         SelectedStation = null;
     }
 

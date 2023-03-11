@@ -72,31 +72,14 @@ public partial class InfoMenuDetailView : ContentView
     {
         if (text.Contains("http"))
         {
-            await Browser.OpenAsync(new Uri(text), BrowserLaunchMode.SystemPreferred);
+            await Helper.OpenUrlAsync(text);
         }
     }
 
     private Task OpenTlfAsync(string text)
     {
-        try
-        {
-            PhoneDialer.Open(text);
-        }
-        catch (ArgumentNullException anEx)
-        {
-            // Number was null or white space
-            _ = anEx.Message;
-        }
-        catch (FeatureNotSupportedException ex)
-        {
-            // Phone Dialer is not supported on this device.
-            _ = ex.Message;
-        }
-        catch (Exception ex)
-        {
-            // Other error has occurred.
-            _ = ex.Message;
-        }
+        if (PhoneDialer.Default.IsSupported)
+            PhoneDialer.Default.Open(text);
 
         return Task.CompletedTask;
     }

@@ -46,6 +46,7 @@
                                 Padding="6"
                                 BackgroundColor="{StaticResource BlueGeneral}"
                                 HeightRequest="48"
+                                Stroke="{StaticResource BlueGeneral}"
                                 StrokeShape="RoundRectangle 100"
                                 WidthRequest="48">
                                 <Label

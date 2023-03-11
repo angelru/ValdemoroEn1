@@ -33,4 +33,37 @@ public class Helper
         string json = JsonSerializer.Serialize(stopNames);
         Preferences.Set("stopNames", json);
     }
+
+    public static Task OpenMapAsync(string name, double latitude, double longitude)
+    {
+        var location = new Microsoft.Maui.Devices.Sensors.Location(latitude, longitude);
+        var options = new MapLaunchOptions { Name = name };
+
+        try
+        {
+            return Map.Default.OpenAsync(location, options);
+        }
+        catch (Exception ex)
+        {
+            _ = ex.Message;
+        }
+
+        return Task.CompletedTask;
+    }
+
+    public static async Task<bool> OpenUrlAsync(string url)
+    {
+        bool result = false;
+
+        try
+        {
+            result = await Browser.Default.OpenAsync(new Uri(url), BrowserLaunchMode.SystemPreferred);
+        }
+        catch (Exception ex)
+        {
+            _ = ex.Message;
+        }
+
+        return result;
+    }
 }
