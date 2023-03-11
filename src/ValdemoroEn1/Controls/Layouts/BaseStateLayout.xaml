@@ -9,12 +9,11 @@
     toolkit:StateContainer.CurrentState="{Binding Source={x:Reference this}, Path=CurrentState}"
     CompressedLayout.IsHeadless="true">
     <toolkit:StateContainer.StateViews>
-        <VerticalStackLayout
+        <ActivityIndicator
             toolkit:StateView.StateKey="Loading"
-            CompressedLayout.IsHeadless="true"
-            VerticalOptions="CenterAndExpand">
-            <ActivityIndicator IsRunning="True" Color="{StaticResource BlueGeneral}" />
-        </VerticalStackLayout>
+            IsRunning="True"
+            VerticalOptions="CenterAndExpand"
+            Color="{StaticResource BlueGeneral}" />
         <VerticalStackLayout
             Padding="16"
             toolkit:StateView.StateKey="ConexError"
