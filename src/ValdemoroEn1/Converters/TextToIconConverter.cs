@@ -10,7 +10,8 @@ public class TextToIconConverter : IValueConverter
             return null;
 
         string text = (string)value;
-        string finalText = string.Concat("https://www.airvisual.com/images/", text, ".png");
+        string last = text[^1..];
+        string finalText = string.Concat(last, text);
         return finalText;
     }
 

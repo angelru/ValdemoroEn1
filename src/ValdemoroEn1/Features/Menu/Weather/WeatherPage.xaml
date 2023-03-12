@@ -158,7 +158,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Spacing="6">
-                        <Image HeightRequest="30" Source="{Binding Weather.Data.Current.Weather.Ic, Converter={StaticResource TextToIconConverter}}" />
+                        <Image HeightRequest="34" Source="{Binding Weather.Data.Current.Weather.Ic, Converter={StaticResource TextToIconConverter}}" />
                         <Label
                             HorizontalTextAlignment="Start"
                             Text="{Binding Weather.Data.Current.Weather.Tp, StringFormat='{0:0}ºc'}"

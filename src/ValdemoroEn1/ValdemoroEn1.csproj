@@ -44,6 +44,19 @@
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="512,760" Color="White" />
 		
+		<MauiImage Include="Resources\Images\d01d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\n01n.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d02d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\n02n.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d03d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d04d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d09d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d10d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\n10n.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d11d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d13d.png" BaseSize="315,285" />
+		<MauiImage Include="Resources\Images\d50d.png" BaseSize="315,285" />
+		
 		<!-- Images -->
 
 		<MauiImage Include="Resources\Images\facegreen.svg" BaseSize="48,48" />
