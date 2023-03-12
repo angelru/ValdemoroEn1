@@ -1,6 +1,10 @@
 ﻿using System.Text.Json;
 using System.Text.RegularExpressions;
 
+#if ANDROID
+using Microsoft.Maui.Platform;
+#endif
+
 namespace ValdemoroEn1.Common;
 
 public class Helper
@@ -17,6 +21,7 @@ public class Helper
         }
 #endif
     }
+
     public static bool ValidateEmail(string email)
     {
         if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(email))

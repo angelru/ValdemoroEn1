@@ -37,6 +37,7 @@ public static partial class LifecycleEventsExtensions
 
     private static CrossFirebaseSettings CreateCrossFirebaseSettings()
     {
-        return new CrossFirebaseSettings(isAuthEnabled: true);
+        return new CrossFirebaseSettings(isAuthEnabled: true,
+            googleRequestIdToken: "1043453667471-h09jtasjld44dn7js3kpiq8abf5dbtcg.apps.googleusercontent.com");
     }
 }
