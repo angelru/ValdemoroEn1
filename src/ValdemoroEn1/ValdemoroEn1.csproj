@@ -42,7 +42,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="512,760" Color="White" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="192,192" Color="White" />
 		
 		<MauiImage Include="Resources\Images\d01d.png" BaseSize="315,285" />
 		<MauiImage Include="Resources\Images\n01n.png" BaseSize="315,285" />
@@ -86,6 +86,10 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\values\strings.xml" />
+	</ItemGroup>
+	
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="GoogleApi" Version="4.5.4" />
@@ -98,6 +102,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
 		<ProguardConfiguration Include="Platforms\Android\proguard.cfg" />
 		<AndroidEnvironment Include="Platforms\Android\GarbageCollector.config" />
+		<GoogleServicesJson Include="Platforms\Android\google-services.json" />
 	</ItemGroup>
 
 	<ItemGroup>

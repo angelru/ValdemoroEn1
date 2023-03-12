@@ -11,7 +11,7 @@ public static class MauiProgram
         builder.UseMauiApp<App>()
             .RegisterFonts()
             .RegisterServices()
-            //.RegisterFirebaseServices()
+            .RegisterFirebaseServices()
             .RegisterPagesViewModels()
             .RegisterHandlers()
             .UseMauiCommunityToolkit();

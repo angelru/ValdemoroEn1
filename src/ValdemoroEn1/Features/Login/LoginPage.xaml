@@ -30,6 +30,7 @@
             <Label.FormattedText>
                 <FormattedString>
                     <Span Text="{localization:Translate ForgotPassword}" />
+                    <Span Text=" " />
                     <Span FontAttributes="Bold" Text="{localization:Translate PressHere}" />
                 </FormattedString>
             </Label.FormattedText>
