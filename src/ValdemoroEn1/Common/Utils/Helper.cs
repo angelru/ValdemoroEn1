@@ -5,6 +5,18 @@ namespace ValdemoroEn1.Common;
 
 public class Helper
 {
+    //TODO BUG: https://github.com/dotnet/maui/issues/12002
+    public static void HideKeyBoard()
+    {
+#if ANDROID
+        if (Platform.CurrentActivity.CurrentFocus != null)
+        {
+
+            Platform.CurrentActivity.HideKeyboard(Platform.CurrentActivity.CurrentFocus);
+            Platform.CurrentActivity.CurrentFocus.ClearFocus();
+        }
+#endif
+    }
     public static bool ValidateEmail(string email)
     {
         if (string.IsNullOrEmpty(email) || string.IsNullOrWhiteSpace(email))

@@ -7,4 +7,9 @@ public partial class RegisterPage : ContentPage
 		InitializeComponent();
 		BindingContext= registerPageViewModel;
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Helper.HideKeyBoard();
+    }
 }

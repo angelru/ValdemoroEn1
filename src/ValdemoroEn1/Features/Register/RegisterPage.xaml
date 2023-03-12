@@ -22,6 +22,7 @@
             Text="{Binding Password}" />
         <controls:TermsView />
         <Button
+            Clicked="Button_Clicked"
             Command="{Binding RegisterCommand}"
             Style="{StaticResource ButtonGeneral}"
             Text="{localization:Translate Signup}" />

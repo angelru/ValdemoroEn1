@@ -33,7 +33,10 @@
                 Command="{Binding RegisterCommand}"
                 Style="{StaticResource ButtonGeneral}"
                 Text="{localization:Translate Signup}" />
-            <Label HorizontalTextAlignment="Center" LineBreakMode="WordWrap">
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="{localization:Translate HaveAnAccount}" />
