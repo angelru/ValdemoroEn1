@@ -214,15 +214,6 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Para más información en la web oficial de CRTM..
-        /// </summary>
-        public static string CrtmWeb {
-            get {
-                return ResourceManager.GetString("CrtmWeb", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string Email {
@@ -368,6 +359,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El tiempo y la calidad de aire se obtiene en tiempo real a través del servicio que ofrece IQAir..
+        /// </summary>
+        public static string IQAirInfo {
+            get {
+                return ResourceManager.GetString("IQAirInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a ¡Únete a
         ///ValdemoroEn1!.
         /// </summary>
@@ -410,6 +410,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string LogoutMsg {
             get {
                 return ResourceManager.GetString("LogoutMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a La cartelera de cine con la compra de sus entradas se obtiene en tiempo real a través de la web del Centro Comercial El Restón..
+        /// </summary>
+        public static string MoviesInfo {
+            get {
+                return ResourceManager.GetString("MoviesInfo", resourceCulture);
             }
         }
         
@@ -626,6 +635,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string WeatherICA {
             get {
                 return ResourceManager.GetString("WeatherICA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Para más información en la web oficial..
+        /// </summary>
+        public static string WebInfo {
+            get {
+                return ResourceManager.GetString("WebInfo", resourceCulture);
             }
         }
         

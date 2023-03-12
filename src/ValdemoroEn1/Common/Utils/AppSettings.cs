@@ -7,10 +7,12 @@ public class AppSettings
 
     //Geoportal gasolineras
     public const string FuelApiUrl = "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/";
-    public const string FuelMunicipaly = "4432";
+    public const string FuelWeb = "https://geoportalgasolineras.es/geoportal-instalaciones/Inicio";
+    public const string FuelApiMunicipaly = "4432";
 
     //IQAir
     public const string IQAirApiUrl = "https://api.airvisual.com/v2/";
+    public const string IQAirWeb = "https://www.iqair.com/es/";
     public const string IQAirApiKey = "API KEY";
     public const string IQAirApiCity = "Valdemoro";
     public const string IQAirApiState = "Madrid";
@@ -18,8 +20,8 @@ public class AppSettings
 
     //Crtm
     public const string CrtmApiUrl = "https://www.crtm.es/widgets/api/";
-    public const string CrtmCodMunicipaly = "4426";
     public const string CrtmWeb = "https://www.crtm.es";
+    public const string CrtmApiCodMunicipaly = "4426";
 
     //Google
     public const string TermsGoogleURL = "https://policies.google.com/terms?hl=es";

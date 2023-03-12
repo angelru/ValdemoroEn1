@@ -15,9 +15,43 @@
                     <Label Text="{localization:Translate ValdemoroEn1}" />
                 </controls:CardView.CardContent>
             </controls:CardView>
+            <controls:CardView Title="{localization:Translate CinemaListings}">
+                <controls:CardView.CardContent>
+                    <Label Text="{localization:Translate MoviesInfo}" />
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{localization:Translate WebInfo}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.CinemaUrl}" Tapped="OpenWeb_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </controls:CardView.CardContent>
+            </controls:CardView>
             <controls:CardView Title="{localization:Translate GasPrice}">
                 <controls:CardView.CardContent>
                     <Label Text="{localization:Translate GasInfo}" />
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{localization:Translate WebInfo}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.FuelWeb}" Tapped="OpenWeb_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </controls:CardView.CardContent>
+            </controls:CardView>
+            <controls:CardView Title="{localization:Translate WeatherICA}">
+                <controls:CardView.CardContent>
+                    <Label Text="{localization:Translate IQAirInfo}" />
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{localization:Translate WebInfo}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.IQAirWeb}" Tapped="OpenWeb_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </controls:CardView.CardContent>
             </controls:CardView>
             <controls:CardView Title="{localization:Translate Transport}">
@@ -25,7 +59,7 @@
                     <Label Text="{localization:Translate CrtmInfo}" />
                     <Label
                         FontAttributes="Bold"
-                        Text="{localization:Translate CrtmWeb}"
+                        Text="{localization:Translate WebInfo}"
                         TextDecorations="Underline">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer CommandParameter="{Static common:AppSettings.CrtmWeb}" Tapped="OpenWeb_Tapped" />

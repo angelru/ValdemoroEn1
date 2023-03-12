@@ -168,9 +168,6 @@
   <data name="CrtmInfo" xml:space="preserve">
     <value>Acceso a los horarios del transporte público. Se trata de mostrar los datos de forma sencilla y contrastada con fuentes oficiales del CRTM pero de forma particular, es decir, no hay ningún vínculo con el consorcio.</value>
   </data>
-  <data name="CrtmWeb" xml:space="preserve">
-    <value>Para más información en la web oficial de CRTM.</value>
-  </data>
   <data name="Email" xml:space="preserve">
     <value>Correo</value>
   </data>
@@ -220,6 +217,9 @@ ValdemoroEn1!</value>
   <data name="InvalidEmailPassword" xml:space="preserve">
     <value>Usuario o contraseña incorrectos.</value>
   </data>
+  <data name="IQAirInfo" xml:space="preserve">
+    <value>El tiempo y la calidad de aire se obtiene en tiempo real a través del servicio que ofrece IQAir.</value>
+  </data>
   <data name="JoinValdemoro" xml:space="preserve">
     <value>¡Únete a
 ValdemoroEn1!</value>
@@ -235,6 +235,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="LogoutMsg" xml:space="preserve">
     <value>¿Seguro que quiere cerrar sesión?</value>
+  </data>
+  <data name="MoviesInfo" xml:space="preserve">
+    <value>La cartelera de cine con la compra de sus entradas se obtiene en tiempo real a través de la web del Centro Comercial El Restón.</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
@@ -307,6 +310,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="WeatherICA" xml:space="preserve">
     <value>Tiempo y calidad del aire</value>
+  </data>
+  <data name="WebInfo" xml:space="preserve">
+    <value>Para más información en la web oficial.</value>
   </data>
   <data name="WithOutTlf" xml:space="preserve">
     <value>Sin teléfono</value>

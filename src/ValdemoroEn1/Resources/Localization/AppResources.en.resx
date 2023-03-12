@@ -168,9 +168,6 @@
   <data name="CrtmInfo" xml:space="preserve">
     <value>Access to public transport schedules. It is about showing the data in a simple way and contrasted with official sources of the CRTM but in a particular way, that is, there is no link with the consortium.</value>
   </data>
-  <data name="CrtmWeb" xml:space="preserve">
-    <value>For more information on the official CRTM website.</value>
-  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
@@ -220,6 +217,9 @@ ValdemoroEn1!</value>
   <data name="InvalidEmailPassword" xml:space="preserve">
     <value>Wrong username or password.</value>
   </data>
+  <data name="IQAirInfo" xml:space="preserve">
+    <value>Weather and air quality is obtained in real time through the service offered by IQAir.</value>
+  </data>
   <data name="JoinValdemoro" xml:space="preserve">
     <value>¡Join
 ValdemoroEn1!</value>
@@ -235,6 +235,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="LogoutMsg" xml:space="preserve">
     <value>Are you sure you want to log out?</value>
+  </data>
+  <data name="MoviesInfo" xml:space="preserve">
+    <value>The movie billboard with the purchase of your tickets is obtained in real time through the website of the El Restón Shopping Center.</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
@@ -307,6 +310,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="WeatherICA" xml:space="preserve">
     <value>Weather and air quality</value>
+  </data>
+  <data name="WebInfo" xml:space="preserve">
+    <value>For more information on the official website.</value>
   </data>
   <data name="WithOutTlf" xml:space="preserve">
     <value>Without phone</value>

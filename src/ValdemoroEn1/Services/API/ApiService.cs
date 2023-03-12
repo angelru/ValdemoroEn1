@@ -35,7 +35,7 @@ public class ApiService
 
     public Task<GasStationResponse> GasStationsAsync(string idProducto)
     {
-        string municipaly = AppSettings.FuelMunicipaly;
+        string municipaly = AppSettings.FuelApiMunicipaly;
         return fuelhttpClient.GetFromJsonAsync<GasStationResponse>($"EstacionesTerrestres/FiltroMunicipioProducto/{municipaly}/{idProducto}");
     }
 
@@ -62,7 +62,7 @@ public class ApiService
 
     public Task<StopsResponse> StopsAsync()
     {
-        string codMunicipality = AppSettings.CrtmCodMunicipaly;
+        string codMunicipality = AppSettings.CrtmApiCodMunicipaly;
         return crtmHttpClient.GetFromJsonAsync<StopsResponse>($"GetStops.php?codMunicipality={codMunicipality}");
     }
 }
