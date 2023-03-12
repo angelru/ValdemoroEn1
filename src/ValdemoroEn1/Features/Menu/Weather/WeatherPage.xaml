@@ -16,7 +16,7 @@
     <ContentPage.Resources>
         <converters:ICAToTextConverter x:Key="ICAToTextConverter" />
         <converters:MtsToKmConverter x:Key="MtsToKmConverter" />
-        <converters:AddLastCharacterConverter x:Key="AddLastCharacterConverter" />
+        <converters:TextToIconConverter x:Key="TextToIconConverter" />
     </ContentPage.Resources>
 
     <controls:StateLayout
@@ -130,7 +130,7 @@
                 <Grid
                     ColumnDefinitions="*,*,*"
                     ColumnSpacing="30"
-                    RowDefinitions="*,*"
+                    RowDefinitions="*,auto"
                     RowSpacing="6">
                     <Image
                         Grid.Row="0"
@@ -158,7 +158,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         Spacing="6">
-                        <Image HeightRequest="46" Source="{Binding Weather.Data.Current.Weather.Ic, Converter={StaticResource AddLastCharacterConverter}}" />
+                        <Image HeightRequest="30" Source="{Binding Weather.Data.Current.Weather.Ic, Converter={StaticResource TextToIconConverter}}" />
                         <Label
                             HorizontalTextAlignment="Start"
                             Text="{Binding Weather.Data.Current.Weather.Tp, StringFormat='{0:0}ºc'}"

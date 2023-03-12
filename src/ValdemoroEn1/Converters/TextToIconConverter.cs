@@ -2,7 +2,7 @@
 
 namespace ValdemoroEn1.Converters;
 
-public class AddLastCharacterConverter : IValueConverter
+public class TextToIconConverter : IValueConverter
 {
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
     {
@@ -10,8 +10,7 @@ public class AddLastCharacterConverter : IValueConverter
             return null;
 
         string text = (string)value;
-        string last = text[^1..];
-        string finalText = string.Concat(last, text);
+        string finalText = string.Concat("https://www.airvisual.com/images/", text, ".png");
         return finalText;
     }
 

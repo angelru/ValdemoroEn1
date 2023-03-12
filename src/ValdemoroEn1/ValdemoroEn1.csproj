@@ -54,26 +54,6 @@
 		<MauiImage Include="Resources\Images\humidity.png" BaseSize="100,100" />
 		<MauiImage Include="Resources\Images\windspeed.png" BaseSize="256,256" />
 		
-		<MauiImage Include="Resources\Images\d01d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d02d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d03d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d04d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d09d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d10d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d11d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d13d.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\d50d.png" BaseSize="100,100" />
-		
-		<MauiImage Include="Resources\Images\n01n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n02n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n03n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n04n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n09n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n10n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n11n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n13n.png" BaseSize="100,100" />
-		<MauiImage Include="Resources\Images\n50n.png" BaseSize="100,100" />
-		
 		<MauiImage Include="Resources\Images\apple.svg" BaseSize="24,24" />
 		<MauiImage Include="Resources\Images\conexerror.png" BaseSize="448,448" />
 		<MauiImage Include="Resources\Images\error.png" BaseSize="384,240" />
