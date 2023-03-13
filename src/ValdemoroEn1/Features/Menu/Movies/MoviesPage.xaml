@@ -48,8 +48,7 @@
                                 Padding="0"
                                 ColumnDefinitions="*"
                                 CompressedLayout.IsHeadless="true"
-                                RowDefinitions="80,*,*"
-                                RowSpacing="10">
+                                RowDefinitions="auto,*,auto">
                                 <VerticalStackLayout
                                     Grid.Row="0"
                                     Grid.Column="0"
@@ -62,12 +61,12 @@
                                     Grid.Row="1"
                                     Grid.Column="0"
                                     HorizontalScrollBarVisibility="Never"
-                                    Orientation="Horizontal">
+                                    Orientation="Horizontal"
+                                    VerticalOptions="Center">
                                     <HorizontalStackLayout
                                         BindableLayout.ItemsSource="{Binding Sessions, Mode=OneTime}"
                                         CompressedLayout.IsHeadless="true"
-                                        Spacing="6"
-                                        VerticalOptions="Start">
+                                        Spacing="6">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate x:DataType="models:Session">
                                                 <Button
@@ -84,12 +83,14 @@
                                     Grid.Row="2"
                                     Grid.Column="0"
                                     CompressedLayout.IsHeadless="true"
+                                    HeightRequest="30"
                                     Spacing="6">
                                     <Border
                                         BackgroundColor="{StaticResource BlueGeneral}"
-                                        HeightRequest="48"
+                                        HeightRequest="28"
+                                        Stroke="{StaticResource BlueGeneral}"
                                         StrokeShape="RoundRectangle 100"
-                                        WidthRequest="48">
+                                        WidthRequest="28">
                                         <Label
                                             FontFamily="FontAwesomeSolid"
                                             HorizontalTextAlignment="Center"
