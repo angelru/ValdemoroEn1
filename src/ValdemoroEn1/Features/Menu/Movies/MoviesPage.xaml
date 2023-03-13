@@ -84,14 +84,14 @@
                                     Grid.Row="2"
                                     Grid.Column="0"
                                     CompressedLayout.IsHeadless="true"
-                                    HeightRequest="30"
+                                    HeightRequest="42"
                                     Spacing="6">
                                     <Border
                                         BackgroundColor="{StaticResource BlueGeneral}"
-                                        HeightRequest="28"
+                                        HeightRequest="40"
                                         Stroke="{StaticResource BlueGeneral}"
                                         StrokeShape="RoundRectangle 100"
-                                        WidthRequest="28">
+                                        WidthRequest="40">
                                         <Label
                                             FontFamily="FontAwesomeSolid"
                                             HorizontalTextAlignment="Center"
