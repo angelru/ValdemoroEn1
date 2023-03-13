@@ -19,10 +19,10 @@
                 Title="{localization:Translate SelectProduct}"
                 Margin="0,0,0,8"
                 ItemDisplayBinding="{Binding NombreProducto}"
-                ItemsSource="{Binding Fuels}"
+                ItemsSource="{Binding Fuels, Mode=OneTime}"
                 SelectedItem="{Binding SelectedFuel}" />
             <CollectionView
-                ItemsSource="{Binding GasStations}"
+                ItemsSource="{Binding GasStations, Mode=OneTime}"
                 SelectedItem="{Binding SelectedStation}"
                 SelectionChangedCommand="{Binding SelectionStationCommand}"
                 SelectionMode="Single"
@@ -60,13 +60,13 @@
                                 Grid.Row="0"
                                 Grid.Column="1"
                                 VerticalOptions="Center">
-                                <Label FontAttributes="Bold" Text="{Binding Rotulo}" />
-                                <Label Text="{Binding Direccion}" />
+                                <Label FontAttributes="Bold" Text="{Binding Rotulo, Mode=OneTime}" />
+                                <Label Text="{Binding Direccion, Mode=OneTime}" />
                             </VerticalStackLayout>
                             <Label
                                 Grid.Row="0"
                                 Grid.Column="2"
-                                Text="{Binding PrecioProducto, StringFormat='{0} €'}"
+                                Text="{Binding PrecioProducto, Mode=OneTime, StringFormat='{0} €'}"
                                 VerticalTextAlignment="Center" />
                         </Grid>
                     </DataTemplate>

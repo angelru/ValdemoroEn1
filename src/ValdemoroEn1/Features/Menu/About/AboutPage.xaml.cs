@@ -29,7 +29,7 @@ public partial class AboutPage : ContentPage
 
     private async void OpenWeb_Tapped(object sender, TappedEventArgs e)
     {
-       string url = e.Parameter.ToString();
+       string url = e.Parameter?.ToString();
        await Helper.OpenUrlAsync(url);
     }
 }

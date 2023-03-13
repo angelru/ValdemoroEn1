@@ -11,7 +11,6 @@ public partial class MoviesPageViewModel : BaseViewModel
     {
         string date = value;
         var movies = FlattenMovies(date);
-
         Movies.ReplaceRange(movies);
     }
 
