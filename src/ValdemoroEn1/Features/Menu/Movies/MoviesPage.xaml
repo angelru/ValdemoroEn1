@@ -52,6 +52,7 @@
                                 <VerticalStackLayout
                                     Grid.Row="0"
                                     Grid.Column="0"
+                                    CompressedLayout.IsHeadless="true"
                                     Spacing="10">
                                     <Label LineBreakMode="TailTruncation" Text="{Binding Title, Mode=OneTime}" />
                                     <Label Text="{Binding Duration, Mode=OneTime, StringFormat='{0} min'}" />
