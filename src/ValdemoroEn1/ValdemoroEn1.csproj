@@ -42,7 +42,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="192,192" Color="White" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="400,400" Color="White" />
 
 		<MauiImage Include="Resources\Images\d01d.png" BaseSize="315,285" />
 		<MauiImage Include="Resources\Images\n01n.png" BaseSize="315,285" />
