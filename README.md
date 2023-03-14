@@ -88,6 +88,7 @@ The application has a clean and tidy architecture, applying the best practices, 
   * Bindings/Relative
   * Converters
   * Triggers
+  * Visual states
   * Extensions
   * Font Awesome
   * Global Usings
