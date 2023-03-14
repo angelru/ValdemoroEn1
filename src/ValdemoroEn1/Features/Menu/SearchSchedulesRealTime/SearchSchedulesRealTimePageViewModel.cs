@@ -20,20 +20,13 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
         StopsMunicipality();
     }
 
-    [RelayCommand]
-    private void StopsMunicipality()
-    {
-        _ = RunSafeAsync(StopsMunicipalityAsync, stateError: StateKey.CrtmError);
-    }
-
     public ObservableRangeCollection<StopName> StopMunicipalities { get; set; } = new();
     public ObservableRangeCollection<StopName> StopNames { get; set; } = new();
 
     [RelayCommand]
-    private void SearchStop()
+    private void StopsMunicipality()
     {
-        var stopNames = stopMunicipalities.Where(w => w.CodStop.Contains(TextStopCode.ToUpper()) || w.Name.Contains(TextStopCode.ToUpper())).Select(s => new StopName(s.CodStop, s.ShortCodStop, s.Name)).ToList();
-        StopMunicipalities.ReplaceRange(stopNames);
+        _ = RunSafeAsync(StopsMunicipalityAsync, stateError: StateKey.CrtmError);
     }
 
     private async Task StopsMunicipalityAsync()
@@ -41,6 +34,13 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
         var stopsMunicipality = await ApiService.StopsAsync();
         stopMunicipalities = stopsMunicipality.Stops.Stop;
         StopNames.ReplaceRange(Helper.Stops());
+    }
+
+    [RelayCommand]
+    private void SearchStop()
+    {
+        var stopNames = stopMunicipalities.Where(w => w.CodStop.Contains(TextStopCode.ToUpper()) || w.Name.Contains(TextStopCode.ToUpper())).Select(s => new StopName(s.CodStop, s.ShortCodStop, s.Name)).ToList();
+        StopMunicipalities.ReplaceRange(stopNames);
     }
 
     [RelayCommand]

@@ -19,6 +19,7 @@ public partial class GasStationsPageViewModel : BaseViewModel
     }
 
     public ObservableRangeCollection<ListaEESSPrecio> GasStations { get; private set; } = new();
+
     public ObservableRangeCollection<FuelResponse> Fuels { get; private set; } = new();
 
     [RelayCommand]
@@ -37,6 +38,7 @@ public partial class GasStationsPageViewModel : BaseViewModel
     {
         _ = RunSafeAsync(FuelsAsync);
     }
+
     private async Task StationsAsync(string iDProducto)
     {
         var gasStationResponse = await ApiService.GasStationsAsync(iDProducto);
