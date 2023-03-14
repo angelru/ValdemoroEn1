@@ -7,11 +7,60 @@
     xmlns:features="clr-namespace:ValdemoroEn1.Features"
     xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
-    Title="{localization:Translate Establishments}">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    xmlns:models="clr-namespace:ValdemoroEn1.Models"
+    Title="{localization:Translate Establishments}"
+    Padding="16"
+    x:DataType="features:EstablishmentsPageViewModel">
+    <CollectionView
+        ItemSizingStrategy="MeasureFirstItem"
+        ItemsSource="{Binding Establishments}"
+        SelectedItem="{Binding SelectedInfoItem}"
+        SelectionChangedCommand="{Binding SelectionInfoItemCommand}"
+        SelectionMode="Single">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout
+                HorizontalItemSpacing="10"
+                Orientation="Vertical"
+                Span="2"
+                VerticalItemSpacing="10" />
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="models:InfoItem">
+                <Border
+                    x:Name="BorderD"
+                    Padding="10"
+                    BackgroundColor="{StaticResource RedGeneral}"
+                    Stroke="{StaticResource White}"
+                    StrokeShape="RoundRectangle 10">
+                    <VerticalStackLayout CompressedLayout.IsHeadless="true">
+                        <Label
+                            x:Name="LabelIcon"
+                            FontFamily="FontAwesomeSolid"
+                            FontSize="46"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Icon}"
+                            TextColor="White" />
+                        <Label
+                            x:Name="LabelText"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Title}"
+                            TextColor="White" />
+                    </VerticalStackLayout>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup Name="CommonStates">
+                            <VisualState Name="Normal" />
+                            <VisualState Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+                                    <Setter TargetName="BorderD" Property="Border.Stroke" Value="{StaticResource Black}" />
+                                    <Setter TargetName="LabelIcon" Property="Label.TextColor" Value="{StaticResource Black}" />
+                                    <Setter TargetName="LabelText" Property="Label.TextColor" Value="{StaticResource Black}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>

@@ -1,4 +1,5 @@
 ﻿namespace ValdemoroEn1.Models;
+
 public class InfoMenu
 {
     public string PlaceId { get; set; }
