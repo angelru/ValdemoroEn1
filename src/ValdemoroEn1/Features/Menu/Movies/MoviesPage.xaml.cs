@@ -8,14 +8,7 @@ public partial class MoviesPage : ContentPage
 		BindingContext = moviesPageViewModel;
 	}
 
-    private async void Hour_Clicked(object sender, EventArgs e)
-    {
-        var button = (Button)sender;
-        string url = button.CommandParameter?.ToString(); 
-        await Helper.OpenUrlAsync(url);
-    }
-
-    private async void ShowTrailer_Tapped(object sender, TappedEventArgs e)
+    public async void OpenUrl_Tapped(object sender, TappedEventArgs e)
     {
         string url = e.Parameter?.ToString();
         await Helper.OpenUrlAsync(url);

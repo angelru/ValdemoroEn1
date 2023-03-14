@@ -70,12 +70,16 @@
                                         Spacing="6">
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate x:DataType="models:Session">
-                                                <Button
+                                                <Border
+                                                    Padding="8"
                                                     BackgroundColor="{StaticResource BlueGeneral}"
-                                                    Clicked="Hour_Clicked"
-                                                    CommandParameter="{Binding Ticket, Mode=OneTime}"
-                                                    Text="{Binding Hour, Mode=OneTime}"
-                                                    TextColor="{StaticResource White}" />
+                                                    Stroke="{StaticResource BlueGeneral}"
+                                                    StrokeShape="RoundRectangle 10">
+                                                    <Label Text="{Binding Hour}" TextColor="White" />
+                                                    <Border.GestureRecognizers>
+                                                        <TapGestureRecognizer CommandParameter="{Binding Ticket, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
+                                                    </Border.GestureRecognizers>
+                                                </Border>
                                             </DataTemplate>
                                         </BindableLayout.ItemTemplate>
                                     </HorizontalStackLayout>
@@ -101,7 +105,7 @@
                                     </Border>
                                     <Label Text="{localization:Translate Trailer}" VerticalTextAlignment="Center" />
                                     <HorizontalStackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer CommandParameter="{Binding Trailer, Mode=OneTime}" Tapped="ShowTrailer_Tapped" />
+                                        <TapGestureRecognizer CommandParameter="{Binding Trailer, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
                                     </HorizontalStackLayout.GestureRecognizers>
                                 </HorizontalStackLayout>
                             </Grid>

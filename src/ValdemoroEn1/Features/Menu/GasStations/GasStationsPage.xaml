@@ -59,6 +59,7 @@
                             <VerticalStackLayout
                                 Grid.Row="0"
                                 Grid.Column="1"
+                                CompressedLayout.IsHeadless="true"
                                 VerticalOptions="Center">
                                 <Label FontAttributes="Bold" Text="{Binding Rotulo, Mode=OneTime}" />
                                 <Label Text="{Binding Direccion, Mode=OneTime}" />
