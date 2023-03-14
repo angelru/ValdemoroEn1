@@ -269,6 +269,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Establecimientos.
+        /// </summary>
+        public static string Establishments {
+            get {
+                return ResourceManager.GetString("Establishments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Comida a domicilio.
         /// </summary>
         public static string FoodDelivery {

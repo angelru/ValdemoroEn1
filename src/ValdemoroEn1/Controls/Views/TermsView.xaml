@@ -3,6 +3,7 @@
     x:Class="ValdemoroEn1.Controls.TermsView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:common="clr-namespace:ValdemoroEn1.Common"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     x:Name="this">
     <Label Margin="0,16,0,0" LineBreakMode="WordWrap">
@@ -11,13 +12,13 @@
                 <Span Text="{localization:Translate AcceptTerms}" />
                 <Span FontAttributes="Bold" Text="{localization:Translate TermsConditions}">
                     <Span.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Terms_Tapped" />
+                        <TapGestureRecognizer CommandParameter="{Static common:AppSettings.TermsGoogleURL}" Tapped="OpenUrl_Tapped" />
                     </Span.GestureRecognizers>
                 </Span>
                 <Span Text="{localization:Translate AndThe}" />
                 <Span FontAttributes="Bold" Text="{localization:Translate PrivacyGoogle}">
                     <Span.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Privacy_Tapped" />
+                        <TapGestureRecognizer CommandParameter="{Static common:AppSettings.PrivacyGoogleURL}" Tapped="OpenUrl_Tapped" />
                     </Span.GestureRecognizers>
                 </Span>
             </FormattedString>

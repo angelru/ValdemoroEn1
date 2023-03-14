@@ -7,14 +7,10 @@
             InitializeComponent();
         }
 
-        private async void Terms_Tapped(object sender, TappedEventArgs e)
+        private async void OpenUrl_Tapped(object sender, TappedEventArgs e)
         {
-            await Helper.OpenUrlAsync(AppSettings.TermsGoogleURL);
-        }
-
-        private async void Privacy_Tapped(object sender, TappedEventArgs e)
-        {
-            await Helper.OpenUrlAsync(AppSettings.PrivacyGoogleURL);
+            string url = e.Parameter?.ToString();
+            await Helper.OpenUrlAsync(url);
         }
     }
 }

@@ -187,6 +187,9 @@ ValdemoroEn1!</value>
   <data name="ErrorEmail" xml:space="preserve">
     <value>There seems to be an error in your email.</value>
   </data>
+  <data name="Establishments" xml:space="preserve">
+    <value>Establishments</value>
+  </data>
   <data name="FoodDelivery" xml:space="preserve">
     <value>Food delivery</value>
   </data>

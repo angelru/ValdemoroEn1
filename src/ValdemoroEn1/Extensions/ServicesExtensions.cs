@@ -17,6 +17,7 @@ public static partial class ServicesExtensions
             .AddSingleton<GasStationsPage>().AddSingleton<GasStationsPageViewModel>()
             .AddSingleton<WeatherPage>().AddSingleton<WeatherPageViewModel>()
             .AddSingleton<SearchSchedulesRealTimePage>().AddSingleton<SearchSchedulesRealTimePageViewModel>()
+            .AddSingleton<EstablishmentsPage>().AddSingleton<EstablishmentsPageViewModel>()
             .AddSingleton<MainPage>().AddSingleton<MainPageViewModel>();
 
         return builder;

@@ -7,7 +7,6 @@
         BackgroundColor="{StaticResource RedGeneral}"
         HeightRequest="200"
         RowDefinitions="*, 1">
-
         <VerticalStackLayout Grid.Row="0" VerticalOptions="Center">
             <Border
                 HeightRequest="84"
@@ -27,7 +26,6 @@
                 Text="{Binding Email}"
                 TextColor="White" />
         </VerticalStackLayout>
-
         <BoxView
             Grid.Row="1"
             HeightRequest="1"

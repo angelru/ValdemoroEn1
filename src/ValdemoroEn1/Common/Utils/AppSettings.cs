@@ -33,7 +33,7 @@ public class AppSettings
     public const string Main = "//Main";
 
     //Request api google
-    public const string ApiKey = "API KEY"
+    public const string ApiKey = "";
     public const string CityQuery = "Valdemoro";
 
     //Email

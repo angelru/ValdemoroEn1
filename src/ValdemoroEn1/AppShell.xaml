@@ -25,28 +25,13 @@
         Route="Menu"
         Shell.TabBarIsVisible="False">
 
-        <!--<ShellContent
-            Title="{localization:Translate FoodDelivery}"
-            ContentTemplate="{DataTemplate features:InfoMenuPage}"
+        <ShellContent
+            Title="{localization:Translate Establishments}"
+            ContentTemplate="{DataTemplate features:EstablishmentsPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
+                             Glyph={Static fontawesome:FontAwesomeIcons.Building},
                              Color=Black,
                              Size=24}" />
-        <ShellContent
-            Title="{localization:Translate Restaurants}"
-            ContentTemplate="{DataTemplate features:InfoMenuPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Utensils},
-                             Color=Black,
-                             Size=24}" />
-
-        <ShellContent
-            Title="{localization:Translate Hostels}"
-            ContentTemplate="{DataTemplate features:InfoMenuPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Hotel},
-                             Color=Black,
-                             Size=24}" />-->
         <ShellContent
             Title="{localization:Translate CinemaListings}"
             ContentTemplate="{DataTemplate features:MoviesPage}"

@@ -153,6 +153,9 @@
 		<MauiXaml Update="Controls\Views\TermsView.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Features\Menu\Establishments\EstablishmentsPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Features\Menu\GasStations\GasStationsPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
