@@ -23,6 +23,7 @@ public partial class EstablishmentsPageViewModel : BaseViewModel
     private async Task SelectionInfoItemAsync()
     {
         if (SelectedInfoItem is null) return;
-
+        NavigationService.AddParameter("title", SelectedInfoItem.Title);
+        await NavigationService.NavigationAsync(AppSettings.InfoMenu);
     }
 }

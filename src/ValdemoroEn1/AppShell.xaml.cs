@@ -21,11 +21,12 @@ public partial class AppShell : Shell
 
     private void RegisterRoutes()
     {
-        Routing.RegisterRoute("about", typeof(AboutPage));
-        Routing.RegisterRoute("schedulesrealtime", typeof(SchedulesRealTimePage));
-        Routing.RegisterRoute("infomenudetails", typeof(InfoMenuDetailPage));
-        Routing.RegisterRoute("register", typeof(RegisterPage));
-        Routing.RegisterRoute("login", typeof(LoginPage));
+        Routing.RegisterRoute(AppSettings.About, typeof(AboutPage));
+        Routing.RegisterRoute(AppSettings.SchedulesRealTime, typeof(SchedulesRealTimePage));
+        Routing.RegisterRoute(AppSettings.InfoMenuDetail, typeof(InfoMenuDetailPage));
+        Routing.RegisterRoute(AppSettings.InfoMenu, typeof(InfoMenuPage));
+        Routing.RegisterRoute(AppSettings.Register, typeof(RegisterPage));
+        Routing.RegisterRoute(AppSettings.Login, typeof(LoginPage));
     }
 
     protected override void OnNavigated(ShellNavigatedEventArgs args)

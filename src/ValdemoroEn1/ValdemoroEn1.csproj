@@ -111,7 +111,7 @@
 		<Compile Update="Features\Menu\About\AboutPage.xaml.cs">
 			<DependentUpon>AboutPage.xaml</DependentUpon>
 		</Compile>
-		<Compile Update="Features\Menu\SchedulesRealTime\SchedulesRealTimePage.xaml.cs">
+		<Compile Update="Features\Menu\SearchSchedulesRealTime\SchedulesRealTime\SchedulesRealTimePage.xaml.cs">
 			<DependentUpon>SchedulesRealTimePage.xaml</DependentUpon>
 		</Compile>
 		<Compile Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml.cs">
@@ -180,17 +180,21 @@
 		<MauiXaml Update="Features\Menu\About\AboutPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Features\Menu\InfoMenuDetail\InfoMenuDetailPage.xaml">
+		<MauiXaml Update="Features\Menu\Establishments\InfoMenuDetail\InfoMenuDetailPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Features\Menu\InfoMenu\InfoMenuPage.xaml">
+		<MauiXaml Update="Features\Menu\Establishments\InfoMenu\InfoMenuPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
-		<MauiXaml Update="Features\Menu\SchedulesRealTime\SchedulesRealTimePage.xaml">
+		<MauiXaml Update="Features\Menu\SearchSchedulesRealTime\SchedulesRealTime\SchedulesRealTimePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="GoogleCloudFunctions\" />
 	</ItemGroup>
 </Project>

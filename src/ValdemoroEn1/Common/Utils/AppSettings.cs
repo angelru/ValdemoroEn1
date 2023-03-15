@@ -27,15 +27,22 @@ public class AppSettings
     public const string TermsGoogleURL = "https://policies.google.com/terms?hl=es";
     public const string PrivacyGoogleURL = "https://policies.google.com/privacy?hl=es";
 
-    //Routes 
-    public const string MainLogin = "//Main/login";
-    public const string Menu = "///Menu";
-    public const string Main = "//Main";
-
     //Request api google
-    public const string ApiKey = "";
+    public const string ApiKey = "NEXT";
     public const string CityQuery = "Valdemoro";
 
     //Email
     public const string ContactEmail = "angel.valdeolmos@outlook.es";
+
+    //Routes
+    public const string About = "About";
+    public const string SchedulesRealTime = "SchedulesRealTime";
+    public const string InfoMenuDetail = "InfoMenuDetail";
+    public const string InfoMenu= "InfoMenu";
+    public const string Register = "Register";
+    public const string Login = "Login";
+
+    public const string MainLogin = "//Main/login";
+    public const string Menu = "///Menu";
+    public const string Main = "//Main";
 }

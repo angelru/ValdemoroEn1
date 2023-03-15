@@ -6,13 +6,10 @@ using GoogleApi.Entities.Places.Search.Text.Response;
 
 namespace ValdemoroEn1.Features;
 
-public partial class InfoMenuPageViewModel : BaseViewModel
+public partial class InfoMenuPageViewModel : BaseViewModel, IQueryAttributable
 {
     [ObservableProperty]
     private InfoMenu _selectedInfoMenu;
-
-    [ObservableProperty]
-    private bool _isRefreshing;
 
     [ObservableProperty]
     private bool _loadMore;
@@ -25,11 +22,41 @@ public partial class InfoMenuPageViewModel : BaseViewModel
 
     public InfoMenuPageViewModel()
     {
-        Title = Shell.Current.CurrentItem.CurrentItem.CurrentItem.Title;
-        InfoMenu();
     }
 
     public ObservableRangeCollection<InfoMenu> InfoMenus { get; set; } = new();
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        string title = query["title"] as string;
+        Title = title;
+
+        InfoMenu();
+    }
+
+    [RelayCommand]
+    private void InfoMenu()
+    {
+        ItemTreshold = 5;
+        _ = RunSafeAsync(() => SearchTextQueryAsync(Title));
+    }
+
+    private async Task SearchTextQueryAsync(string query)
+    {
+        placesTextSearchRequest = new PlacesTextSearchRequest
+        {
+            Key = AppSettings.ApiKey,
+            Query = string.Format("{0} {1}", query, AppSettings.CityQuery),
+            Language = Language.Spanish
+        };
+
+        var placesTextSearchResponse = await GooglePlaces.Search.TextSearch.QueryAsync(placesTextSearchRequest);
+        placesTextSearchRequest.PageToken = placesTextSearchResponse.NextPageToken;
+
+        var infoMenus = await InfoQueryAsync(placesTextSearchResponse.Results);
+
+        InfoMenus.ReplaceRange(infoMenus);
+    }
 
     [RelayCommand]
     private async Task SelectionInfoMenuAsync()
@@ -38,25 +65,6 @@ public partial class InfoMenuPageViewModel : BaseViewModel
         NavigationService.AddParameter("infoMenu", SelectedInfoMenu);
         await NavigationService.NavigationAsync("infomenudetails");
         SelectedInfoMenu = null;
-    }
-
-    [RelayCommand]
-    private void InfoMenu()
-    {
-        ItemTreshold = 5;
-        LoadMore = false;
-        IsRefreshing = false;
-        _ = RunSafeAsync(() => SearchTextQueryAsync(Title));
-    }
-
-    [RelayCommand]
-    private async Task RefreshInfoMenusAsync()
-    {
-        ItemTreshold = 5;
-        IsRefreshing = true;
-        LoadMore = false;
-        await RunSafeAsync(() => SearchTextQueryAsync(Title), false);
-        IsRefreshing = false;
     }
 
     [RelayCommand]
@@ -87,23 +95,6 @@ public partial class InfoMenuPageViewModel : BaseViewModel
 
             InfoMenus.AddRange(infoMenus);
         }
-    }
-
-    private async Task SearchTextQueryAsync(string query)
-    {
-        placesTextSearchRequest = new PlacesTextSearchRequest
-        {
-            Key = AppSettings.ApiKey,
-            Query = string.Format("{0} {1}", query, AppSettings.CityQuery),
-            Language = Language.Spanish
-        };
-
-        var placesTextSearchResponse = await GooglePlaces.Search.TextSearch.QueryAsync(placesTextSearchRequest);
-        placesTextSearchRequest.PageToken = placesTextSearchResponse.NextPageToken;
-
-        var infoMenus = await InfoQueryAsync(placesTextSearchResponse.Results);
-
-        InfoMenus.ReplaceRange(infoMenus);
     }
 
     private async Task<List<InfoMenu>> InfoQueryAsync(IEnumerable<TextResult> results)

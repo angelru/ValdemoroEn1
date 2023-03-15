@@ -22,7 +22,7 @@ public partial class AppShellViewModel : BaseViewModel
     private async Task AboutAsync()
     {
         Shell.Current.FlyoutIsPresented = false;
-        await NavigationService.NavigationAsync("about");
+        await NavigationService.NavigationAsync(AppSettings.About);
     }
 
     [RelayCommand]
