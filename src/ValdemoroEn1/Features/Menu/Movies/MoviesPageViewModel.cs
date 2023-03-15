@@ -2,7 +2,7 @@
 
 public partial class MoviesPageViewModel : BaseViewModel
 {
-    private List<Evento> Events = new();
+    private readonly List<Evento> events = new();
 
     [ObservableProperty]
     private string _selectedDate;
@@ -35,15 +35,17 @@ public partial class MoviesPageViewModel : BaseViewModel
     {
         var movie = await ApiService.MovieTimesAsync();
         Name = movie.Recinto.Nombre;
-        Events = movie.Recinto.Eventos;
 
-        var dates = FlattenDates(Events);
+        events.AddRange(movie.Recinto.Eventos);
+        events.AddRange(movie.ProximosEventos.Eventos);
+
+        var dates = FlattenDates();
         Dates.ReplaceRange(dates);
     }
 
     private List<Movie> FlattenMovies(string date)
     {
-        var movies = Events.Where(s => s.InfoFechas.Fechas.Any(s => s.LaFecha == date))
+        var movies = events.Where(s => s.InfoFechas.Fechas.Any(s => s.LaFecha == date))
              .Select(evento =>
              {
                  var sessions = evento.InfoFechas.Fechas.FirstOrDefault(s => s.LaFecha == date)
@@ -72,10 +74,9 @@ public partial class MoviesPageViewModel : BaseViewModel
         return movies;
     }
 
-    private List<string> FlattenDates(List<Evento> events)
+    private List<string> FlattenDates()
     {
-        var dates = events.Select(s => s.InfoFechas.Fechas.GroupBy(g => g.LaFecha)
-                          .Select(s => s.FirstOrDefault().LaFecha)).FirstOrDefault().ToList();
+        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => g.LaFecha)).Distinct().Take(7).Order().ToList();
         return dates;
     }
 }
