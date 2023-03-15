@@ -63,7 +63,7 @@ public partial class InfoMenuPageViewModel : BaseViewModel, IQueryAttributable
     {
         if (SelectedInfoMenu is null) return;
         NavigationService.AddParameter("infoMenu", SelectedInfoMenu);
-        await NavigationService.NavigationAsync("infomenudetails");
+        await NavigationService.NavigationAsync(AppSettings.InfoMenuDetail);
         SelectedInfoMenu = null;
     }
 

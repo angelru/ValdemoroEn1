@@ -25,9 +25,6 @@
                 ItemsSource="{Binding StopTimesGroups, Mode=OneTime}"
                 SelectionMode="None"
                 VerticalOptions="FillAndExpand">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="16" Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:StopTimesGroup">
                         <Border Stroke="LightGray" StrokeShape="RoundRectangle 20">

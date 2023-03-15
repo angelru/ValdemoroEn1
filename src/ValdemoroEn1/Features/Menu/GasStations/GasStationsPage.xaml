@@ -27,9 +27,6 @@
                 SelectionChangedCommand="{Binding SelectionStationCommand}"
                 SelectionMode="Single"
                 VerticalOptions="FillAndExpand">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="16" Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:ListaEESSPrecio">
                         <Grid

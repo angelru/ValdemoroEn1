@@ -25,9 +25,6 @@
                 ItemsSource="{Binding Movies, Mode=OneTime}"
                 SelectionMode="None"
                 VerticalOptions="FillAndExpand">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="20" Orientation="Vertical" />
-                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:Movie">
                         <Grid

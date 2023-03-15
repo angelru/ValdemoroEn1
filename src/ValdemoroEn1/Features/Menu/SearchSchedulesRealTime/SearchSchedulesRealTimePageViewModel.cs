@@ -55,7 +55,7 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
     {
         AddStopName(stopName);
         NavigationService.AddParameter("stopCode", stopName.StopCode);
-        await NavigationService.NavigationAsync("schedulesrealtime");
+        await NavigationService.NavigationAsync(AppSettings.SchedulesRealTime);
     }
 
     private void AddStopName(StopName stopName)

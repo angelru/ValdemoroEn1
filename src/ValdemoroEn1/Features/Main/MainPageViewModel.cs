@@ -10,13 +10,13 @@ public partial class MainPageViewModel : BaseViewModel
     [RelayCommand]
     private async Task RegisterAsync()
     {
-        await NavigationService.NavigationAsync("register");
+        await NavigationService.NavigationAsync(AppSettings.Register);
     }
 
     [RelayCommand]
     private async Task LoginAsync()
     {
-        await NavigationService.NavigationAsync("login");
+        await NavigationService.NavigationAsync(AppSettings.Login);
     }
 
     //[RelayCommand]
