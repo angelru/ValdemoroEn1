@@ -17,7 +17,7 @@
         <controls:StateLayout.SuccessContent>
             <Picker
                 Title="{localization:Translate SelectProduct}"
-                Margin="0,0,0,8"
+                Margin="0,0,0,6"
                 ItemDisplayBinding="{Binding NombreProducto}"
                 ItemsSource="{Binding Fuels, Mode=OneTime}"
                 SelectedItem="{Binding SelectedFuel}" />
@@ -30,13 +30,13 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="dto:ListaEESSPrecio">
                         <Grid
-                            Padding="0"
+                            Margin="0,0,0,16"
                             BackgroundColor="{StaticResource White}"
                             ColumnDefinitions="60,170,*"
+                            ColumnSpacing="20"
                             CompressedLayout.IsHeadless="true"
                             HeightRequest="60"
-                            RowDefinitions="*,auto"
-                            Style="{StaticResource GridGeneral}">
+                            RowDefinitions="*,auto">
                             <Border
                                 Grid.Row="0"
                                 Grid.Column="0"

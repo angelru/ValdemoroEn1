@@ -27,7 +27,10 @@
                 VerticalOptions="FillAndExpand">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:StopTimesGroup">
-                        <Border Stroke="LightGray" StrokeShape="RoundRectangle 20">
+                        <Border
+                            Margin="0,0,0,16"
+                            Stroke="LightGray"
+                            StrokeShape="RoundRectangle 20">
                             <Grid
                                 ColumnDefinitions="*"
                                 CompressedLayout.IsHeadless="True"
