@@ -5,7 +5,7 @@
 
 Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
-* **Establecimientos.** Listado de establecimientos como bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
+* **Establecimientos.** Listado de establecimientos como bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido. (Próximamente)
 * **Cartelera.** Consulta la cartelera de cine en tiempo real y compra tus entradas.
 * **Precio de la gasolina.** Consulta el precio de la gasolina en tiempo real y dirígete a la gasolinera mediante GPS.
 * **Tiempo y calidad del aire.** Consulta el tiempo y la calidad del aire en tiempo real.
@@ -14,7 +14,7 @@ Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
 Your services in Valdemoro, all the information in one place.
 
-* **Establishments.** List of establishments such as local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly.
+* **Establishments.** List of establishments such as local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly. (Soon)
 * **Billboard.** Check the movie billing in real time and buy your tickets.
 * **Price of gasoline.** Check the price of gasoline in real time and go to the gas station using GPS.
 * **Weather and air quality.** Check the weather and air quality in real time.
