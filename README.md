@@ -49,8 +49,7 @@ I hope you can learn with the project 👋🏽
 # CRTM API
 * [CRTM](https://www.crtm.es/tu-transporte-publico.aspx)
 
-# Google API and Firebase Auth
-* [Places](https://developers.google.com/maps/documentation/places/web-service)
+# Firebase Auth
 * [Auth](https://firebase.google.com/docs/auth)
 
 ## Firebase setup
