@@ -52,6 +52,12 @@ I hope you can learn with the project 👋🏽
 # Firebase Auth
 * [Auth](https://firebase.google.com/docs/auth)
 
+# Tools used
+* [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
+* [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
+* [Plugin.Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
+* [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
+
 # Firebase setup
 1. Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/), if you don't already have one. If you already have an existing Google project associated with your mobile app, click **Import Google Project**. Otherwise, click **Create New Project**.
 2. Go to the **Authentication** section and press select **Sign-in method**, in the Sign-in provides options, select and enable **Google** and **Email/Password**. 
@@ -63,12 +69,6 @@ I hope you can learn with the project 👋🏽
 5. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
 
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
-
-# Tools used
-* [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
-* [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
-* [Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
-* [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
 
 # Architecture
 The application has a clean and tidy architecture, applying the best practices, MVVM and pattern feature-oriented.
