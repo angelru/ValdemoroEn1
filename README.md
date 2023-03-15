@@ -11,7 +11,7 @@ Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 * **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
 * **Cercanías.** Consulta el horario en tiempo real de los trenes de Valdemoro.
 
-(Próximamente)
+(Muy pronto)
 * **Establecimientos.** Listado de establecimientos como bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
 
 Your services in Valdemoro, all the information in one place.
@@ -22,7 +22,8 @@ Your services in Valdemoro, all the information in one place.
 * **Buses.** Real-time schedule of urban and intercity buses, locate the bus stop number and check the time to your bus.
 * **Train.** Check the real-time schedule of Valdemoro trains.
 
-* **Establishments.** List of establishments such as local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly. (Soon)
+(Coming soon)
+* **Establishments.** List of establishments such as local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly.
 
 # History
 Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
