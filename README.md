@@ -98,8 +98,10 @@ The application has a clean and tidy architecture, applying the best practices, 
 # Demo
 #### Android
 
-<img src ="/images/menu.png?raw=true" width="200" /> <img src ="/images/list.png?raw=true" width="200" />
-
+<img src ="/images/me.png?raw=true" width="180" /> <img src ="/images/ga.png?raw=true" width="180" /> 
+<img src ="/images/iq.png?raw=true" width="180" /> <img src ="/images/st.png?raw=true" width="180" /> 
+<img src ="/images/sh.png?raw=true" width="180" />
+ 
 # Download
 <a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
   <img width="200" src="/images/googleplay.png?raw=true"/>
