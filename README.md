@@ -52,10 +52,14 @@ I hope you can learn with the project 👋🏽
 # Firebase Auth
 * [Auth](https://firebase.google.com/docs/auth)
 
+# Google Places API
+* [Places](https://developers.google.com/maps/documentation/places/web-service)
+
 # Tools used
 * [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
 * [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
 * [Plugin.Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
+* [Google Api](https://github.com/vivet/GoogleApi)
 * [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
 
 # Firebase setup
@@ -69,6 +73,10 @@ I hope you can learn with the project 👋🏽
 5. Download and add ```Google-services.json``` to your app project ```Platforms\Android``` and **build action** behaviour to ```GoogleServicesJson``` by Right clicking/Build.
 
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
+
+## Google cloud setup
+1. Enable APIS in the [Google cloud](https://developers.google.com/maps/documentation/places/web-service/cloud-setup)
+2. Use API keys [Get api key](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
 
 # Api Keys Setup, create a class
 ```
