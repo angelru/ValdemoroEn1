@@ -5,6 +5,7 @@ using GoogleApi.Entities.Places.Details.Request.Enums;
 using GoogleApi.Entities.Places.Details.Response;
 using GoogleApi.Entities.Places.Photos.Request;
 using System.Collections.ObjectModel;
+using ValdemoroEn1.Common.Utils;
 
 namespace ValdemoroEn1.Features;
 
@@ -40,7 +41,7 @@ public partial class InfoMenuDetailPageViewModel : BaseViewModel, IQueryAttribut
 
         placesDetailsResponse = await GooglePlaces.Details.QueryAsync(new PlacesDetailsRequest
         {
-            Key = AppSettings.ApiKey,
+            Key = AppKeys.GooglePlacesKey,
             PlaceId = infoMenu.PlaceId,
             Language = Language.Spanish,
             Fields = FieldTypes.Basic | FieldTypes.Contact
@@ -78,7 +79,7 @@ public partial class InfoMenuDetailPageViewModel : BaseViewModel, IQueryAttribut
         {
             var photo = await GooglePlaces.Photos.QueryAsync(new PlacesPhotosRequest
             {
-                Key = AppSettings.ApiKey,
+                Key = AppKeys.GooglePlacesKey,
                 PhotoReference = ph.PhotoReference,
                 MaxWidth = 500,
                 MaxHeight = 250

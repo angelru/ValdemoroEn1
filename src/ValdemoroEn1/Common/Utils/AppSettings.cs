@@ -13,7 +13,6 @@ public class AppSettings
     //IQAir
     public const string IQAirApiUrl = "https://api.airvisual.com/v2/";
     public const string IQAirWeb = "https://www.iqair.com/es/";
-    public const string IQAirApiKey = "API KEY";
     public const string IQAirApiCity = "Valdemoro";
     public const string IQAirApiState = "Madrid";
     public const string IQAirApiCountry = "SPAIN";
@@ -28,7 +27,6 @@ public class AppSettings
     public const string PrivacyGoogleURL = "https://policies.google.com/privacy?hl=es";
 
     //Request api google
-    public const string ApiKey = "NEXT";
     public const string CityQuery = "Valdemoro";
 
     //Email

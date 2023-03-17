@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Json;
 using System.Xml.Serialization;
+using ValdemoroEn1.Common.Utils;
 
 namespace ValdemoroEn1.Services;
 
@@ -46,7 +47,7 @@ public class ApiService
 
     public Task<WeatherResponse> WeatherAsync()
     {
-        string key = AppSettings.IQAirApiKey;
+        string key = AppKeys.IQAirApiKey;
         string country = AppSettings.IQAirApiCountry;
         string state = AppSettings.IQAirApiState;
         string city = AppSettings.IQAirApiCity;
