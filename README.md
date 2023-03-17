@@ -70,6 +70,18 @@ I hope you can learn with the project 👋🏽
 
 5. Click **Add Firebase to your *iOS* app** and follow the setup steps. (Coming soon)
 
+# Api Keys Setup, create a class
+```
+public class AppKeys
+{
+    //IQAir
+    public const string IQAirApiKey = "API KEY";
+
+    //Google
+    public const string GooglePlacesKey = "API KEY";
+}
+```
+
 # Architecture
 The application has a clean and tidy architecture, applying the best practices, MVVM and pattern feature-oriented.
 
