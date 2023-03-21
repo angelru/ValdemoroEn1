@@ -13,6 +13,7 @@ public static partial class ServicesExtensions
             .AddTransient<LoginPage>().AddTransient<LoginPageViewModel>()
 
         //Singleton
+            .AddSingleton<TheaterPage>().AddSingleton<TheaterPageViewModel>()
             .AddSingleton<MoviesPage>().AddSingleton<MoviesPageViewModel>()
             .AddSingleton<GasStationsPage>().AddSingleton<GasStationsPageViewModel>()
             .AddSingleton<WeatherPage>().AddSingleton<WeatherPageViewModel>()

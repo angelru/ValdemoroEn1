@@ -594,6 +594,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Teatro.
+        /// </summary>
+        public static string Theater {
+            get {
+                return ResourceManager.GetString("Theater", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ver trailer.
         /// </summary>
         public static string Trailer {

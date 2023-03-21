@@ -25,11 +25,19 @@
         Route="Menu"
         Shell.TabBarIsVisible="False">
 
-        <ShellContent
+        <!--<ShellContent
             Title="{localization:Translate Establishments}"
             ContentTemplate="{DataTemplate features:EstablishmentsPage}"
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Building},
+                             Color=Black,
+                             Size=24}" />-->
+
+        <ShellContent
+            Title="{localization:Translate Theater}"
+            ContentTemplate="{DataTemplate features:TheaterPage}"
+            Icon="{FontImage FontFamily=FontAwesomeSolid,
+                             Glyph={Static fontawesome:FontAwesomeIcons.MasksTheater},
                              Color=Black,
                              Size=24}" />
 

@@ -191,6 +191,9 @@
 		<MauiXaml Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Features\Menu\Theater\TheaterPage.xaml">
+		  <Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>

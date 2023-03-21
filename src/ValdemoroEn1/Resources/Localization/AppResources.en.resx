@@ -296,6 +296,9 @@ ValdemoroEn1!</value>
   <data name="TermsConditions" xml:space="preserve">
     <value>terms and conditions </value>
   </data>
+  <data name="Theater" xml:space="preserve">
+    <value>Theater</value>
+  </data>
   <data name="Trailer" xml:space="preserve">
     <value>Show trailer</value>
   </data>
