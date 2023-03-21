@@ -260,8 +260,8 @@ ValdemoroEn1!</value>
   <data name="SearchBus" xml:space="preserve">
     <value>Search- favorites</value>
   </data>
-  <data name="SelectDate" xml:space="preserve">
-    <value>Select a date</value>
+  <data name="SelectDay" xml:space="preserve">
+    <value>Select a day</value>
   </data>
   <data name="SelectHour" xml:space="preserve">
     <value>Select the time and buy your ticket</value>

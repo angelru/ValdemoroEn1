@@ -486,11 +486,11 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Selecciona una fecha.
+        ///   Busca una cadena traducida similar a Selecciona un día.
         /// </summary>
-        public static string SelectDate {
+        public static string SelectDay {
             get {
-                return ResourceManager.GetString("SelectDate", resourceCulture);
+                return ResourceManager.GetString("SelectDay", resourceCulture);
             }
         }
         
