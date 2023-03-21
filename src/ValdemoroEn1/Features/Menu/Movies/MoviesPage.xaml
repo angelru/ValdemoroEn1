@@ -17,7 +17,7 @@
         <controls:StateLayout.SuccessContent>
             <Label HorizontalTextAlignment="Center" Text="{Binding Name}" />
             <Picker
-                Title="{localization:Translate SelectDay}"
+                Title="{localization:Translate SelectDate}"
                 Margin="0,0,0,6"
                 ItemsSource="{Binding Dates, Mode=OneTime}"
                 SelectedItem="{Binding SelectedDate}" />

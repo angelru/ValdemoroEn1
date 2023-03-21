@@ -45,7 +45,6 @@ public partial class MoviesPageViewModel : BaseViewModel
 
     private List<Movie> FlattenMovies(string date)
     {
-        date = DateTime.Parse(date).ToString("dd/MM/yyyy");
         var movies = events.Where(s => s.InfoFechas.Fechas.Any(s => s.LaFecha == date))
              .Select(evento =>
              {
@@ -77,7 +76,7 @@ public partial class MoviesPageViewModel : BaseViewModel
 
     private List<string> FlattenDates()
     {
-        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => DateTime.Parse(g.LaFecha))).Distinct().Take(7).Order().Select(s => s.ToString("dddd d MMMM")).ToList();
+        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => g.LaFecha)).Distinct().Take(7).Order().ToList();
         return dates;
     }
 }
