@@ -7,43 +7,22 @@
     xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     Title="{localization:Translate Theater}">
-    <Grid
-        Padding="16"
-        ColumnDefinitions="*,*"
-        RowDefinitions="56,*"
-        RowSpacing="16">
-        <Button
-            Grid.Row="0"
-            Grid.Column="0"
-            BackgroundColor="{StaticResource BlueGeneral}"
-            Clicked="GoBack_Clicked"
-            WidthRequest="56">
-            <Button.ImageSource>
-                <FontImageSource
-                    FontFamily="FontAwesomeSolid"
-                    Glyph="{Static fontawesome:FontAwesomeIcons.ArrowLeft}"
-                    Size="24"
-                    Color="{StaticResource White}" />
-            </Button.ImageSource>
-        </Button>
-        <Button
-            Grid.Row="0"
-            Grid.Column="1"
-            BackgroundColor="{StaticResource BlueGeneral}"
-            Clicked="Home_Clicked"
-            WidthRequest="56">
-            <Button.ImageSource>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="Home_Clicked">
+            <ToolbarItem.IconImageSource>
                 <FontImageSource
                     FontFamily="FontAwesomeSolid"
                     Glyph="{Static fontawesome:FontAwesomeIcons.House}"
-                    Size="24"
+                    Size="20"
                     Color="{StaticResource White}" />
-            </Button.ImageSource>
-        </Button>
-        <WebView
-            x:Name="TheaterWebView"
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            Source="{Static common:AppSettings.TheaterUrl}" />
-    </Grid>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <WebView
+        x:Name="TheaterWebView"
+        Margin="16"
+        Source="{Static common:AppSettings.TheaterUrl}" />
+
 </ContentPage>

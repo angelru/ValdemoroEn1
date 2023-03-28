@@ -12,9 +12,4 @@ public partial class TheaterPage : ContentPage
     {
         TheaterWebView.Source = new UrlWebViewSource { Url = AppSettings.TheaterUrl };
     }
-
-    private void GoBack_Clicked(object sender, EventArgs e)
-    {
-        TheaterWebView.GoBack();
-    }
 }
