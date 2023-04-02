@@ -299,6 +299,9 @@ ValdemoroEn1!</value>
   <data name="Theater" xml:space="preserve">
     <value>Theater</value>
   </data>
+  <data name="TheaterInfo" xml:space="preserve">
+    <value>The purchase of theater tickets is obtained through the website of the Valdemoro town hall.</value>
+  </data>
   <data name="Trailer" xml:space="preserve">
     <value>Show trailer</value>
   </data>

@@ -603,6 +603,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a La compra de las entradas del teatro se obtiene a través de la web del ayuntamiento de Valdemoro..
+        /// </summary>
+        public static string TheaterInfo {
+            get {
+                return ResourceManager.GetString("TheaterInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ver trailer.
         /// </summary>
         public static string Trailer {

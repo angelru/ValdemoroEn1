@@ -57,7 +57,7 @@
                                 <ScrollView
                                     Grid.Row="1"
                                     Grid.Column="0"
-                                    HorizontalScrollBarVisibility="Never"
+                                    HorizontalScrollBarVisibility="Always"
                                     Orientation="Horizontal"
                                     VerticalOptions="Center">
                                     <HorizontalStackLayout

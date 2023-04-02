@@ -299,6 +299,9 @@ ValdemoroEn1!</value>
   <data name="Theater" xml:space="preserve">
     <value>Teatro</value>
   </data>
+  <data name="TheaterInfo" xml:space="preserve">
+    <value>La compra de las entradas del teatro se obtiene a través de la web del ayuntamiento de Valdemoro.</value>
+  </data>
   <data name="Trailer" xml:space="preserve">
     <value>Ver trailer</value>
   </data>

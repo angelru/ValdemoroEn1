@@ -15,6 +15,19 @@
                     <Label Text="{localization:Translate ValdemoroEn1}" />
                 </controls:CardView.CardContent>
             </controls:CardView>
+            <controls:CardView Title="{localization:Translate Theater}">
+                <controls:CardView.CardContent>
+                    <Label Text="{localization:Translate TheaterInfo}" />
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{localization:Translate WebInfo}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.TheatherValdemoroUrl}" Tapped="OpenWeb_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </controls:CardView.CardContent>
+            </controls:CardView>
             <controls:CardView Title="{localization:Translate CinemaListings}">
                 <controls:CardView.CardContent>
                     <Label Text="{localization:Translate MoviesInfo}" />
@@ -67,11 +80,11 @@
                     </Label>
                 </controls:CardView.CardContent>
             </controls:CardView>
-            <controls:CardView Title="Google">
+            <!--<controls:CardView Title="Google">
                 <controls:CardView.CardContent>
                     <Label Text="{localization:Translate GoogleInfo}" />
                 </controls:CardView.CardContent>
-            </controls:CardView>
+            </controls:CardView>-->
             <controls:CardView Title="{localization:Translate Contact}">
                 <controls:CardView.CardContent>
                     <Label
