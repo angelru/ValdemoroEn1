@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.LifecycleEvents;
+using Plugin.Firebase.CloudMessaging;
 
 #if ANDROID
 using Plugin.Firebase.Core.Platforms.Android;
@@ -28,6 +29,7 @@ public static partial class LifecycleEventsExtensions
         });
 
         builder.Services
+            .AddSingleton(_ => CrossFirebaseCloudMessaging.Current)
             .AddSingleton(_ => CrossFirebaseAuth.Current);
 
         return builder;

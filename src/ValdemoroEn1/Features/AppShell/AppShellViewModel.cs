@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui.Views;
+using Plugin.Firebase.CloudMessaging;
 using ValdemoroEn1.Controls;
 
 namespace ValdemoroEn1.Features;
@@ -16,6 +17,13 @@ public partial class AppShellViewModel : BaseViewModel
 
     public AppShellViewModel()
     {
+        _ = RunSafeAsync(NotificationsAsync);
+    }
+
+    private async Task NotificationsAsync()
+    {
+        await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
+        await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
     }
 
     [RelayCommand]

@@ -85,10 +85,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\drawable\ic_push_small.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="GoogleApi" Version="4.5.4" />
 		<PackageReference Include="Plugin.Firebase.Auth" Version="2.0.1" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.1" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
