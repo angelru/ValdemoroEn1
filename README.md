@@ -5,6 +5,7 @@
 
 Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
+* **Teatro.** Consulta las obras de teatro y compra tus entradas.
 * **Cartelera.** Consulta la cartelera de cine en tiempo real y compra tus entradas.
 * **Precio de la gasolina.** Consulta el precio de la gasolina en tiempo real y dirígete a la gasolinera mediante GPS.
 * **Tiempo y calidad del aire.** Consulta el tiempo y la calidad del aire en tiempo real.
@@ -16,6 +17,7 @@ Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
 Your services in Valdemoro, all the information in one place.
 
+* **Theatre.** Consult the plays and buy your tickets.
 * **Billboard.** Check the movie billing in real time and buy your tickets.
 * **Price of gasoline.** Check the price of gasoline in real time and go to the gas station using GPS.
 * **Weather and air quality.** Check the weather and air quality in real time.
