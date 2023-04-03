@@ -1,8 +1,11 @@
-﻿using Android.App;
+﻿using Android;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using AndroidX.Core.App;
+using AndroidX.Core.Content;
 using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 using Plugin.Firebase.CloudMessaging;
 using Platform = Microsoft.Maui.ApplicationModel.Platform;
@@ -12,17 +15,24 @@ namespace ValdemoroEn1;
 [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 public class MainActivity : MauiAppCompatActivity
 {
-
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
         Window.SetStatusBarColor(Color.FromArgb("#043465").ToAndroid());
         HandleIntent(Intent);
-        CreateNotificationChannelIfNeeded();
+        ConfigurationNotification();
     }
 
-    private void CreateNotificationChannelIfNeeded()
+    private void ConfigurationNotification()
     {
+        if (Build.VERSION.SdkInt >= BuildVersionCodes.Tiramisu)
+        {
+            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.PostNotifications) != Permission.Granted)
+            {
+                ActivityCompat.RequestPermissions(this, new[] { Manifest.Permission.PostNotifications }, 0);
+            }
+        }
+
         if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
         {
             CreateNotificationChannel();

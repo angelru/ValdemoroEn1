@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="es.valtimoretec.valdemoroenuno">
-	<application android:allowBackup="true"
+	<application 
+			     android:allowBackup="false"
+			     android:fullBackupContent="false"
+				 android:dataExtractionRules="@xml/data_extraction_rules"
 				 android:icon="@mipmap/appicon"
 				 android:roundIcon="@mipmap/appicon_round"
 				 android:supportsRtl="true"
@@ -43,6 +46,7 @@
 			<data android:scheme="geo"/>
 		</intent>
 	</queries>
+	<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-sdk android:minSdkVersion="26" android:targetSdkVersion="33" />

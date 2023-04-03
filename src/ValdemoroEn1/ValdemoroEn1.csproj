@@ -23,7 +23,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
-		<AndroidPackageFormat>aab</AndroidPackageFormat>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
 		<AndroidUseAapt2>True</AndroidUseAapt2>
 		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
 		<RunAOTCompilation>true</RunAOTCompilation>
@@ -85,7 +85,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\proguard.cfg" />
 	  <None Remove="Platforms\Android\Resources\drawable\ic_push_small.png" />
+	  <None Remove="Platforms\Android\Resources\xml\data_extraction_rules.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -100,7 +102,6 @@
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
-		<ProguardConfiguration Include="Platforms\Android\proguard.cfg" />
 		<AndroidEnvironment Include="Platforms\Android\GarbageCollector.config" />
 		<GoogleServicesJson Include="Platforms\Android\google-services.json" />
 	</ItemGroup>
