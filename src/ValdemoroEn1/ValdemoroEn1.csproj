@@ -85,12 +85,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Platforms\Android\proguard.cfg" />
-	  <None Remove="Platforms\Android\Resources\drawable\ic_push_small.png" />
-	  <None Remove="Platforms\Android\Resources\xml\data_extraction_rules.xml" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="GoogleApi" Version="4.5.4" />
@@ -104,6 +98,7 @@
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
 		<AndroidEnvironment Include="Platforms\Android\GarbageCollector.config" />
 		<GoogleServicesJson Include="Platforms\Android\google-services.json" />
+		<ProguardConfiguration Include="Platforms\Android\proguard.cfg" />
 	</ItemGroup>
 
 	<ItemGroup>
