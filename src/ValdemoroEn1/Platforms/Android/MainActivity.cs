@@ -46,7 +46,7 @@ public class MainActivity : MauiAppCompatActivity
         var channel = new NotificationChannel(channelId, "General", NotificationImportance.Default);
         notificationManager.CreateNotificationChannel(channel);
         FirebaseCloudMessagingImplementation.ChannelId = channelId;
-        FirebaseCloudMessagingImplementation.SmallIconRef = Resource.Drawable.ic_push_small;
+        FirebaseCloudMessagingImplementation.SmallIconRef = Resource.Drawable.ic_push;
     }
 
     private static void HandleIntent(Intent intent)

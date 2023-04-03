@@ -7,7 +7,7 @@
 				 android:supportsRtl="true"
 				 android:usesCleartextTraffic="true"
 				 android:label="ValdemoroEn1">
-		<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_push_small" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/ic_push" />
 		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"
 			      android:exported="false" />
 		<receiver
