@@ -66,7 +66,7 @@
 		<MauiImage Include="Resources\Images\humidity.png" BaseSize="100,100" />
 		<MauiImage Include="Resources\Images\windspeed.png" BaseSize="256,256" />
 
-		<MauiImage Include="Resources\Images\apple.svg" BaseSize="24,24" />
+		<MauiImage Include="Resources\Images\apple.png" BaseSize="24,24" />
 		<MauiImage Include="Resources\Images\conexerror.png" BaseSize="448,448" />
 		<MauiImage Include="Resources\Images\error.png" BaseSize="384,240" />
 		<MauiImage Include="Resources\Images\facebook.svg" BaseSize="24,24" />
@@ -92,7 +92,13 @@
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.1" />
 	</ItemGroup>
 
+	<!-- ios entitlements -->
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+		<BundleResource Include="GoogleService-Info.plist" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">

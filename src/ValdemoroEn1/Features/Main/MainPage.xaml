@@ -17,17 +17,20 @@
             Grid.Row="1"
             Spacing="6"
             VerticalOptions="End">
+
+            <Button
+                Command="{Binding AppleLoginCommand}"
+                ImageSource="apple"
+                IsVisible="{OnPlatform iOS=True,
+                                       Android=False}"
+                Style="{StaticResource ButtonGeneral}"
+                Text="{localization:Translate SigninWithApple}" />
+
             <Button
                 Command="{Binding GoogleLoginCommand}"
                 ImageSource="google"
                 Style="{StaticResource ButtonGeneral}"
                 Text="{localization:Translate SigninWithGoogle}" />
-
-            <!--<Button
-                Command="{Binding FacebookLoginCommand}"
-                ImageSource="facebook"
-                Style="{StaticResource ButtonGeneral}"
-                Text="{localization:Translate SigninWithFacebook}" />-->
 
             <Button
                 Command="{Binding RegisterCommand}"

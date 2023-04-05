@@ -29,6 +29,17 @@ public partial class MainPageViewModel : BaseViewModel
     //}
 
     [RelayCommand]
+    private async Task AppleLoginAsync()
+    {
+        await RunSafeAsync(async () =>
+        {
+            var firebaseUser = await CrossFirebaseAuth.Current.SignInWithAppleAsync();
+            Preferences.Set("login", true);
+            await NavigationService.NavigationAsync(AppSettings.Menu);
+        });
+    }
+
+    [RelayCommand]
     private async Task GoogleLoginAsync()
     {
         await RunSafeAsync(async () =>
