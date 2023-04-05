@@ -33,10 +33,7 @@ public class MainActivity : MauiAppCompatActivity
             }
         }
 
-        if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
-        {
-            CreateNotificationChannel();
-        }
+        CreateNotificationChannel();
     }
 
     private void CreateNotificationChannel()
