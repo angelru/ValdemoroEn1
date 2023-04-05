@@ -59,8 +59,8 @@ I hope you can learn with the project 👋🏽
 
 # Tools used
 * [.NET MAUI](https://github.com/dotnet/maui)
-* [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
 * [.NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
+* [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
 * [Plugin.Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
 * [Google Api](https://github.com/vivet/GoogleApi)
 * [HttpClient](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/rest)
