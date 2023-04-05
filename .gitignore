@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 /src/ValdemoroEn1/Platforms/Android/google-services.json
 /src/ValdemoroEn1/Common/Utils/AppKeys.cs
+/src/ValdemoroEn1/Platforms/iOS/GoogleService-Info.plist
