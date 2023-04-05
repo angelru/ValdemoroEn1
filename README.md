@@ -58,6 +58,7 @@ I hope you can learn with the project 👋🏽
 * [Places](https://developers.google.com/maps/documentation/places/web-service)
 
 # Tools used
+* [.NET MAUI](https://github.com/dotnet/maui)
 * [MVVM Community Toolkit](https://aka.ms/mvvmtoolkit/docs)
 * [NET MAUI Community Toolkit](https://github.com/CommunityToolkit/Maui)
 * [Plugin.Firebase](https://github.com/TobiasBuchholz/Plugin.Firebase)
