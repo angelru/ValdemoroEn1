@@ -98,4 +98,12 @@
                                     Size=24}"
         Text="{localization:Translate Logout}" />
 
+    <MenuItem
+        Command="{Binding DeleteAccountCommand}"
+        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
+                                    Glyph={Static fontawesome:FontAwesomeIcons.User},
+                                    Color=Black,
+                                    Size=24}"
+        Text="{localization:Translate DelAccount}" />
+
 </Shell>

@@ -214,6 +214,24 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar cuenta.
+        /// </summary>
+        public static string DelAccount {
+            get {
+                return ResourceManager.GetString("DelAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ten en cuenta que, al borrar tu cuenta, perderás todo acceso y toda la información relacionada con ella. Esta acción no se puede deshacer. ¿Estás seguro de que deseas proceder con la eliminación de tu cuenta?.
+        /// </summary>
+        public static string DelAccountMsg {
+            get {
+                return ResourceManager.GetString("DelAccountMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Correo.
         /// </summary>
         public static string Email {
@@ -428,6 +446,15 @@ namespace ValdemoroEn1.Resources.Localization {
         public static string MoviesInfo {
             get {
                 return ResourceManager.GetString("MoviesInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Mi cuenta.
+        /// </summary>
+        public static string MyAccount {
+            get {
+                return ResourceManager.GetString("MyAccount", resourceCulture);
             }
         }
         

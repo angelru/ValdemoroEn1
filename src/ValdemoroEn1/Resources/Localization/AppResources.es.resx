@@ -168,6 +168,12 @@
   <data name="CrtmInfo" xml:space="preserve">
     <value>Acceso a los horarios del transporte público. Se trata de mostrar los datos de forma sencilla y contrastada con fuentes oficiales del CRTM pero de forma particular, es decir, no hay ningún vínculo con el consorcio.</value>
   </data>
+  <data name="DelAccount" xml:space="preserve">
+    <value>Eliminar cuenta</value>
+  </data>
+  <data name="DelAccountMsg" xml:space="preserve">
+    <value>Ten en cuenta que, al borrar tu cuenta, perderás todo acceso y toda la información relacionada con ella. Esta acción no se puede deshacer. ¿Estás seguro de que deseas proceder con la eliminación de tu cuenta?</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Correo</value>
   </data>
@@ -241,6 +247,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="MoviesInfo" xml:space="preserve">
     <value>La cartelera de cine con la compra de sus entradas se obtiene en tiempo real a través de la web del Centro Comercial El Restón.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>Mi cuenta</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>

@@ -27,6 +27,22 @@ public partial class AppShellViewModel : BaseViewModel
     }
 
     [RelayCommand]
+    private async Task DeleteAccountAsync()
+    {
+        bool accept = await AlertService.DisplayAlertAsync(AppResources.MyAccount, AppResources.DelAccountMsg, AppResources.Accept, AppResources.Cancel);
+
+        if (accept)
+        {
+            if (CrossFirebaseAuth.Current?.CurrentUser != null)
+            {
+                Preferences.Clear();
+                await CrossFirebaseAuth.Current.CurrentUser.DeleteAsync();
+                await NavigationService.NavigationAsync(AppSettings.Main);
+            }
+        }
+    }
+
+    [RelayCommand]
     private async Task AboutAsync()
     {
         Shell.Current.FlyoutIsPresented = false;

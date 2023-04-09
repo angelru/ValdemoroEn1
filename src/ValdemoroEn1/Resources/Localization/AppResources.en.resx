@@ -168,6 +168,12 @@
   <data name="CrtmInfo" xml:space="preserve">
     <value>Access to public transport schedules. It is about showing the data in a simple way and contrasted with official sources of the CRTM but in a particular way, that is, there is no link with the consortium.</value>
   </data>
+  <data name="DelAccount" xml:space="preserve">
+    <value>Delete account</value>
+  </data>
+  <data name="DelAccountMsg" xml:space="preserve">
+    <value>Please be aware that deleting your account will result in a permanent loss of access and all associated information. This action cannot be undone. Are you sure you want to proceed with deleting your account?</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
@@ -241,6 +247,9 @@ ValdemoroEn1!</value>
   </data>
   <data name="MoviesInfo" xml:space="preserve">
     <value>The movie billboard with the purchase of your tickets is obtained in real time through the website of the El Restón Shopping Center.</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My account</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
