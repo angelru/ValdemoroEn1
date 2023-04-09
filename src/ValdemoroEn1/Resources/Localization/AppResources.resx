@@ -291,7 +291,7 @@ ValdemoroEn1!</value>
     <value>Español</value>
   </data>
   <data name="StopCode" xml:space="preserve">
-    <value>Código de parada</value>
+    <value>Código o nombre de la parada</value>
   </data>
   <data name="TermsConditions" xml:space="preserve">
     <value>términos y condiciones </value>

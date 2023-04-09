@@ -291,7 +291,7 @@ ValdemoroEn1!</value>
     <value>Spanish</value>
   </data>
   <data name="StopCode" xml:space="preserve">
-    <value>Stop code</value>
+    <value>Code or stop name</value>
   </data>
   <data name="TermsConditions" xml:space="preserve">
     <value>terms and conditions </value>

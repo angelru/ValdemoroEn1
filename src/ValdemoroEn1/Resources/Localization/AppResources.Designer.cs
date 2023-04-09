@@ -576,7 +576,7 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Código de parada.
+        ///   Busca una cadena traducida similar a Código o nombre de la parada.
         /// </summary>
         public static string StopCode {
             get {

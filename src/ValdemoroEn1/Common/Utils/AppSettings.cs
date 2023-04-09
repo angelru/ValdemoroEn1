@@ -33,8 +33,9 @@ public class AppSettings
     //Request api google
     public const string CityQuery = "Valdemoro";
 
-    //Email
-    public const string ContactEmail = "angel.valdeolmos@outlook.es";
+    //Contact
+    public const string ContactUrl = "https://www.angelruben.es";
+    public const string ContactEmail = "info@angelruben.es";
 
     //Routes
     public const string About = "About";

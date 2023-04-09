@@ -95,6 +95,14 @@
                             <TapGestureRecognizer Tapped="SendEmail_Tapped" />
                         </Label.GestureRecognizers>
                     </Label>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="{localization:Translate WebInfo}"
+                        TextDecorations="Underline">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Static common:AppSettings.ContactUrl}" Tapped="OpenWeb_Tapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
                 </controls:CardView.CardContent>
             </controls:CardView>
         </VerticalStackLayout>
