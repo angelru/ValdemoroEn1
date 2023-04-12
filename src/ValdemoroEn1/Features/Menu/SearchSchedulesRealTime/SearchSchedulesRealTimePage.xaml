@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+    xmlns:effects="clr-namespace:ValdemoroEn1.Effects"
     xmlns:features="clr-namespace:ValdemoroEn1.Features"
     xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
@@ -18,11 +19,14 @@
         <controls:StateLayout.SuccessContent>
             <Border Stroke="{StaticResource BlueGeneral}" StrokeShape="RoundRectangle 10">
                 <SearchBar
-                    BackgroundColor="Transparent"
+                    BackgroundColor="White"
                     CancelButtonColor="{StaticResource BlueGeneral}"
                     FontSize="Small"
                     Placeholder="{localization:Translate StopCode}"
                     Text="{Binding TextStopCode}">
+                    <SearchBar.Effects>
+                        <effects:SearchBarTransparentEffect />
+                    </SearchBar.Effects>
                     <SearchBar.Behaviors>
                         <toolkit:UserStoppedTypingBehavior
                             Command="{Binding SearchStopCommand}"

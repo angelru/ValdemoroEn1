@@ -13,6 +13,7 @@ public static class MauiProgram
             .RegisterServices()
             .RegisterFirebaseServices()
             .RegisterPagesViewModels()
+            .RegisterEffects()
             .RegisterHandlers()
             .UseMauiCommunityToolkit();
 

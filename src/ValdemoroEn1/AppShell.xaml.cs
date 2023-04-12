@@ -14,7 +14,7 @@ public partial class AppShell : Shell
     private void CheckLogin()
     {
         bool login = Preferences.ContainsKey("login");
-        if (!login) _ = GoToAsync(AppSettings.Menu);
+        if (login) _ = GoToAsync(AppSettings.Menu);
     }
 
     protected override void OnNavigated(ShellNavigatedEventArgs args)
