@@ -11,7 +11,7 @@
     <Border BackgroundColor="White" StrokeShape="RoundRectangle 20">
         <Grid
             Padding="16"
-            RowDefinitions="auto,*"
+            RowDefinitions="*,auto"
             RowSpacing="20">
             <CollectionView
                 x:Name="LanguageCollectionView"
