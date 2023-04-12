@@ -9,9 +9,39 @@
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     x:DataType="features:AppShellViewModel">
 
-    <Shell.FlyoutHeader>
-        <controls:FlyoutHeaderView />
-    </Shell.FlyoutHeader>
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid
+                Margin="0"
+                BackgroundColor="{StaticResource RedGeneral}"
+                HeightRequest="200"
+                RowDefinitions="*, 1">
+                <VerticalStackLayout Grid.Row="0" VerticalOptions="Center">
+                    <Border
+                        HeightRequest="84"
+                        StrokeThickness="1"
+                        WidthRequest="84">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="100,100,100,100" />
+                        </Border.StrokeShape>
+                        <Image Aspect="AspectFill" Source="{Binding PhotoUrl}" />
+                    </Border>
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Name}"
+                        TextColor="White" />
+                    <Label
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Email}"
+                        TextColor="White" />
+                </VerticalStackLayout>
+                <BoxView
+                    Grid.Row="1"
+                    HeightRequest="1"
+                    Color="{StaticResource BlueGeneral}" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
 
     <ShellContent
         ContentTemplate="{DataTemplate features:MainPage}"
@@ -24,14 +54,6 @@
         FlyoutDisplayOptions="AsMultipleItems"
         Route="Menu"
         Shell.TabBarIsVisible="False">
-
-        <!--<ShellContent
-            Title="{localization:Translate Establishments}"
-            ContentTemplate="{DataTemplate features:EstablishmentsPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Building},
-                             Color=Black,
-                             Size=24}" />-->
 
         <ShellContent
             Title="{localization:Translate Theater}"

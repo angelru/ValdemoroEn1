@@ -36,7 +36,10 @@
 	</array>
 	<key>CFBundleURLSchemes</key>
 	<array>
+		<string>es.valtimoretec.valdemoroenuno</string>
 		<string>com.googleusercontent.apps.1043453667471-i237ounsl42v96a8ld3tc0nl4t5dksta</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<string>Editor</string>
 </dict>
 </plist>

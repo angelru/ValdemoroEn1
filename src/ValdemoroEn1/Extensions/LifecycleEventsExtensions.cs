@@ -18,8 +18,8 @@ public static partial class LifecycleEventsExtensions
 #if IOS
             events.AddiOS(iOS => iOS.FinishedLaunching((app, launchOptions) => {
                 CrossFirebase.Initialize();
-                FirebaseAuthImplementation.Initialize();
                 FirebaseCloudMessagingImplementation.Initialize();
+                FirebaseAuthImplementation.Initialize();
                 return false;
             }));
 #else

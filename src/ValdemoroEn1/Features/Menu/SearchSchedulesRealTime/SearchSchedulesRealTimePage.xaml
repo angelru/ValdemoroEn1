@@ -33,10 +33,11 @@
                 </SearchBar>
             </Border>
             <CollectionView
+                x:Name="SearchCollectionView"
                 Margin="0,0,0,16"
+                HeightRequest="0"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding StopMunicipalities}"
-                MaximumHeightRequest="350"
                 SelectionMode="None">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:StopName">
@@ -81,17 +82,19 @@
                 <VerticalStackLayout BindableLayout.ItemsSource="{Binding StopNames, Mode=OneTime}" CompressedLayout.IsHeadless="True">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="models:StopName">
-                            <SwipeView>
+                            <SwipeView BackgroundColor="DarkRed">
                                 <SwipeView.RightItems>
                                     <SwipeItems>
-                                        <SwipeItem
-                                            BackgroundColor="DarkRed"
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=DeleteStopNameCommand, Mode=OneTime}"
-                                            CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext, Mode=OneTime}"
-                                            IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                                                        Glyph={Static fontawesome:FontAwesomeIcons.Trash},
-                                                                        Color=Black,
-                                                                        Size=24}" />
+                                        <SwipeItemView Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=DeleteStopNameCommand, Mode=OneTime}" CommandParameter="{Binding Source={RelativeSource Self}, Path=BindingContext, Mode=OneTime}">
+                                            <Label
+                                                Padding="30"
+                                                FontFamily="FontAwesomeSolid"
+                                                FontSize="20"
+                                                HorizontalTextAlignment="End"
+                                                Text="{Static fontawesome:FontAwesomeIcons.Trash}"
+                                                TextColor="White"
+                                                VerticalTextAlignment="Center" />
+                                        </SwipeItemView>
                                     </SwipeItems>
                                 </SwipeView.RightItems>
                                 <Grid

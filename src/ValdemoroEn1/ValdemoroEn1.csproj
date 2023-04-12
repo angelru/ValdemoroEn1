@@ -41,7 +41,7 @@
 		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="400,400" Color="White" />
+		<MauiSplashScreen Include="Resources\Splash\splash.png" BaseSize="200,200" Resize="true" Color="White" />
 
 		<MauiImage Include="Resources\Images\d01d.png" BaseSize="315,285" />
 		<MauiImage Include="Resources\Images\n01n.png" BaseSize="315,285" />
@@ -103,7 +103,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
-		<MauiAsset Include="Platforms\iOS\GoogleService-Info.plist" LogicalName="GoogleService-Info.plist" />
+		  <BundleResource Include="Platforms\iOS\GoogleService-Info.plist" Link="GoogleService-Info.plist" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
@@ -150,9 +150,6 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\Views\CardView.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Views\FlyoutHeaderView.xaml">
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Controls\Views\InfoMenuDetailView.xaml">

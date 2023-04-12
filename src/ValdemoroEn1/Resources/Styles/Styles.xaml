@@ -380,6 +380,8 @@
 
     <Style ApplyToDerivedTypes="True" TargetType="Shell">
         <Setter Property="Shell.BackgroundColor" Value="{StaticResource BlueGeneral}" />
+        <Setter Property="Shell.TitleColor" Value="White" />
+        <Setter Property="Shell.ForegroundColor" Value="White" />
         <Setter Property="Shell.NavBarHasShadow" Value="False" />
     </Style>
 

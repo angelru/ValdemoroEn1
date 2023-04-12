@@ -77,7 +77,7 @@ public partial class MoviesPageViewModel : BaseViewModel
 
     private List<string> FlattenDates()
     {
-        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => DateTime.Parse(g.LaFecha))).Distinct().Order().Select(s => s.ToString("dddd d MMMM")).Take(7).ToList();
+        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => DateTime.ParseExact(g.LaFecha, "dd/MM/yyyy", null))).Distinct().Order().Select(s => s.ToString("dddd d MMMM")).Take(7).ToList();
         return dates;
     }
 }

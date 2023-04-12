@@ -6,12 +6,16 @@
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
     xmlns:models="clr-namespace:ValdemoroEn1.Models"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-    Size="220,176"
+    Size="260,200"
     Color="Transparent">
     <Border BackgroundColor="White" StrokeShape="RoundRectangle 20">
-        <VerticalStackLayout Padding="16" Spacing="26">
+        <Grid
+            Padding="16"
+            RowDefinitions="auto,*"
+            RowSpacing="20">
             <CollectionView
                 x:Name="LanguageCollectionView"
+                Grid.Row="0"
                 SelectionChanged="LanguageChanged"
                 SelectionMode="Single">
                 <CollectionView.ItemsLayout>
@@ -41,9 +45,11 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
             <Button
+                Grid.Row="1"
                 Clicked="Button_Clicked"
                 Style="{StaticResource ButtonGeneral}"
-                Text="{localization:Translate Accept}" />
-        </VerticalStackLayout>
+                Text="{localization:Translate Accept}"
+                WidthRequest="180" />
+        </Grid>
     </Border>
 </toolkit:Popup>

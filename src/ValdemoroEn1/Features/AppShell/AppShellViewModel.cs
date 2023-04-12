@@ -17,13 +17,7 @@ public partial class AppShellViewModel : BaseViewModel
 
     public AppShellViewModel()
     {
-        _ = RunSafeAsync(NotificationsAsync);
-    }
-
-    private async Task NotificationsAsync()
-    {
-        await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
-        await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
+        RegisterRoutes();
     }
 
     [RelayCommand]
@@ -68,10 +62,26 @@ public partial class AppShellViewModel : BaseViewModel
         }
     }
 
-    public void User()
+    private void RegisterRoutes()
+    {
+        Routing.RegisterRoute(AppSettings.About, typeof(AboutPage));
+        Routing.RegisterRoute(AppSettings.SchedulesRealTime, typeof(SchedulesRealTimePage));
+        Routing.RegisterRoute(AppSettings.InfoMenuDetail, typeof(InfoMenuDetailPage));
+        Routing.RegisterRoute(AppSettings.InfoMenu, typeof(InfoMenuPage));
+        Routing.RegisterRoute(AppSettings.Register, typeof(RegisterPage));
+        Routing.RegisterRoute(AppSettings.Login, typeof(LoginPage));
+    }
+
+    public void InitFirebase()
     {
         Name = CrossFirebaseAuth.Current?.CurrentUser?.DisplayName;
         Email = CrossFirebaseAuth.Current?.CurrentUser?.Email;
         PhotoUrl = CrossFirebaseAuth.Current?.CurrentUser?.PhotoUrl ?? "profile";
+
+        _ = RunSafeAsync(async () =>
+        {
+            await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
+            await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
+        });
     }
 }
