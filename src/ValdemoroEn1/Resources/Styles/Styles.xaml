@@ -8,8 +8,8 @@
         <Setter Property="TextColor" Value="White" />
         <Setter Property="BackgroundColor" Value="{StaticResource RedGeneral}" />
         <Setter Property="WidthRequest" Value="280" />
-        <Setter Property="HeightRequest" Value="40" />
-        <Setter Property="CornerRadius" Value="60" />
+        <Setter Property="HeightRequest" Value="44" />
+        <Setter Property="CornerRadius" Value="{OnPlatform iOS=22, Android=56}" />
     </Style>
 
     <!--  Grid  -->

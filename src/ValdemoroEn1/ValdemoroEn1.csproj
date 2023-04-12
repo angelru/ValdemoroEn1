@@ -92,13 +92,18 @@
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.1" />
 	</ItemGroup>
 
-	<!-- ios entitlements -->
 	<PropertyGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
 		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+		<CodesignKey>Apple Development: Created via API (X4TNW948PF)</CodesignKey>
+		<CodesignProvision>VS: es.valtimoretec.valdemoroenuno Development</CodesignProvision>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+		<MtouchLink>None</MtouchLink>
 	</PropertyGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
-		<BundleResource Include="GoogleService-Info.plist" />
+		<MauiAsset Include="Platforms\iOS\GoogleService-Info.plist" LogicalName="GoogleService-Info.plist" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
@@ -160,7 +165,7 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Menu\Establishments\EstablishmentsPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
+			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Menu\GasStations\GasStationsPage.xaml">
 			<Generator>MSBuild:Compile</Generator>
@@ -199,11 +204,11 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 		<MauiXaml Update="Features\Menu\Theater\TheaterPage.xaml">
-		  <Generator>MSBuild:Compile</Generator>
+			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="GoogleCloudFunctions\" />
+		<Folder Include="GoogleCloudFunctions\" />
 	</ItemGroup>
 </Project>

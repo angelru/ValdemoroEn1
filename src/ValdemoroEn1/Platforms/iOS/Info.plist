@@ -30,5 +30,13 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>com.googleusercontent.apps.1043453667471-i237ounsl42v96a8ld3tc0nl4t5dksta</string>
+	</array>
 </dict>
 </plist>
