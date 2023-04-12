@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleDisplayName</key>
+	<string>ValdemoroEn1</string>
+	<key>CFBundleIdentifier</key>
+	<string>es.valtimoretec.valdemoroenuno</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleName</key>
+	<string>ValdemoroEn1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIDeviceFamily</key>
@@ -34,12 +44,18 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
-	<key>CFBundleURLSchemes</key>
-	<array>
-		<string>es.valtimoretec.valdemoroenuno</string>
-		<string>com.googleusercontent.apps.1043453667471-i237ounsl42v96a8ld3tc0nl4t5dksta</string>
-	</array>
 	<key>CFBundleURLTypes</key>
-	<string>Editor</string>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Google Services</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1043453667471-i237ounsl42v96a8ld3tc0nl4t5dksta</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
 </dict>
 </plist>
