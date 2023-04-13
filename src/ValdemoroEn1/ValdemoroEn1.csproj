@@ -21,21 +21,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
-		<AndroidPackageFormat>aab</AndroidPackageFormat>
-		<AndroidUseAapt2>True</AndroidUseAapt2>
-		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
-		<RunAOTCompilation>true</RunAOTCompilation>
-		<AndroidLinkTool>r8</AndroidLinkTool>
-		<!--
-	    <AndroidLinkTool>r8</AndroidLinkTool>
-		<RunAOTCompilation>true</RunAOTCompilation>
-		<AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-		<EnableLLVM>false</EnableLLVM>
-		-->
-	</PropertyGroup>
-
+	
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.png" BaseSize="192,192" Color="White" />
@@ -92,13 +78,24 @@
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.1" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
-		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-		<CodesignKey>Apple Development: Created via API (X4TNW948PF)</CodesignKey>
-		<CodesignProvision>VS: es.valtimoretec.valdemoroenuno Development</CodesignProvision>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+		<AndroidPackageFormat>aab</AndroidPackageFormat>
+		<AndroidUseAapt2>True</AndroidUseAapt2>
+		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
+		<RunAOTCompilation>true</RunAOTCompilation>
+		<AndroidLinkTool>r8</AndroidLinkTool>
+		<!--
+	    <AndroidLinkTool>r8</AndroidLinkTool>
+		<RunAOTCompilation>true</RunAOTCompilation>
+		<AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+		<EnableLLVM>false</EnableLLVM>
+		-->
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+		<CodesignKey>Apple Development: Created via API (X4TNW948PF)</CodesignKey>
+		<CodesignProvision>ValdemoroEn1 Dev</CodesignProvision>
 		<MtouchLink>None</MtouchLink>
 	</PropertyGroup>
 
