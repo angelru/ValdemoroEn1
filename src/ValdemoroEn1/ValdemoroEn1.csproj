@@ -78,6 +78,10 @@
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.2" />
 	</ItemGroup>
 
+	<PropertyGroup>
+		<EnableAssemblyILStripping>false</EnableAssemblyILStripping>
+	</PropertyGroup>
+
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
 		<AndroidPackageFormat>aab</AndroidPackageFormat>
 		<AndroidUseAapt2>True</AndroidUseAapt2>
@@ -98,7 +102,7 @@
 		<CodesignProvision>ValdemoroEn1 Dev</CodesignProvision>
 		<MtouchLink>None</MtouchLink>
 	</PropertyGroup>
-
+	
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
 		  <BundleResource Include="Platforms\iOS\GoogleService-Info.plist" Link="GoogleService-Info.plist" />
 	</ItemGroup>
