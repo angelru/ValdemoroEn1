@@ -75,7 +75,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
 		<PackageReference Include="GoogleApi" Version="4.5.4" />
 		<PackageReference Include="Plugin.Firebase.Auth" Version="2.0.1" />
-		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.1" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.2" />
 	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
