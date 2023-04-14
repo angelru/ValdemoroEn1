@@ -117,12 +117,14 @@ The application has a clean and tidy architecture, applying the best practices, 
 
 # Demo
 #### Android
-
-<img src ="/images/animation.gif?raw=true" />
  
 # Download
 <a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
   <img width="200" src="/images/googleplay.png?raw=true"/>
+</a>
+
+<a href="https://apps.apple.com/es/app/valdemoroen1/id6447635266" target="_blank">
+  <img width="200" src="/images/applestore.png?raw=true"/>
 </a>
 
 # Copyright and license
