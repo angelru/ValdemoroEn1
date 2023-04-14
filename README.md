@@ -116,7 +116,6 @@ The application has a clean and tidy architecture, applying the best practices, 
   * iOS (coming soon)
 
 # Demo
-#### Android
  
 # Download
 <a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
