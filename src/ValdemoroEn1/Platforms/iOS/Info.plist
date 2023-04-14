@@ -9,7 +9,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleName</key>
 	<string>ValdemoroEn1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,8 +38,6 @@
 	</array>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
