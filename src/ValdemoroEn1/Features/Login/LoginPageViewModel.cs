@@ -34,10 +34,17 @@ public partial class LoginPageViewModel : BaseViewModel
         {
             var user = await CrossFirebaseAuth.Current.SignInWithEmailAndPasswordAsync(Email, Password);
 
-            if (user != null && user.IsEmailVerified)
+            if (user != null)
             {
-                Preferences.Set("login", true);
-                await NavigationService.NavigationAsync(AppSettings.Menu);
+                if (user.IsEmailVerified)
+                {
+                    Preferences.Set("login", true);
+                    await NavigationService.NavigationAsync(AppSettings.Menu);
+                } 
+                else
+                {
+                    await AlertService.SnackBarAsync(AppResources.EmailVerificationError, SnackType.Error);
+                }
             }
         }
         catch (Exception ex)

@@ -180,6 +180,9 @@
   <data name="EmailExists" xml:space="preserve">
     <value>Mail in use, use another.</value>
   </data>
+  <data name="EmailVerificationError" xml:space="preserve">
+    <value>Please check your email.</value>
+  </data>
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
