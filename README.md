@@ -124,7 +124,7 @@ The application has a clean and tidy architecture, applying the best practices, 
 </a>
 
 <a href="https://apps.apple.com/es/app/valdemoroen1/id6447635266" target="_blank">
-  <img width="200" src="/images/applestore.png?raw=true"/>
+  <img width="200" src="/images/applestore.jpg?raw=true"/>
 </a>
 
 # Copyright and license
