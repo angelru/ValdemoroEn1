@@ -113,7 +113,7 @@ The application has a clean and tidy architecture, applying the best practices, 
   
 # Platforms
   * Android
-  * iOS (coming soon)
+  * iOS
 
 # Demo
  
