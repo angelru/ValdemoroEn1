@@ -232,6 +232,15 @@ namespace ValdemoroEn1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inicie sesión de nuevo y luego elimine su cuenta.
+        /// </summary>
+        public static string DeleteError {
+            get {
+                return ResourceManager.GetString("DeleteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Correo.
         /// </summary>
         public static string Email {

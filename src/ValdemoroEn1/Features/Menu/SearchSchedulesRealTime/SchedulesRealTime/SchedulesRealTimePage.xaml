@@ -25,12 +25,12 @@
                 ItemsSource="{Binding StopTimesGroups, Mode=OneTime}"
                 SelectionMode="None"
                 VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="16" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:StopTimesGroup">
-                        <Border
-                            Margin="0,0,0,16"
-                            Stroke="LightGray"
-                            StrokeShape="RoundRectangle 20">
+                        <Border Stroke="LightGray" StrokeShape="RoundRectangle 20">
                             <Grid
                                 ColumnDefinitions="*"
                                 CompressedLayout.IsHeadless="True"

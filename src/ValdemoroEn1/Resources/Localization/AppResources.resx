@@ -174,6 +174,9 @@
   <data name="DelAccountMsg" xml:space="preserve">
     <value>Ten en cuenta que, al borrar tu cuenta, perderás todo acceso y toda la información relacionada con ella. Esta acción no se puede deshacer. ¿Estás seguro de que deseas proceder con la eliminación de tu cuenta?</value>
   </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>Inicie sesión de nuevo y luego elimine su cuenta</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Correo</value>
   </data>

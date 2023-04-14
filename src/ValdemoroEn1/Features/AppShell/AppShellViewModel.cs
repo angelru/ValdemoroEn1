@@ -27,11 +27,20 @@ public partial class AppShellViewModel : BaseViewModel
 
         if (accept)
         {
-            if (CrossFirebaseAuth.Current?.CurrentUser != null)
+            try
             {
-                Preferences.Clear();
-                await CrossFirebaseAuth.Current.CurrentUser.DeleteAsync();
-                await NavigationService.NavigationAsync(AppSettings.Main);
+                if (CrossFirebaseAuth.Current?.CurrentUser != null)
+                {
+                    Preferences.Clear();
+                    await CrossFirebaseAuth.Current.CurrentUser.DeleteAsync();
+                    await NavigationService.NavigationAsync(AppSettings.Main);
+                }
+            }
+            catch (Exception ex)
+            {
+                _ = ex.Message;
+                await AlertService.SnackBarAsync(AppResources.DeleteError, SnackType.Success);
+                await SignOutAsync();
             }
         }
     }
@@ -56,10 +65,15 @@ public partial class AppShellViewModel : BaseViewModel
 
         if (accept)
         {
-            await CrossFirebaseAuth.Current?.SignOutAsync();
-            Preferences.Remove("login");
-            await NavigationService.NavigationAsync(AppSettings.Main);
+            await SignOutAsync();
         }
+    }
+
+    private async Task SignOutAsync()
+    {
+        await CrossFirebaseAuth.Current?.SignOutAsync();
+        Preferences.Remove("login");
+        await NavigationService.NavigationAsync(AppSettings.Main);
     }
 
     private void RegisterRoutes()

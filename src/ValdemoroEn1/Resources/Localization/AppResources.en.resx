@@ -174,6 +174,9 @@
   <data name="DelAccountMsg" xml:space="preserve">
     <value>Please be aware that deleting your account will result in a permanent loss of access and all associated information. This action cannot be undone. Are you sure you want to proceed with deleting your account?</value>
   </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>Sign in again and then delete your account</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
