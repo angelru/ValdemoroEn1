@@ -88,9 +88,9 @@ public partial class AppShellViewModel : BaseViewModel
 
     public void InitFirebase()
     {
-        Name = CrossFirebaseAuth.Current?.CurrentUser?.DisplayName;
-        Email = CrossFirebaseAuth.Current?.CurrentUser?.Email;
-        PhotoUrl = CrossFirebaseAuth.Current?.CurrentUser?.PhotoUrl ?? "profile";
+        //Name = CrossFirebaseAuth.Current?.CurrentUser?.DisplayName;
+        //Email = CrossFirebaseAuth.Current?.CurrentUser?.Email;
+        //PhotoUrl = CrossFirebaseAuth.Current?.CurrentUser?.PhotoUrl ?? "profile";
 
         _ = RunSafeAsync(async () =>
         {

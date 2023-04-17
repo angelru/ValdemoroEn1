@@ -19,15 +19,6 @@ public partial class MainPageViewModel : BaseViewModel
         await NavigationService.NavigationAsync(AppSettings.Login);
     }
 
-    //[RelayCommand]
-    //private async Task FacebookLoginAsync()
-    //{
-    //    await RunSafeAsync(async () =>
-    //    {
-    //        var firebaseUser = await CrossFirebaseAuth.Current.LinkWithFacebookAsync();
-    //    });
-    //}
-
     [RelayCommand]
     private async Task AppleLoginAsync()
     {

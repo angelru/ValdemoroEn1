@@ -11,7 +11,12 @@
 
     <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
-            <Grid
+            <Image
+                Margin="0"
+                Aspect="AspectFill"
+                HeightRequest="230"
+                Source="valdemoro.jpg" />
+            <!--<Grid
                 Margin="0"
                 BackgroundColor="{StaticResource RedGeneral}"
                 HeightRequest="200"
@@ -39,16 +44,16 @@
                     Grid.Row="1"
                     HeightRequest="1"
                     Color="{StaticResource BlueGeneral}" />
-            </Grid>
+            </Grid>-->
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
 
-    <ShellContent
+    <!--<ShellContent
         ContentTemplate="{DataTemplate features:MainPage}"
         Route="Main"
         Shell.FlyoutBehavior="Disabled"
         Shell.FlyoutItemIsVisible="False"
-        Shell.NavBarIsVisible="False" />
+        Shell.NavBarIsVisible="False" />-->
 
     <FlyoutItem
         FlyoutDisplayOptions="AsMultipleItems"
@@ -120,7 +125,7 @@
                                     Size=24}"
         Text="{localization:Translate About}" />
 
-    <MenuItem
+    <!--<MenuItem
         Command="{Binding LogoutCommand}"
         IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
                                     Glyph={Static fontawesome:FontAwesomeIcons.PowerOff},
@@ -134,6 +139,6 @@
                                     Glyph={Static fontawesome:FontAwesomeIcons.User},
                                     Color=Black,
                                     Size=24}"
-        Text="{localization:Translate DelAccount}" />
+        Text="{localization:Translate DelAccount}" />-->
 
 </Shell>

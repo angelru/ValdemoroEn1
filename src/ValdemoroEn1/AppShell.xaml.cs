@@ -8,7 +8,7 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
         BindingContext = new AppShellViewModel();
-        CheckLogin();
+        //CheckLogin();
     }
 
     private void CheckLogin()
