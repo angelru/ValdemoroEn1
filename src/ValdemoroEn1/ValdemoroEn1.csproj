@@ -15,8 +15,8 @@
 		<ApplicationIdGuid>34EFD796-05B2-4E61-A769-8AF2E26E5220</ApplicationIdGuid>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.1.6</ApplicationDisplayVersion>
-		<ApplicationVersion>13</ApplicationVersion>
+		<ApplicationDisplayVersion>1.1.7</ApplicationDisplayVersion>
+		<ApplicationVersion>14</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
@@ -96,18 +96,9 @@
 		-->
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-		<CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-		<CodesignKey>Apple Development: Created via API (X4TNW948PF)</CodesignKey>
-		<CodesignProvision>ValdemoroEn1 Dev</CodesignProvision>
-		<MtouchLink>None</MtouchLink>
-	</PropertyGroup>
-
 	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
-	  <ProvisioningType>manual</ProvisioningType>
-	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-	  <CodesignKey>Apple Distribution: Angel Ruben (3AJC26G5QV)</CodesignKey>
-	  <CodesignProvision>ValdemoroEn1 Pro</CodesignProvision>
+	  <CodesignKey>Apple Development: Created via API (8Z84A286U7)</CodesignKey>
+	  <CodesignProvision>VS: es.valtimoretec.valdemoroenuno Development</CodesignProvision>
 	</PropertyGroup>
 	
 	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">

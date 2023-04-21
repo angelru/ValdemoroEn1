@@ -9,9 +9,14 @@ public partial class MoviesPageViewModel : BaseViewModel
 
     partial void OnSelectedDateChanged(string value)
     {
-        string date = value;
-        var movies = FlattenMovies(date);
-        Movies.ReplaceRange(movies);
+        _ = RunSafeAsync(async () =>
+        {
+            string date = value;
+            var movies = FlattenMovies(date);
+            await Task.Yield();
+            Movies.ReplaceRange(movies);
+        });
+
     }
 
     public MoviesPageViewModel()

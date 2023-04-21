@@ -21,99 +21,95 @@
                 Margin="0,0,0,6"
                 ItemsSource="{Binding Dates, Mode=OneTime}"
                 SelectedItem="{Binding SelectedDate}" />
-            <CollectionView
-                ItemsSource="{Binding Movies, Mode=OneTime}"
-                SelectionMode="None"
-                VerticalOptions="FillAndExpand">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Movie">
-                        <Grid
-                            Margin="0,0,0,16"
-                            BackgroundColor="{StaticResource White}"
-                            ColumnDefinitions="120,*"
-                            ColumnSpacing="6"
-                            CompressedLayout.IsHeadless="true"
-                            RowDefinitions="190,auto">
-                            <Image
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Aspect="AspectFill"
-                                Source="{Binding Cover, Mode=OneTime}" />
+            <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
+                <VerticalStackLayout BindableLayout.ItemsSource="{Binding Movies, Mode=OneTime}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="models:Movie">
                             <Grid
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                ColumnDefinitions="*"
+                                Margin="0,0,0,16"
+                                BackgroundColor="{StaticResource White}"
+                                ColumnDefinitions="120,*"
+                                ColumnSpacing="6"
                                 CompressedLayout.IsHeadless="true"
-                                RowDefinitions="auto,*,auto">
-                                <VerticalStackLayout
+                                RowDefinitions="190,auto">
+                                <Image
                                     Grid.Row="0"
                                     Grid.Column="0"
+                                    Aspect="AspectFill"
+                                    Source="{Binding Cover, Mode=OneTime}" />
+                                <Grid
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    ColumnDefinitions="*"
                                     CompressedLayout.IsHeadless="true"
-                                    Spacing="10">
-                                    <Label LineBreakMode="TailTruncation" Text="{Binding Title, Mode=OneTime}" />
-                                    <Label Text="{Binding Duration, Mode=OneTime, StringFormat='{0} min'}" />
-                                    <Label Text="{localization:Translate SelectHour}" />
-                                </VerticalStackLayout>
-                                <ScrollView
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    HorizontalScrollBarVisibility="Always"
-                                    Orientation="Horizontal"
-                                    VerticalOptions="Center">
-                                    <HorizontalStackLayout
-                                        BindableLayout.ItemsSource="{Binding Sessions, Mode=OneTime}"
+                                    RowDefinitions="auto,50,48">
+                                    <VerticalStackLayout
+                                        Grid.Row="0"
+                                        Grid.Column="0"
                                         CompressedLayout.IsHeadless="true"
+                                        Spacing="10">
+                                        <Label LineBreakMode="TailTruncation" Text="{Binding Title, Mode=OneTime}" />
+                                        <Label Text="{Binding Duration, Mode=OneTime, StringFormat='{0} min'}" />
+                                        <Label Text="{localization:Translate SelectHour}" />
+                                    </VerticalStackLayout>
+                                    <ScrollView
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        HorizontalScrollBarVisibility="Always"
+                                        Orientation="Horizontal"
+                                        VerticalOptions="Center">
+                                        <HorizontalStackLayout BindableLayout.ItemsSource="{Binding Sessions, Mode=OneTime}" CompressedLayout.IsHeadless="true">
+                                            <BindableLayout.ItemTemplate>
+                                                <DataTemplate x:DataType="models:Session">
+                                                    <Border
+                                                        Padding="8"
+                                                        BackgroundColor="{StaticResource BlueGeneral}"
+                                                        Stroke="{StaticResource BlueGeneral}"
+                                                        StrokeShape="RoundRectangle 10">
+                                                        <Label Text="{Binding Hour}" TextColor="White" />
+                                                        <Border.GestureRecognizers>
+                                                            <TapGestureRecognizer CommandParameter="{Binding Ticket, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
+                                                        </Border.GestureRecognizers>
+                                                    </Border>
+                                                </DataTemplate>
+                                            </BindableLayout.ItemTemplate>
+                                        </HorizontalStackLayout>
+                                    </ScrollView>
+                                    <HorizontalStackLayout
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        CompressedLayout.IsHeadless="true"
+                                        HeightRequest="42"
                                         Spacing="6">
-                                        <BindableLayout.ItemTemplate>
-                                            <DataTemplate x:DataType="models:Session">
-                                                <Border
-                                                    Padding="8"
-                                                    BackgroundColor="{StaticResource BlueGeneral}"
-                                                    Stroke="{StaticResource BlueGeneral}"
-                                                    StrokeShape="RoundRectangle 10">
-                                                    <Label Text="{Binding Hour}" TextColor="White" />
-                                                    <Border.GestureRecognizers>
-                                                        <TapGestureRecognizer CommandParameter="{Binding Ticket, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
-                                                    </Border.GestureRecognizers>
-                                                </Border>
-                                            </DataTemplate>
-                                        </BindableLayout.ItemTemplate>
+                                        <Border
+                                            BackgroundColor="{StaticResource BlueGeneral}"
+                                            HeightRequest="40"
+                                            Stroke="{StaticResource BlueGeneral}"
+                                            StrokeShape="RoundRectangle 100"
+                                            WidthRequest="40">
+                                            <Label
+                                                FontFamily="FontAwesomeSolid"
+                                                HorizontalTextAlignment="Center"
+                                                Text="{Static fontawesome:FontAwesomeIcons.Play}"
+                                                TextColor="White"
+                                                VerticalTextAlignment="Center" />
+                                        </Border>
+                                        <Label Text="{localization:Translate Trailer}" VerticalTextAlignment="Center" />
+                                        <HorizontalStackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding Trailer, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
+                                        </HorizontalStackLayout.GestureRecognizers>
                                     </HorizontalStackLayout>
-                                </ScrollView>
-                                <HorizontalStackLayout
-                                    Grid.Row="2"
-                                    Grid.Column="0"
-                                    CompressedLayout.IsHeadless="true"
-                                    HeightRequest="42"
-                                    Spacing="6">
-                                    <Border
-                                        BackgroundColor="{StaticResource BlueGeneral}"
-                                        HeightRequest="40"
-                                        Stroke="{StaticResource BlueGeneral}"
-                                        StrokeShape="RoundRectangle 100"
-                                        WidthRequest="40">
-                                        <Label
-                                            FontFamily="FontAwesomeSolid"
-                                            HorizontalTextAlignment="Center"
-                                            Text="{Static fontawesome:FontAwesomeIcons.Play}"
-                                            TextColor="White"
-                                            VerticalTextAlignment="Center" />
-                                    </Border>
-                                    <Label Text="{localization:Translate Trailer}" VerticalTextAlignment="Center" />
-                                    <HorizontalStackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer CommandParameter="{Binding Trailer, Mode=OneTime}" Tapped="OpenUrl_Tapped" />
-                                    </HorizontalStackLayout.GestureRecognizers>
-                                </HorizontalStackLayout>
+                                </Grid>
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.ColumnSpan="2"
+                                    Margin="0,6,0,0"
+                                    Text="{Binding Synopsis, Mode=OneTime}" />
                             </Grid>
-                            <Label
-                                Grid.Row="1"
-                                Grid.ColumnSpan="2"
-                                Margin="0,6,0,0"
-                                Text="{Binding Synopsis, Mode=OneTime}" />
-                        </Grid>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+            </ScrollView>
         </controls:StateLayout.SuccessContent>
     </controls:StateLayout>
 </ContentPage>
