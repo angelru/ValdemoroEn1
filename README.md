@@ -5,27 +5,15 @@
 
 Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
-* **Teatro.** Consulta las obras de teatro y compra tus entradas.
-* **Cartelera.** Consulta la cartelera de cine en tiempo real y compra tus entradas.
-* **Precio de la gasolina.** Consulta el precio de la gasolina en tiempo real y dirígete a la gasolinera mediante GPS.
-* **Tiempo y calidad del aire.** Consulta el tiempo y la calidad del aire en tiempo real.
-* **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
-* **Cercanías.** Consulta el horario en tiempo real de los trenes de Valdemoro.
+Si eres un amante del teatro, consulta la selección de obras y compra tus entradas con facilidad.
 
-(Muy pronto)
-* **Establecimientos.** Listado de establecimientos como bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
+¿Prefieres el cine? No te pierdas la cartelera en tiempo real y asegúrate de conseguir tus entradas a tiempo.
 
-Your services in Valdemoro, all the information in one place.
+Si necesitas llenar el depósito de tu coche, consulta el precio de la gasolina en tiempo real y encuentra la gasolinera más cercana gracias a la navegación GPS.
 
-* **Theatre.** Consult the plays and buy your tickets.
-* **Billboard.** Check the movie billing in real time and buy your tickets.
-* **Price of gasoline.** Check the price of gasoline in real time and go to the gas station using GPS.
-* **Weather and air quality.** Check the weather and air quality in real time.
-* **Buses.** Real-time schedule of urban and intercity buses, locate the bus stop number and check the time to your bus.
-* **Train.** Check the real-time schedule of Valdemoro trains.
+¿Te preocupa el clima y la calidad del aire? Obtén información actualizada al instante para que puedas planificar tus actividades con confianza.
 
-(Coming soon)
-* **Establishments.** List of establishments such as local restaurants, hours, photos, take-away menu, telephone and location. You can know in a click if they are open, call the establishment directly.
+Además, si necesitas utilizar transporte público, conoce el horario en tiempo real de los autobuses urbanos e interurbanos, localiza tu parada en la marquesina y consulta el tiempo de espera estimado. Si necesitas información sobre cercanías, también puedes consultar los horarios de los trenes en tiempo real.
 
 # History
 Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
@@ -33,12 +21,6 @@ Decido publicar el código fuente de mi aplicación en **[.NET MAUI](https://lea
 **ValdemoroEn1** es un proyecto que empecé con mucha ilusión en el 2015 en **[PhoneGap](https://es.wikipedia.org/wiki/PhoneGap)**, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://learn.microsoft.com/es-es/xamarin/get-started/what-is-xamarin-forms)** y en 2023 a **[.NET MAUI](https://learn.microsoft.com/es-es/dotnet/maui/what-is-maui)**
 
 Espero que podáis aprender con el proyecto 👋🏽
-
-I decide to post the source code of my application in **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)** because I believe in community work, in which all of us contribute our bit to advance open source and thus increase our knowledge.
-
-**ValdemoroEn1** is a project that I started with great enthusiasm for 2015 at **[PhoneGap](https://en.wikipedia.org/wiki/PhoneGap)**, but in 2017 I decided to move it to **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** and in 2023 to **[.NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui)**
-
-I hope you can learn with the project 👋🏽
 
 # Geoportal Gasolineras API
 * [Geoportal Gasolineras](https://geoportalgasolineras.es/geoportal-instalaciones/Inicio)
