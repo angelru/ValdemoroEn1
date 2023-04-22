@@ -1,4 +1,5 @@
 ﻿using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.PlatformConfiguration;
 
 #if IOS
 using UIKit;
@@ -19,8 +20,8 @@ internal class SearchBarTransparentPlatformEffect : PlatformEffect
         if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
         {
             var searchBar = Control as UISearchBar;
-
-            searchBar.SearchTextField.BackgroundColor = UIColor.White;
+            searchBar.SearchTextField.BackgroundColor = UIColor.Clear;
+            searchBar.BackgroundImage = new UIImage();
         }
 #endif
     }
