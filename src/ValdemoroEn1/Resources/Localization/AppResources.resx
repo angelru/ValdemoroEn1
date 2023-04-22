@@ -257,6 +257,9 @@ ValdemoroEn1!</value>
   <data name="MyAccount" xml:space="preserve">
     <value>Mi cuenta</value>
   </data>
+  <data name="News" xml:space="preserve">
+    <value>Noticias</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>Contraseña</value>
   </data>

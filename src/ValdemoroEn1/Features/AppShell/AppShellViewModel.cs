@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Views;
 using Plugin.Firebase.CloudMessaging;
+using Plugin.Firebase.CloudMessaging.EventArgs;
 using ValdemoroEn1.Controls;
 
 namespace ValdemoroEn1.Features;
@@ -18,6 +19,19 @@ public partial class AppShellViewModel : BaseViewModel
     public AppShellViewModel()
     {
         RegisterRoutes();
+        InitFirebase();
+    }
+
+    private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
+    {
+        var newsNotification = new NewsNotification
+        {
+            Title = e.Notification.Title,
+            Summary = e.Notification.Body    
+        };
+
+        NavigationService.AddParameter("news", newsNotification);
+        _ = NavigationService.NavigationAsync(AppSettings.News);
     }
 
     [RelayCommand]
@@ -78,6 +92,7 @@ public partial class AppShellViewModel : BaseViewModel
 
     private void RegisterRoutes()
     {
+        Routing.RegisterRoute(AppSettings.News, typeof(NewsPage));
         Routing.RegisterRoute(AppSettings.About, typeof(AboutPage));
         Routing.RegisterRoute(AppSettings.SchedulesRealTime, typeof(SchedulesRealTimePage));
         Routing.RegisterRoute(AppSettings.InfoMenuDetail, typeof(InfoMenuDetailPage));
@@ -88,12 +103,11 @@ public partial class AppShellViewModel : BaseViewModel
 
     public void InitFirebase()
     {
-        //Name = CrossFirebaseAuth.Current?.CurrentUser?.DisplayName;
-        //Email = CrossFirebaseAuth.Current?.CurrentUser?.Email;
-        //PhotoUrl = CrossFirebaseAuth.Current?.CurrentUser?.PhotoUrl ?? "profile";
+        //CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
 
         _ = RunSafeAsync(async () =>
         {
+            string token = await CrossFirebaseCloudMessaging.Current.GetTokenAsync();
             await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
             await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
         });
