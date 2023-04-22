@@ -103,13 +103,13 @@ public partial class AppShellViewModel : BaseViewModel
 
     public void InitFirebase()
     {
-        //CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
-
         _ = RunSafeAsync(async () =>
         {
-            string token = await CrossFirebaseCloudMessaging.Current.GetTokenAsync();
+            //CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
             await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
+            await Task.Delay(5000);
             await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
+            string token = await CrossFirebaseCloudMessaging.Current.GetTokenAsync();
         });
     }
 }
