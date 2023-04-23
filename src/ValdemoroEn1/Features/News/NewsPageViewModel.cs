@@ -2,19 +2,15 @@
 
 public partial class NewsPageViewModel : BaseViewModel, IQueryAttributable
 {
+    [ObservableProperty]
+    private NewsNotification _newsNotifications;
+
     public NewsPageViewModel()
     {
     }
 
-
-    [ObservableProperty]
-    public NewsNotification newsNotifications;
-
     public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
-        MainThread.BeginInvokeOnMainThread(() =>
-        {
-            NewsNotifications = query["news"] as NewsNotification;
-        });
+        NewsNotifications = query["news"] as NewsNotification;
     }
 }

@@ -94,14 +94,12 @@ public partial class AppShellViewModel : BaseViewModel
 
     private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
     {
-        var newsNotification = new NewsNotification
-        {
-            Title = e.Notification.Title,
-            Summary = e.Notification.Body
-        };
-
-        NavigationService.AddParameter("news", newsNotification);
-        _ = NavigationService.NavigationAsync(AppSettings.News);
+        //if (e.Notification.Data.TryGetValue("NewsData", out string newsNotificationJson))
+        //{
+        //    var newsNotification = JsonSerializer.Deserialize<NewsNotification>(newsNotificationJson);
+        //    NavigationService.AddParameter("news", newsNotification);
+        //    _ = NavigationService.NavigationAsync(AppSettings.News);
+        //}
     }
 
     public void InitFirebase()
