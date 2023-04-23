@@ -7,6 +7,8 @@ namespace ValdemoroEn1.Features;
 
 public partial class AppShellViewModel : BaseViewModel
 {
+    private bool _initFirebase = false;
+
     [ObservableProperty]
     private ImageSource _photoUrl;
 
@@ -104,11 +106,14 @@ public partial class AppShellViewModel : BaseViewModel
 
     public void InitFirebase()
     {
+        if (_initFirebase) return;
+
         try
         {
             CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
             _ = CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
             _ = CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
+            _initFirebase = true;
         }
         catch (Exception ex)
         {
