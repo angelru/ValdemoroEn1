@@ -19,20 +19,9 @@ public partial class AppShellViewModel : BaseViewModel
     public AppShellViewModel()
     {
         RegisterRoutes();
-        InitFirebase();
     }
 
-    private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
-    {
-        var newsNotification = new NewsNotification
-        {
-            Title = e.Notification.Title,
-            Summary = e.Notification.Body    
-        };
-
-        NavigationService.AddParameter("news", newsNotification);
-        _ = NavigationService.NavigationAsync(AppSettings.News);
-    }
+    public static AppShellViewModel Instance { get; set; } = new AppShellViewModel();
 
     [RelayCommand]
     private async Task DeleteAccountAsync()
@@ -101,15 +90,29 @@ public partial class AppShellViewModel : BaseViewModel
         Routing.RegisterRoute(AppSettings.Login, typeof(LoginPage));
     }
 
+    private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
+    {
+        var newsNotification = new NewsNotification
+        {
+            Title = e.Notification.Title,
+            Summary = e.Notification.Body
+        };
+
+        NavigationService.AddParameter("news", newsNotification);
+        _ = NavigationService.NavigationAsync(AppSettings.News);
+    }
+
     public void InitFirebase()
     {
-        _ = RunSafeAsync(async () =>
+        try
         {
-            //CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
-            await CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
-            await Task.Delay(5000);
-            await CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
-            string token = await CrossFirebaseCloudMessaging.Current.GetTokenAsync();
-        });
+            CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
+            _ = CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
+            _ = CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
+        }
+        catch (Exception ex)
+        {
+            _ = ex.Message;
+        }
     }
 }
