@@ -125,6 +125,16 @@
                                     Size=24}"
         Text="{localization:Translate About}" />
 
+    <Shell.FlyoutFooterTemplate>
+        <DataTemplate>
+            <Label
+                Padding="16"
+                HorizontalTextAlignment="Center"
+                Text="{Binding CurrentVersion}"
+                VerticalTextAlignment="Center" />
+        </DataTemplate>
+    </Shell.FlyoutFooterTemplate>
+
     <!--<MenuItem
         Command="{Binding LogoutCommand}"
         IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
