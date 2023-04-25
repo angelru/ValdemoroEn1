@@ -5,18 +5,16 @@ public partial class MoviesPageViewModel : BaseViewModel
     private readonly List<Evento> events = new();
 
     [ObservableProperty]
-    private string _selectedDate;
+    private MovieDate _selectedDate;
 
-    partial void OnSelectedDateChanged(string value)
+    partial void OnSelectedDateChanged(MovieDate value)
     {
         _ = RunSafeAsync(async () =>
         {
-            string date = value;
-            var movies = FlattenMovies(date);
+            var movies = FlattenMovies(value.Date);
             await Task.Yield();
             Movies.ReplaceRange(movies);
         });
-
     }
 
     public MoviesPageViewModel()
@@ -26,7 +24,7 @@ public partial class MoviesPageViewModel : BaseViewModel
 
     public ObservableRangeCollection<Movie> Movies { get; private set; } = new();
 
-    public ObservableRangeCollection<string> Dates { get; private set; } = new();
+    public ObservableRangeCollection<MovieDate> Dates { get; private set; } = new();
 
     public string Name { get; private set; }
 
@@ -39,50 +37,67 @@ public partial class MoviesPageViewModel : BaseViewModel
     private async Task MoviesAsync()
     {
         var movie = await ApiService.MovieTimesAsync();
-        Name = movie.Recinto.Nombre;
+        Name = movie.Cartelera.Recinto.Nombre;
 
-        events.AddRange(movie.Recinto.Eventos);
-        events.AddRange(movie.ProximosEventos.Eventos);
+        events.AddRange(movie.Cartelera.Recinto.Eventos);
+        events.AddRange(movie.Cartelera.ProximosEventos.Eventos);
 
-        var dates = FlattenDates();
+        var dates = GetDates();
         Dates.ReplaceRange(dates);
     }
 
     private List<Movie> FlattenMovies(string date)
     {
-        date = DateTime.Parse(date).ToString("dd/MM/yyyy");
-        var movies = events.Where(s => s.InfoFechas.Fechas.Any(s => s.LaFecha == date))
-             .Select(evento =>
-             {
-                 var sessions = evento.InfoFechas.Fechas.FirstOrDefault(s => s.LaFecha == date)
-                                      .InfoSesiones.Sesiones.Select(s =>
-                                            new Session
-                                            {
-                                                Hour = s.Hora,
-                                                Ticket = s.Url
-                                            }).ToList();
+        var eventsDate = events.Where(s => s.InfoFechas != null && s.InfoFechas.Fechas.Any(s => s.LaFecha == date)).ToList();
 
-                 var movie = new Movie
-                 {
-                     Title = evento.Titulo.Nombre,
-                     Cover = evento.Caratula,
-                     Synopsis = evento.Sinopsis,
-                     Duration = evento.Duracion,
-                     Gender = evento.Genero,
-                     Qualification = evento.Calificacion,
-                     Trailer = evento.Trailer,
-                     Sessions = sessions
-                 };
+        if (eventsDate.Any())
+        {
+            var movies = eventsDate.Select(evento =>
+            {
+                var sessions = evento.InfoFechas.Fechas.FirstOrDefault(s => s.LaFecha == date)
+                                     .InfoSesiones.Sesiones.Select(s =>
+                                           new Session
+                                           {
+                                               Hour = s.Hora,
+                                               Ticket = s.Url
+                                           }).ToList();
 
-                 return movie;
-             }).ToList();
+                var movie = new Movie
+                {
+                    Title = evento.Titulo.Nombre,
+                    Cover = evento.Caratula,
+                    Synopsis = evento.Sinopsis,
+                    Duration = evento.Duracion,
+                    Gender = evento.Genero,
+                    Qualification = evento.Calificacion,
+                    Trailer = evento.Trailer,
+                    Sessions = sessions
+                };
 
-        return movies;
+                return movie;
+            }).ToList();
+
+            return movies;
+        }
+
+        return new List<Movie>();
     }
 
-    private List<string> FlattenDates()
+    private List<MovieDate> GetDates()
     {
-        var dates = events.SelectMany(s => s.InfoFechas.Fechas.Select(g => DateTime.ParseExact(g.LaFecha, "dd/MM/yyyy", null))).Distinct().Order().Select(s => s.ToString("dddd d MMMM")).Take(7).ToList();
+        var dates = new List<MovieDate>();
+
+        for (int i = 0; i < 7; i++)
+        {
+            var movieDate = new MovieDate
+            {
+                Date = DateTime.Now.AddDays(i).ToString("dd/MM/yyyy"),
+                DisplayDate = DateTime.Now.AddDays(i).ToString("dddd, d MMMM")
+            };
+
+            dates.Add(movieDate);
+        }
+
         return dates;
     }
 }

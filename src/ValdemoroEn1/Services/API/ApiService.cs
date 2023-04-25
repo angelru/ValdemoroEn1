@@ -1,5 +1,4 @@
 ﻿using System.Net.Http.Json;
-using System.Xml.Serialization;
 using ValdemoroEn1.Common.Utils;
 
 namespace ValdemoroEn1.Services;
@@ -29,8 +28,7 @@ public class ApiService
     public async Task<MovieResponse> MovieTimesAsync()
     {
         string movies = await cinemahttpClient.GetStringAsync("cartelera.asp");
-        var serializer = new XmlSerializer(typeof(MovieResponse));
-        var movieResponse = (MovieResponse)serializer.Deserialize(new StringReader(movies));
+        var movieResponse = Helper.XmlToObject<MovieResponse>(movies);
         return movieResponse;
     }
 

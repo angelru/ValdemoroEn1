@@ -19,6 +19,7 @@
             <Picker
                 Title="{localization:Translate SelectDay}"
                 Margin="0,0,0,6"
+                ItemDisplayBinding="{Binding DisplayDate}"
                 ItemsSource="{Binding Dates, Mode=OneTime}"
                 SelectedItem="{Binding SelectedDate}" />
             <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">

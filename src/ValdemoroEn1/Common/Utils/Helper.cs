@@ -1,5 +1,7 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
+using System.Xml;
 
 #if ANDROID
 using Microsoft.Maui.Platform;
@@ -20,6 +22,17 @@ public class Helper
             Platform.CurrentActivity.CurrentFocus.ClearFocus();
         }
 #endif
+    }
+
+    public static T XmlToObject<T>(string xml)
+    {
+        XmlDocument xmlDoc = new();
+        xmlDoc.LoadXml(xml);
+        xmlDoc.RemoveChild(xmlDoc.FirstChild);
+        var builder = new StringBuilder();
+        Newtonsoft.Json.JsonSerializer.Create().Serialize(new CustomJsonWriter(new StringWriter(builder)), xmlDoc);
+        string json = builder.ToString();
+        return Newtonsoft.Json.JsonConvert.DeserializeObject<T>(json);
     }
 
     public static bool ValidateEmail(string email)
@@ -82,5 +95,22 @@ public class Helper
         }
 
         return result;
+    }
+}
+
+public class CustomJsonWriter : Newtonsoft.Json.JsonTextWriter
+{
+    public CustomJsonWriter(TextWriter writer) : base(writer) { }
+
+    public override void WritePropertyName(string name)
+    {
+        if (name.StartsWith("@") || name.StartsWith("#"))
+        {
+            base.WritePropertyName(name[1..]);
+        }
+        else
+        {
+            base.WritePropertyName(name);
+        }
     }
 }
