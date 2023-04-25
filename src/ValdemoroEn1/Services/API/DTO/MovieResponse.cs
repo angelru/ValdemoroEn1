@@ -85,12 +85,14 @@ public class Fecha
 public class InfoFechas
 {
     [JsonProperty("fecha")]
+    [JsonConverter(typeof(SingleOrArrayConverterN<Fecha>))]
     public List<Fecha> Fechas { get; set; }
 }
 
 public class ProximosEventos
 {
     [JsonProperty("evento")]
+    [JsonConverter(typeof(SingleOrArrayConverterN<Evento>))]
     public List<Evento> Eventos { get; set; }
 }
 
@@ -103,6 +105,7 @@ public class Recinto
     public string Nombre { get; set; }
 
     [JsonProperty("evento")]
+    [JsonConverter(typeof(SingleOrArrayConverterN<Evento>))]
     public List<Evento> Eventos { get; set; }
 }
 
