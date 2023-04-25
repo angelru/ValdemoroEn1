@@ -7,9 +7,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>es.valtimoretec.valdemoroenuno</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.9</string>
+	<string>1.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.1.9.6</string>
+	<string>1.0</string>
 	<key>CFBundleName</key>
 	<string>ValdemoroEn1</string>
 	<key>LSRequiresIPhoneOS</key>
