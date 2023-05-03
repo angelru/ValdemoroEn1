@@ -31,7 +31,7 @@
                     <DataTemplate x:DataType="dto:ListaEESSPrecio">
                         <Grid
                             Margin="0,0,0,16"
-                            BackgroundColor="{StaticResource White}"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
                             ColumnDefinitions="60,170,*"
                             ColumnSpacing="20"
                             CompressedLayout.IsHeadless="true"

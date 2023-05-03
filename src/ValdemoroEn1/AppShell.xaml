@@ -68,62 +68,79 @@
                              Color=Black,
                              Size=24}" />-->
 
+      
+
         <ShellContent
             Title="{localization:Translate Theater}"
-            ContentTemplate="{DataTemplate features:TheaterPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.MasksTheater},
-                             Color=Black,
-                             Size=24}" />
+            ContentTemplate="{DataTemplate features:TheaterPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.MasksTheater}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+            </ShellContent.Icon>
+        </ShellContent>
+
 
         <ShellContent
             Title="{localization:Translate CinemaListings}"
-            ContentTemplate="{DataTemplate features:MoviesPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Film},
-                             Color=Black,
-                             Size=24}" />
+            ContentTemplate="{DataTemplate features:MoviesPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.Film}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+            </ShellContent.Icon>
+        </ShellContent>
 
         <ShellContent
             Title="{localization:Translate GasPrice}"
-            ContentTemplate="{DataTemplate features:GasStationsPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.GasPump},
-                             Color=Black,
-                             Size=24}" />
+            ContentTemplate="{DataTemplate features:GasStationsPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.GasPump}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+            </ShellContent.Icon>
+        </ShellContent>
 
         <ShellContent
             Title="{localization:Translate WeatherICA}"
-            ContentTemplate="{DataTemplate features:WeatherPage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.CloudSun},
-                             Color=Black,
-                             Size=24}" />
+            ContentTemplate="{DataTemplate features:WeatherPage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.CloudSun}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+            </ShellContent.Icon>
+        </ShellContent>
 
         <ShellContent
             Title="{localization:Translate Transport}"
-            ContentTemplate="{DataTemplate features:SearchSchedulesRealTimePage}"
-            Icon="{FontImage FontFamily=FontAwesomeSolid,
-                             Glyph={Static fontawesome:FontAwesomeIcons.Bus},
-                             Color=Black,
-                             Size=24}" />
+            ContentTemplate="{DataTemplate features:SearchSchedulesRealTimePage}">
+            <ShellContent.Icon>
+                <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.Bus}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+            </ShellContent.Icon>
+        </ShellContent>
     </FlyoutItem>
 
     <MenuItem
         Command="{Binding LanguagePopupCommand}"
-        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                    Glyph={Static fontawesome:FontAwesomeIcons.Language},
-                                    Color=Black,
-                                    Size=24}"
-        Text="{localization:Translate Language}" />
+        Text="{localization:Translate Language}">
+        <MenuItem.IconImageSource>
+            <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.Language}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
 
     <MenuItem
         Command="{Binding AboutCommand}"
-        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                    Glyph={Static fontawesome:FontAwesomeIcons.CircleInfo},
-                                    Color=Black,
-                                    Size=24}"
-        Text="{localization:Translate About}" />
+        Text="{localization:Translate About}">
+        <MenuItem.IconImageSource>
+            <FontImageSource FontFamily="FontAwesomeSolid"
+                                 Glyph="{Static fontawesome:FontAwesomeIcons.CircleInfo}"
+                                 Color="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" Size="24" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
 
     <Shell.FlyoutFooterTemplate>
         <DataTemplate>

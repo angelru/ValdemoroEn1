@@ -125,7 +125,7 @@
 
             <Border
                 Padding="16"
-                Stroke="{StaticResource BlueGeneral}"
+                Stroke="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                 StrokeShape="RoundRectangle 20">
                 <Grid
                     ColumnDefinitions="*,*,*"
@@ -163,7 +163,7 @@
                         <Label
                             HorizontalTextAlignment="Start"
                             Text="{Binding Weather.Data.Current.Weather.Tp, StringFormat='{0:0}ºc'}"
-                            TextColor="{StaticResource Black}"
+                            TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"
                             VerticalTextAlignment="Center" />
                     </HorizontalStackLayout>
 
@@ -174,7 +174,11 @@
                         <Image
                             HeightRequest="26"
                             Source="windspeed"
-                            WidthRequest="26" />
+                            WidthRequest="26">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                            </Image.Behaviors>
+                        </Image>
                         <Label
                             HorizontalTextAlignment="Center"
                             Text="{Binding Weather.Data.Current.Weather.Ws, Converter={StaticResource MtsToKmConverter}}"
@@ -188,7 +192,11 @@
                         <Image
                             HeightRequest="25"
                             Source="humidity"
-                            WidthRequest="25" />
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
+                            </Image.Behaviors>
+                        </Image>
                         <Label
                             HorizontalTextAlignment="Center"
                             Text="{Binding Weather.Data.Current.Weather.Hu, StringFormat='{0:0}%'}"

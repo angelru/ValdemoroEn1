@@ -13,7 +13,7 @@
             toolkit:StateView.StateKey="Loading"
             IsRunning="True"
             VerticalOptions="CenterAndExpand"
-            Color="{StaticResource BlueGeneral}" />
+            Color="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}" />
         <VerticalStackLayout
             Padding="16"
             toolkit:StateView.StateKey="ConexError"

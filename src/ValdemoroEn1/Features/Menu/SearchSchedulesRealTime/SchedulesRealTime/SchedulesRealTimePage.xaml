@@ -20,7 +20,7 @@
                 FontAttributes="Bold"
                 FontSize="16"
                 Text="{Binding StopTimesResponse.StopTimes.Stop.Name, Mode=OneTime}"
-                TextColor="Black" />
+                TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}" />
             <CollectionView
                 ItemsSource="{Binding StopTimesGroups, Mode=OneTime}"
                 SelectionMode="None"

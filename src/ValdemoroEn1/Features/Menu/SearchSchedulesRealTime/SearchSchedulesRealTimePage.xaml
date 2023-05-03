@@ -28,7 +28,7 @@
                     </SwipeItems>
                 </SwipeView.RightItems>
                 <Grid
-                    BackgroundColor="White"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
                     ColumnDefinitions="50,*"
                     CompressedLayout.IsHeadless="True"
                     RowDefinitions="35">
@@ -38,7 +38,7 @@
                         FontSize="13"
                         LineBreakMode="TailTruncation"
                         Text="{Binding ShortStopCode, Mode=OneTime}"
-                        TextColor="{StaticResource BlueGeneral}"
+                        TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                         VerticalTextAlignment="Center" />
                     <Label
                         Grid.Row="0"
@@ -46,7 +46,7 @@
                         FontSize="13"
                         LineBreakMode="TailTruncation"
                         Text="{Binding Name, Mode=OneTime}"
-                        TextColor="{StaticResource BlueGeneral}"
+                        TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                         VerticalTextAlignment="Center" />
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding ., Mode=OneTime}" />
@@ -71,7 +71,7 @@
                     </SwipeItems>
                 </SwipeView.RightItems>
                 <Grid
-                    BackgroundColor="White"
+                    BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
                     ColumnDefinitions="50,*"
                     CompressedLayout.IsHeadless="True"
                     RowDefinitions="35">
@@ -81,7 +81,7 @@
                         FontSize="13"
                         LineBreakMode="TailTruncation"
                         Text="{Binding ShortStopCode, Mode=OneTime}"
-                        TextColor="{StaticResource BlueGeneral}"
+                        TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                         VerticalTextAlignment="Center" />
                     <Label
                         Grid.Row="0"
@@ -89,7 +89,7 @@
                         FontSize="13"
                         LineBreakMode="TailTruncation"
                         Text="{Binding Name, Mode=OneTime}"
-                        TextColor="{StaticResource BlueGeneral}"
+                        TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                         VerticalTextAlignment="Center" />
                     <Grid.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding ., Mode=OneTime}" />
@@ -107,10 +107,10 @@
         CurrentState="{Binding BaseState}"
         ErrorCommand="{Binding StopsMunicipalityCommand}">
         <controls:StateLayout.SuccessContent>
-            <Border Stroke="{StaticResource BlueGeneral}" StrokeShape="RoundRectangle 10">
+            <Border Stroke="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}" StrokeShape="RoundRectangle 10">
                 <SearchBar
                     BackgroundColor="White"
-                    CancelButtonColor="{StaticResource BlueGeneral}"
+                    CancelButtonColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                     FontSize="Small"
                     Placeholder="{localization:Translate StopCode}"
                     Text="{Binding TextStopCode}">
@@ -136,7 +136,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:StopName">
                         <Grid
-                            BackgroundColor="White"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"
                             ColumnDefinitions="50,*"
                             CompressedLayout.IsHeadless="True"
                             RowDefinitions="35">
@@ -146,7 +146,7 @@
                                 FontSize="13"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding ShortStopCode, Mode=OneTime}"
-                                TextColor="{StaticResource BlueGeneral}"
+                                TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                                 VerticalTextAlignment="Center" />
                             <Label
                                 Grid.Row="0"
@@ -154,7 +154,7 @@
                                 FontSize="13"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Name, Mode=OneTime}"
-                                TextColor="{StaticResource BlueGeneral}"
+                                TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}"
                                 VerticalTextAlignment="Center" />
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type features:SearchSchedulesRealTimePageViewModel}}, Path=SchedulesCommand, Mode=OneTime}" CommandParameter="{Binding ., Mode=OneTime}" />
@@ -167,11 +167,11 @@
                 FontAttributes="Bold"
                 HorizontalTextAlignment="Center"
                 Text="{localization:Translate SearchBus}"
-                TextColor="{StaticResource BlueGeneral}" />
+                TextColor="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}" />
             <BoxView
                 Margin="0,0,0,10"
                 HeightRequest="1"
-                Color="{StaticResource BlueGeneral}" />
+                Color="{AppThemeBinding Light={StaticResource BlueGeneral}, Dark={StaticResource White}}" />
             <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
                 <VerticalStackLayout BindableLayout.ItemTemplateSelector="{StaticResource IssueiOSTemplateSelector}" BindableLayout.ItemsSource="{Binding StopNames, Mode=OneTime}" />
             </ScrollView>
