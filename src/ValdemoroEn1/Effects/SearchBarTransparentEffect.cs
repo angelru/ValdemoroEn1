@@ -1,5 +1,4 @@
 ﻿using Microsoft.Maui.Controls.Platform;
-using Microsoft.Maui.Controls.PlatformConfiguration;
 
 #if IOS
 using UIKit;
