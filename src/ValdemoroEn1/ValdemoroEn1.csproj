@@ -211,8 +211,4 @@
 			<Generator>MSBuild:Compile</Generator>
 		</MauiXaml>
 	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="GoogleCloudFunctions\" />
-	</ItemGroup>
 </Project>
