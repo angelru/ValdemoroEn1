@@ -40,7 +40,9 @@ public partial class MoviesPageViewModel : BaseViewModel
         Name = movie.Cartelera.Recinto.Nombre;
 
         events.AddRange(movie.Cartelera.Recinto.Eventos);
-        events.AddRange(movie.Cartelera.ProximosEventos.Eventos);
+
+        if (movie.Cartelera.ProximosEventos != null)
+            events.AddRange(movie.Cartelera.ProximosEventos.Eventos);
 
         var dates = GetDates();
         Dates.ReplaceRange(dates);
