@@ -15,5 +15,6 @@ public class IssueiOSTemplateSelector : DataTemplateSelector
 
         return IoSTemplate;
     }
+
     private static bool IsAndroid() => DeviceInfo.Current.Platform == DevicePlatform.Android;
 }
