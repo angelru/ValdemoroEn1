@@ -16,7 +16,7 @@ public static partial class LifecycleEventsExtensions
         builder.ConfigureLifecycleEvents(events =>
         {
 #if IOS
-            events.AddiOS(iOS => iOS.FinishedLaunching((app, launchOptions) => {
+            events.AddiOS(iOS => iOS.WillFinishLaunching((app, launchOptions) => {
                 CrossFirebase.Initialize();
                 FirebaseCloudMessagingImplementation.Initialize();
                 FirebaseAuthImplementation.Initialize();
