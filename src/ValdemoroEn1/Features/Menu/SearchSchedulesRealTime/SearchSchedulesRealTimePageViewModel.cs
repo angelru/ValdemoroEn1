@@ -61,11 +61,9 @@ public partial class SearchSchedulesRealTimePageViewModel : BaseViewModel
     private void AddStopName(StopName stopName)
     {
         var stop = StopNames.FirstOrDefault(f => f.StopCode == stopName.StopCode);
+        if (stop != null) return;
 
-        if (stop is null)
-        {
-            StopNames.Add(stopName);
-            Helper.SaveStops(StopNames);
-        }
+        StopNames.Add(stopName);
+        Helper.SaveStops(StopNames);
     }
 }
