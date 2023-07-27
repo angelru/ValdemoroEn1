@@ -9,14 +9,14 @@ public static class MauiProgram
     {
         var builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
             .RegisterEssentials()
             .RegisterFonts()
             .RegisterServices()
             .RegisterFirebaseServices()
             .RegisterPagesViewModels()
             .RegisterEffects()
-            .RegisterHandlers()
-            .UseMauiCommunityToolkit();
+            .RegisterHandlers();
 
         return builder.Build();
     }
