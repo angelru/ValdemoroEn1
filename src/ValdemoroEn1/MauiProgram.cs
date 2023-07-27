@@ -12,8 +12,8 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .RegisterEssentials()
             .RegisterFonts()
-            .RegisterServices()
             .RegisterFirebaseServices()
+            .RegisterServices()
             .RegisterPagesViewModels()
             .RegisterEffects()
             .RegisterHandlers();
