@@ -79,7 +79,7 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
 		<PackageReference Include="GoogleApi" Version="5.0.5" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Plugin.Firebase.Auth" Version="2.0.2" />
+		<PackageReference Include="Plugin.Firebase.Auth" Version="2.0.3" />
 		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.2" />
 	</ItemGroup>
 

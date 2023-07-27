@@ -11,12 +11,12 @@ public static class MauiProgram
         builder.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
             .RegisterEssentials()
+            .RegisterEffects()
+            .RegisterHandlers()
             .RegisterFonts()
             .RegisterFirebaseServices()
             .RegisterServices()
-            .RegisterPagesViewModels()
-            .RegisterEffects()
-            .RegisterHandlers();
+            .RegisterPagesViewModels();
 
         return builder.Build();
     }
