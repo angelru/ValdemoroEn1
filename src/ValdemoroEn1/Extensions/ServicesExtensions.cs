@@ -1,4 +1,6 @@
-﻿namespace ValdemoroEn1.Extensions;
+﻿using CommunityToolkit.Maui;
+
+namespace ValdemoroEn1.Extensions;
 
 public static partial class ServicesExtensions
 {
@@ -6,21 +8,22 @@ public static partial class ServicesExtensions
     {
         builder.Services
         //Transient
-            .AddTransient<NewsPage>().AddTransient<NewsPageViewModel>()
-            .AddTransient<SchedulesRealTimePage>().AddTransient<SchedulesRealTimePageViewModel>()
-            .AddTransient<InfoMenuDetailPage>().AddTransient<InfoMenuDetailPageViewModel>()
-            .AddTransient<InfoMenuPage>().AddTransient<InfoMenuPageViewModel>()
-            .AddTransient<RegisterPage>().AddTransient<RegisterPageViewModel>()
-            .AddTransient<LoginPage>().AddTransient<LoginPageViewModel>()
+            .AddTransientWithShellRoute<AboutPage, AboutPageViewModel>(AppSettings.About)
+            .AddTransientWithShellRoute<NewsPage, NewsPageViewModel>(AppSettings.News)
+            .AddTransientWithShellRoute<SchedulesRealTimePage, SchedulesRealTimePageViewModel>(AppSettings.SchedulesRealTime)
+            .AddTransientWithShellRoute<InfoMenuDetailPage, InfoMenuDetailPageViewModel>(AppSettings.InfoMenuDetail)
+            .AddTransientWithShellRoute<InfoMenuPage, InfoMenuPageViewModel>(AppSettings.InfoMenu)
+            .AddTransientWithShellRoute<RegisterPage, RegisterPageViewModel>(AppSettings.Register)
+            .AddTransientWithShellRoute<LoginPage, LoginPageViewModel>(AppSettings.Login)
 
         //Singleton
-            .AddSingleton<TheaterPage>().AddSingleton<TheaterPageViewModel>()
-            .AddSingleton<MoviesPage>().AddSingleton<MoviesPageViewModel>()
-            .AddSingleton<GasStationsPage>().AddSingleton<GasStationsPageViewModel>()
-            .AddSingleton<WeatherPage>().AddSingleton<WeatherPageViewModel>()
-            .AddSingleton<SearchSchedulesRealTimePage>().AddSingleton<SearchSchedulesRealTimePageViewModel>()
-            .AddSingleton<EstablishmentsPage>().AddSingleton<EstablishmentsPageViewModel>()
-            .AddSingleton<MainPage>().AddSingleton<MainPageViewModel>();
+            .AddSingleton<TheaterPage, TheaterPageViewModel>()
+            .AddSingleton<MoviesPage, MoviesPageViewModel>()
+            .AddSingleton<GasStationsPage, GasStationsPageViewModel>()
+            .AddSingleton<WeatherPage, WeatherPageViewModel>()
+            .AddSingleton<SearchSchedulesRealTimePage, SearchSchedulesRealTimePageViewModel>()
+            .AddSingleton<EstablishmentsPage, EstablishmentsPageViewModel>()
+            .AddSingleton<MainPage, MainPageViewModel>();
 
         return builder;
     }

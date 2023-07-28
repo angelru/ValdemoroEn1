@@ -2,9 +2,10 @@ namespace ValdemoroEn1.Features;
 
 public partial class AboutPage : ContentPage
 {
-    public AboutPage()
+    public AboutPage(AboutPageViewModel aboutPageViewModel)
     {
         InitializeComponent();
+        BindingContext = aboutPageViewModel;
     }
 
     private async void SendEmail_Tapped(object sender, TappedEventArgs e)

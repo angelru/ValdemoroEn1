@@ -23,7 +23,6 @@ public partial class AppShellViewModel : BaseViewModel
 
     public AppShellViewModel()
     {
-        RegisterRoutes();
         GetCurrentVersion();
     }
 
@@ -88,17 +87,6 @@ public partial class AppShellViewModel : BaseViewModel
         await CrossFirebaseAuth.Current?.SignOutAsync();
         Preferences.Remove("login");
         await NavigationService.NavigationAsync(AppSettings.Main);
-    }
-
-    private void RegisterRoutes()
-    {
-        Routing.RegisterRoute(AppSettings.News, typeof(NewsPage));
-        Routing.RegisterRoute(AppSettings.About, typeof(AboutPage));
-        Routing.RegisterRoute(AppSettings.SchedulesRealTime, typeof(SchedulesRealTimePage));
-        Routing.RegisterRoute(AppSettings.InfoMenuDetail, typeof(InfoMenuDetailPage));
-        Routing.RegisterRoute(AppSettings.InfoMenu, typeof(InfoMenuPage));
-        Routing.RegisterRoute(AppSettings.Register, typeof(RegisterPage));
-        Routing.RegisterRoute(AppSettings.Login, typeof(LoginPage));
     }
 
     private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
