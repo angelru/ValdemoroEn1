@@ -10,7 +10,7 @@ public partial class AppShellViewModel : BaseViewModel
     private bool _initFirebase = false;
 
     [ObservableProperty]
-    private string _currentVersion;
+    private string _currentVersion = "Ver: " + VersionTracking.Default.CurrentVersion.ToString() + " (" + VersionTracking.Default.CurrentBuild.ToString() + ")";
 
     [ObservableProperty]
     private ImageSource _photoUrl;
@@ -23,12 +23,6 @@ public partial class AppShellViewModel : BaseViewModel
 
     public AppShellViewModel()
     {
-        GetCurrentVersion();
-    }
-
-    private void GetCurrentVersion()
-    {
-        CurrentVersion = "Ver: " + VersionTracking.Default.CurrentVersion.ToString() + " (" + VersionTracking.Default.CurrentBuild.ToString() + ")";
     }
 
     public static AppShellViewModel Instance { get; set; } = new AppShellViewModel();
@@ -99,6 +93,8 @@ public partial class AppShellViewModel : BaseViewModel
         //}
     }
 
+
+    //TODO refactorizar
     public void InitFirebase()
     {
         if (_initFirebase) return;
