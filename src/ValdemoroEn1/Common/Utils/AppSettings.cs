@@ -38,7 +38,6 @@ public class AppSettings
     public const string ContactEmail = "info@angelruben.es";
 
     //Routes
-    public const string News = "News";
     public const string About = "About";
     public const string SchedulesRealTime = "SchedulesRealTime";
     public const string InfoMenuDetail = "InfoMenuDetail";

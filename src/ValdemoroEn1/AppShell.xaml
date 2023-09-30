@@ -7,6 +7,7 @@
     xmlns:features="clr-namespace:ValdemoroEn1.Features"
     xmlns:fontawesome="clr-namespace:ValdemoroEn1.FontAwesome"
     xmlns:localization="clr-namespace:ValdemoroEn1.Resources.Localization"
+    Loaded="Shell_Loaded"
     x:DataType="features:AppShellViewModel">
 
     <Shell.FlyoutHeaderTemplate>

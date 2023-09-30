@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Maui.Views;
 using Plugin.Firebase.CloudMessaging;
-using Plugin.Firebase.CloudMessaging.EventArgs;
 using ValdemoroEn1.Controls;
 
 namespace ValdemoroEn1.Features;
@@ -83,16 +82,6 @@ public partial class AppShellViewModel : BaseViewModel
         await NavigationService.NavigationAsync(AppSettings.Main);
     }
 
-    private void NotificationTapped(object sender, FCMNotificationTappedEventArgs e)
-    {
-        //if (e.Notification.Data.TryGetValue("NewsData", out string newsNotificationJson))
-        //{
-        //    var newsNotification = JsonSerializer.Deserialize<NewsNotification>(newsNotificationJson);
-        //    NavigationService.AddParameter("news", newsNotification);
-        //    _ = NavigationService.NavigationAsync(AppSettings.News);
-        //}
-    }
-
 
     //TODO refactorizar
     public void InitFirebase()
@@ -101,7 +90,6 @@ public partial class AppShellViewModel : BaseViewModel
 
         try
         {
-            CrossFirebaseCloudMessaging.Current.NotificationTapped += NotificationTapped;
             _ = CrossFirebaseCloudMessaging.Current.CheckIfValidAsync();
             _ = CrossFirebaseCloudMessaging.Current.SubscribeToTopicAsync("ValdemoroEn1");
             _initFirebase = true;

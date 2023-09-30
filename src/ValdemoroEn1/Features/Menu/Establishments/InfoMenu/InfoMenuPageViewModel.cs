@@ -1,8 +1,8 @@
 ﻿using GoogleApi;
 using GoogleApi.Entities.Common.Enums;
+using GoogleApi.Entities.Places.Common;
 using GoogleApi.Entities.Places.Photos.Request;
 using GoogleApi.Entities.Places.Search.Text.Request;
-using GoogleApi.Entities.Places.Search.Text.Response;
 using ValdemoroEn1.Common.Utils;
 
 namespace ValdemoroEn1.Features;
@@ -98,7 +98,7 @@ public partial class InfoMenuPageViewModel : BaseViewModel, IQueryAttributable
         }
     }
 
-    private async Task<List<InfoMenu>> InfoQueryAsync(IEnumerable<TextResult> results)
+    private async Task<List<InfoMenu>> InfoQueryAsync(IEnumerable<PlaceResult> results)
     {
         List<InfoMenu> infoMenus = new();
 

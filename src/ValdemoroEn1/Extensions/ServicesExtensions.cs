@@ -9,7 +9,6 @@ public static partial class ServicesExtensions
         builder.Services
         //Transient
             .AddTransientWithShellRoute<AboutPage, AboutPageViewModel>(AppSettings.About)
-            .AddTransientWithShellRoute<NewsPage, NewsPageViewModel>(AppSettings.News)
             .AddTransientWithShellRoute<SchedulesRealTimePage, SchedulesRealTimePageViewModel>(AppSettings.SchedulesRealTime)
             .AddTransientWithShellRoute<InfoMenuDetailPage, InfoMenuDetailPageViewModel>(AppSettings.InfoMenuDetail)
             .AddTransientWithShellRoute<InfoMenuPage, InfoMenuPageViewModel>(AppSettings.InfoMenu)
