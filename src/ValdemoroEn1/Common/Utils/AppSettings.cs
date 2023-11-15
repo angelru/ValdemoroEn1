@@ -42,10 +42,7 @@ public class AppSettings
     public const string SchedulesRealTime = "SchedulesRealTime";
     public const string InfoMenuDetail = "InfoMenuDetail";
     public const string InfoMenu= "InfoMenu";
-    public const string Register = "Register";
-    public const string Login = "Login";
 
-    public const string MainLogin = "//Main/login";
     public const string Menu = "///Menu";
     public const string Main = "//Main";
 }

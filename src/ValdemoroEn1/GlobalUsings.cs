@@ -1,6 +1,5 @@
 ﻿global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;
-global using Plugin.Firebase.Auth;
 global using ValdemoroEn1.Common;
 global using ValdemoroEn1.Features;
 global using ValdemoroEn1.FontAwesome;

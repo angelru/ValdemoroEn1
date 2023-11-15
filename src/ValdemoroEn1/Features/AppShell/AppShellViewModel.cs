@@ -26,30 +26,6 @@ public partial class AppShellViewModel : BaseViewModel
 
     public static AppShellViewModel Instance { get; set; } = new AppShellViewModel();
 
-    [RelayCommand]
-    private async Task DeleteAccountAsync()
-    {
-        bool accept = await AlertService.DisplayAlertAsync(AppResources.MyAccount, AppResources.DelAccountMsg, AppResources.Accept, AppResources.Cancel);
-
-        if (accept)
-        {
-            try
-            {
-                if (CrossFirebaseAuth.Current?.CurrentUser != null)
-                {
-                    Preferences.Clear();
-                    await CrossFirebaseAuth.Current.CurrentUser.DeleteAsync();
-                    await NavigationService.NavigationAsync(AppSettings.Main);
-                }
-            }
-            catch (Exception ex)
-            {
-                _ = ex.Message;
-                await AlertService.SnackBarAsync(AppResources.DeleteError, SnackType.Success);
-                await SignOutAsync();
-            }
-        }
-    }
 
     [RelayCommand]
     private async Task AboutAsync()
@@ -63,25 +39,6 @@ public partial class AppShellViewModel : BaseViewModel
     {
         await PopupExtensions.ShowPopupAsync(Shell.Current, new LanguagePopup());
     }
-
-    [RelayCommand]
-    private async Task LogoutAsync()
-    {
-        bool accept = await AlertService.DisplayAlertAsync(AppResources.Logout, AppResources.LogoutMsg, AppResources.Accept, AppResources.Cancel);
-
-        if (accept)
-        {
-            await SignOutAsync();
-        }
-    }
-
-    private async Task SignOutAsync()
-    {
-        await CrossFirebaseAuth.Current?.SignOutAsync();
-        Preferences.Remove("login");
-        await NavigationService.NavigationAsync(AppSettings.Main);
-    }
-
 
     //TODO refactorizar
     public void InitFirebase()

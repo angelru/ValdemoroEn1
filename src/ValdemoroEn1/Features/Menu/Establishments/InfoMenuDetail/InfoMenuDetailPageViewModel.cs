@@ -1,7 +1,7 @@
 ﻿using GoogleApi;
 using GoogleApi.Entities.Common.Enums;
+using GoogleApi.Entities.Places.Common.Enums;
 using GoogleApi.Entities.Places.Details.Request;
-using GoogleApi.Entities.Places.Details.Request.Enums;
 using GoogleApi.Entities.Places.Details.Response;
 using GoogleApi.Entities.Places.Photos.Request;
 using System.Collections.ObjectModel;

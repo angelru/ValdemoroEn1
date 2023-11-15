@@ -12,8 +12,6 @@ public static partial class ServicesExtensions
             .AddTransientWithShellRoute<SchedulesRealTimePage, SchedulesRealTimePageViewModel>(AppSettings.SchedulesRealTime)
             .AddTransientWithShellRoute<InfoMenuDetailPage, InfoMenuDetailPageViewModel>(AppSettings.InfoMenuDetail)
             .AddTransientWithShellRoute<InfoMenuPage, InfoMenuPageViewModel>(AppSettings.InfoMenu)
-            .AddTransientWithShellRoute<RegisterPage, RegisterPageViewModel>(AppSettings.Register)
-            .AddTransientWithShellRoute<LoginPage, LoginPageViewModel>(AppSettings.Login)
 
         //Singleton
             .AddSingleton<TheaterPage, TheaterPageViewModel>()
@@ -21,8 +19,7 @@ public static partial class ServicesExtensions
             .AddSingleton<GasStationsPage, GasStationsPageViewModel>()
             .AddSingleton<WeatherPage, WeatherPageViewModel>()
             .AddSingleton<SearchSchedulesRealTimePage, SearchSchedulesRealTimePageViewModel>()
-            .AddSingleton<EstablishmentsPage, EstablishmentsPageViewModel>()
-            .AddSingleton<MainPage, MainPageViewModel>();
+            .AddSingleton<EstablishmentsPage, EstablishmentsPageViewModel>();
 
         return builder;
     }
