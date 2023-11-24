@@ -76,7 +76,7 @@
 	
 	<ItemGroup>
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.3" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.4" />
 		<PackageReference Include="GoogleApi" Version="5.2.4" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
