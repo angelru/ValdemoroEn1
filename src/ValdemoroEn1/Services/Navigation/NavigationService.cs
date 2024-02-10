@@ -2,7 +2,7 @@
 
 public class NavigationService
 {
-    private static IDictionary<string, object> Parameters { get; set; } = new Dictionary<string, object>();
+    private static Dictionary<string, object> Parameters { get; set; } = new Dictionary<string, object>();
 
     public NavigationService()
     {
