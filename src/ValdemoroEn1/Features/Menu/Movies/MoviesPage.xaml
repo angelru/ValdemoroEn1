@@ -23,7 +23,7 @@
                 ItemsSource="{Binding Dates, Mode=OneTime}"
                 SelectedItem="{Binding SelectedDate}" />
             <ScrollView VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Never">
-                <VerticalStackLayout BindableLayout.ItemsSource="{Binding Movies, Mode=OneTime}">
+                <controls:FixedVerticalStackLayout BindableLayout.ItemsSource="{Binding Movies, Mode=OneTime}">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="models:Movie">
                             <Grid
@@ -44,7 +44,7 @@
                                     ColumnDefinitions="*"
                                     CompressedLayout.IsHeadless="true"
                                     RowDefinitions="auto,50,48">
-                                    <VerticalStackLayout
+                                    <controls:FixedVerticalStackLayout
                                         Grid.Row="0"
                                         Grid.Column="0"
                                         CompressedLayout.IsHeadless="true"
@@ -52,7 +52,7 @@
                                         <Label LineBreakMode="TailTruncation" Text="{Binding Title, Mode=OneTime}" />
                                         <Label Text="{Binding Duration, Mode=OneTime, StringFormat='{0} min'}" />
                                         <Label Text="{localization:Translate SelectHour}" />
-                                    </VerticalStackLayout>
+                                    </controls:FixedVerticalStackLayout>
                                     <ScrollView
                                         Grid.Row="1"
                                         Grid.Column="0"
@@ -109,7 +109,7 @@
                             </Grid>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
-                </VerticalStackLayout>
+                </controls:FixedVerticalStackLayout>
             </ScrollView>
         </controls:StateLayout.SuccessContent>
     </controls:StateLayout>
