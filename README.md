@@ -97,8 +97,6 @@ The application has a clean and tidy architecture, applying the best practices, 
 # Platforms
   * Android
   * iOS
-
-# Demo
  
 # Download
 <a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
