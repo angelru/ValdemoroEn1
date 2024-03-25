@@ -19,19 +19,16 @@ public static partial class LifecycleEventsExtensions
             events.AddiOS(iOS => iOS.WillFinishLaunching((app, launchOptions) => {
                 CrossFirebase.Initialize();
                 FirebaseCloudMessagingImplementation.Initialize();
-                FirebaseAuthImplementation.Initialize();
                 return false;
             }));
 #else
             events.AddAndroid(android => android.OnCreate((activity, _) =>
                 CrossFirebase.Initialize(activity)));
-                FirebaseAuthImplementation.Initialize("1043453667471-h09jtasjld44dn7js3kpiq8abf5dbtcg.apps.googleusercontent.com");
 #endif
         });
 
         builder.Services
-            .AddSingleton(_ => CrossFirebaseCloudMessaging.Current)
-            .AddSingleton(_ => CrossFirebaseAuth.Current);
+            .AddSingleton(_ => CrossFirebaseCloudMessaging.Current);
 
         return builder;
     }

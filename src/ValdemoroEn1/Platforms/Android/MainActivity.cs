@@ -25,15 +25,12 @@ public class MainActivity : MauiAppCompatActivity
 
     private void ConfigurationNotification()
     {
-        if (Build.VERSION.SdkInt >= BuildVersionCodes.Tiramisu)
-        {
-            if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.PostNotifications) != Permission.Granted)
-            {
-                ActivityCompat.RequestPermissions(this, new[] { Manifest.Permission.PostNotifications }, 0);
-            }
-        }
-
         CreateNotificationChannel();
+
+        if (Build.VERSION.SdkInt >= BuildVersionCodes.Tiramisu && ContextCompat.CheckSelfPermission(this, Manifest.Permission.PostNotifications) != Permission.Granted)
+        {
+            ActivityCompat.RequestPermissions(this, new[] { Manifest.Permission.PostNotifications }, 0);
+        }
     }
 
     private void CreateNotificationChannel()
@@ -43,7 +40,7 @@ public class MainActivity : MauiAppCompatActivity
         var channel = new NotificationChannel(channelId, "General", NotificationImportance.Default);
         notificationManager.CreateNotificationChannel(channel);
         FirebaseCloudMessagingImplementation.ChannelId = channelId;
-        FirebaseCloudMessagingImplementation.SmallIconRef = Resource.Drawable.ic_push;
+        FirebaseCloudMessagingImplementation.SmallIconRef = _Microsoft.Android.Resource.Designer.ResourceConstant.Drawable.ic_push;
     }
 
     private static void HandleIntent(Intent intent)
@@ -59,7 +56,6 @@ public class MainActivity : MauiAppCompatActivity
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
     {
-        FirebaseAuthImplementation.HandleActivityResultAsync(requestCode, resultCode, data);
         base.OnActivityResult(requestCode, resultCode, data);
     }
 

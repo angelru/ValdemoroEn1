@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
+		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>ValdemoroEn1</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -15,11 +15,11 @@
 		<ApplicationIdGuid>34EFD796-05B2-4E61-A769-8AF2E26E5220</ApplicationIdGuid>
 
 		<!-- Versions -->
-		<ApplicationDisplayVersion>1.2.3</ApplicationDisplayVersion>
-		<ApplicationVersion>19</ApplicationVersion>
+		<ApplicationDisplayVersion>1.3</ApplicationDisplayVersion>
+		<ApplicationVersion>20</ApplicationVersion>
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">23.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">26.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 	
 	<ItemGroup>
@@ -75,19 +75,20 @@
 	</ItemGroup>
 	
 	<ItemGroup>
-		<PackageReference Include="CommunityToolkit.Maui" Version="6.0.0" />
-		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
-		<PackageReference Include="GoogleApi" Version="5.2.1" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="Plugin.Firebase.Auth" Version="2.0.3" />
-		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.3" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="2.0.4" />
+		<PackageReference Include="GoogleApi" Version="5.3.1" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="7.0.1" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.10" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.10" />
 	</ItemGroup>
 
 	<PropertyGroup>
 		<EnableAssemblyILStripping>false</EnableAssemblyILStripping>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-android|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
 		<AndroidPackageFormat>aab</AndroidPackageFormat>
 		<AndroidUseAapt2>True</AndroidUseAapt2>
 		<AndroidCreatePackagePerAbi>False</AndroidCreatePackagePerAbi>
@@ -101,111 +102,18 @@
 		-->
 	</PropertyGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-android'">
-		<AndroidEnvironment Include="Platforms\Android\GarbageCollector.config" />
+	<ItemGroup Condition="'$(TargetFramework)'=='net8.0-android'">
 		<GoogleServicesJson Include="Platforms\Android\google-services.json" />
 		<ProguardConfiguration Include="Platforms\Android\proguard.cfg" />
 	</ItemGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
+	<PropertyGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 	  <CodesignKey>Apple Development: Created via API (8Z84A286U7)</CodesignKey>
 	  <CodesignProvision>VS: es.valtimoretec.valdemoroenuno Development</CodesignProvision>
 	</PropertyGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net7.0-ios'">
+	<ItemGroup Condition="'$(TargetFramework)'=='net8.0-ios'">
 		<BundleResource Include="Platforms\iOS\GoogleService-Info.plist" Link="GoogleService-Info.plist" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Compile Update="Controls\Layouts\StateLayout.xaml.cs">
-			<DependentUpon>StateLayout.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Controls\Views\InfoMenuDetailView.xaml.cs">
-			<DependentUpon>InfoMenuDetailView.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Features\Menu\About\AboutPage.xaml.cs">
-			<DependentUpon>AboutPage.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Features\Menu\SearchSchedulesRealTime\SchedulesRealTime\SchedulesRealTimePage.xaml.cs">
-			<DependentUpon>SchedulesRealTimePage.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml.cs">
-			<DependentUpon>SearchSchedulesRealTimePage.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Features\Menu\Weather\WeatherPage.xaml.cs">
-			<DependentUpon>WeatherPage.xaml</DependentUpon>
-		</Compile>
-		<Compile Update="Resources\Localization\AppResources.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>AppResources.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Update="Resources\Localization\AppResources.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-
-	<ItemGroup>
-		<MauiXaml Update="Controls\Popups\LanguagePopup.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Views\CardView.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Views\InfoMenuDetailView.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Views\LogoTitleView.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Views\TermsView.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Establishments\EstablishmentsPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\GasStations\GasStationsPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Movies\MoviesPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Weather\WeatherPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Login\LoginPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Register\RegisterPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Controls\Layouts\StateLayout.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Main\MainPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\About\AboutPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Establishments\InfoMenuDetail\InfoMenuDetailPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Establishments\InfoMenu\InfoMenuPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\SearchSchedulesRealTime\SchedulesRealTime\SchedulesRealTimePage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\SearchSchedulesRealTime\SearchSchedulesRealTimePage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-		<MauiXaml Update="Features\Menu\Theater\TheaterPage.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</MauiXaml>
-	</ItemGroup>
 </Project>

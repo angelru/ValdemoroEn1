@@ -17,44 +17,8 @@
                 Aspect="AspectFill"
                 HeightRequest="230"
                 Source="valdemoro.jpg" />
-            <!--<Grid
-                Margin="0"
-                BackgroundColor="{StaticResource RedGeneral}"
-                HeightRequest="200"
-                RowDefinitions="*, 1">
-                <VerticalStackLayout Grid.Row="0" VerticalOptions="Center">
-                    <Border
-                        HeightRequest="84"
-                        StrokeThickness="1"
-                        WidthRequest="84">
-                        <Border.StrokeShape>
-                            <RoundRectangle CornerRadius="100,100,100,100" />
-                        </Border.StrokeShape>
-                        <Image Aspect="AspectFill" Source="{Binding PhotoUrl}" />
-                    </Border>
-                    <Label
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Name}"
-                        TextColor="White" />
-                    <Label
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Email}"
-                        TextColor="White" />
-                </VerticalStackLayout>
-                <BoxView
-                    Grid.Row="1"
-                    HeightRequest="1"
-                    Color="{StaticResource BlueGeneral}" />
-            </Grid>-->
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>
-
-    <!--<ShellContent
-        ContentTemplate="{DataTemplate features:MainPage}"
-        Route="Main"
-        Shell.FlyoutBehavior="Disabled"
-        Shell.FlyoutItemIsVisible="False"
-        Shell.NavBarIsVisible="False" />-->
 
     <FlyoutItem
         FlyoutDisplayOptions="AsMultipleItems"
@@ -67,9 +31,7 @@
             Icon="{FontImage FontFamily=FontAwesomeSolid,
                              Glyph={Static fontawesome:FontAwesomeIcons.Building},
                              Color=Black,
-                             Size=24}" />-->
-
-      
+                             Size=24}" />--> 
 
         <ShellContent
             Title="{localization:Translate Theater}"
@@ -152,21 +114,5 @@
                 VerticalTextAlignment="Center" />
         </DataTemplate>
     </Shell.FlyoutFooterTemplate>
-
-    <!--<MenuItem
-        Command="{Binding LogoutCommand}"
-        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                    Glyph={Static fontawesome:FontAwesomeIcons.PowerOff},
-                                    Color=Black,
-                                    Size=24}"
-        Text="{localization:Translate Logout}" />
-
-    <MenuItem
-        Command="{Binding DeleteAccountCommand}"
-        IconImageSource="{FontImage FontFamily=FontAwesomeSolid,
-                                    Glyph={Static fontawesome:FontAwesomeIcons.User},
-                                    Color=Black,
-                                    Size=24}"
-        Text="{localization:Translate DelAccount}" />-->
 
 </Shell>
